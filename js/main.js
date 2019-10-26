@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $("#learn-more").on('click', function(event) {
+  $("a").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
