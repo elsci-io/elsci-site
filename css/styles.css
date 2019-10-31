@@ -293,3 +293,16 @@ body {
         .job__info h2 {
           font-size: 47px;
           line-height: 60px; } }
+    .job__info p {
+      margin: 0;
+      font-family: Strait;
+      font-size: 24px;
+      line-height: 31px; }
+    .job__info a {
+      color: #2082D8;
+      text-decoration: none; }
+    .job__info--shrink {
+      width: auto;
+      max-width: 550px;
+      -ms-flex-negative: 1;
+      flex-shrink: 1; }

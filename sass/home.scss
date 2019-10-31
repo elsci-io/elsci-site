@@ -220,5 +220,23 @@
 				line-height: 60px;
 			}
 		}
+
+		p {
+			margin: 0;
+			font-family: Strait;
+			font-size: 24px;
+			line-height: 31px;
+		}
+
+		a {
+			color: $blue;
+			text-decoration: none;
+		}
+
+		&--shrink {
+			width: auto;
+			max-width: 550px;
+			flex-shrink: 1;
+		}
 	}
 }
