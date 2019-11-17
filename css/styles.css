@@ -104,8 +104,7 @@ body {
       color: #2082D8; }
     .header__item--bordered {
       color: #2082D8;
-      border: 2px solid #2082D8;
-      border-radius: 25px; }
+      border-bottom: 2px solid #2082D8;}
 
 .home__main {
   margin: 0 auto 40px;
