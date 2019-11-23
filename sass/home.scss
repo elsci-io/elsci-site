@@ -8,19 +8,6 @@
 		@media all and (min-width: 576px) {
 			margin-bottom: 100px;
 		}
-
-		&::before {
-			content: "";
-			background: url('../img/Landscape-01.jpg') center no-repeat;
-			background-size: 1300px;
-			opacity: 0.5;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			position: absolute;
-			z-index: -1;   
-		}
 	}
 
 	&__info {
