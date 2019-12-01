@@ -213,7 +213,7 @@ body {
       .home__features p {
         font-size: 27px;
         line-height: 35px; } }
-  .home__features img {
+  .home__features video {
     margin: 0 auto 40px;
     max-width: 100%;
     display: block;
