@@ -292,3 +292,8 @@ body {
       max-width: 550px;
       -ms-flex-negative: 1;
       flex-shrink: 1; }
+.video {
+  width: 1024px;
+  height: 582px;
+  max-width: 100%;
+}
