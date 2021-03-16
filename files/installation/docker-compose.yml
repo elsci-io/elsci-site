@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  peaksel:
+    container_name: peaksel
+    image: elsci/peaksel:VERSION
+    depends_on:
+      peakseldb:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+    volumes:
+      - ./logs:/var/log/peaksel
+      - ./injections:/opt/injections
+    environment:
+      server.port: 8080
+      jdbc.driverClassName: org.postgresql.Driver
+      jdbc.url: jdbc:postgresql://peakseldb:5432/elsci
+      db.user: peaksel
+      db.pass: HuCZSQUH
+      hibernate.default_schema: peaksel
+      user.log_dir: /var/log
+  peakseldb:
+    container_name: peakseldb
+    image: postgres:13.2
+    environment:
+      - POSTGRES_PASSWORD=Pa3pJXs7
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
