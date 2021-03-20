@@ -25,19 +25,42 @@ h1 {
     line-height: 60px;
   }
 }
+a {
+  color: #2082D8;
+  text-decoration: none;
+}
 
 h2 {
   margin: 0 auto;
   color: #2082D8;
   font-weight: 300;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 40px;
 }
 @media all and (min-width: 576px) {
   h2 {
-    font-size: 47px;
+    font-size: 40px;
     line-height: 60px;
   }
+}
+
+h3 {
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+@media all and (min-width: 576px) {
+  h3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+video, .video {
+  margin: 0 auto 40px;
+  max-width: 100%;
+  display: block;
+  text-align: center;
 }
 .docs p, .docs li {
   font-size: 24px;
@@ -218,7 +241,6 @@ h2 {
   max-width: 1050px; }
   .home__features p {
     margin: 15px 0 5px;
-    color: #727272;
     font-family: Strait;
     font-size: 20px;
     line-height: 30px; }
@@ -226,11 +248,6 @@ h2 {
       .home__features p {
         font-size: 27px;
         line-height: 35px; } }
-  .home__features video {
-    margin: 0 auto 40px;
-    max-width: 100%;
-    display: block;
-    text-align: center; }
 
 .home__links {
   margin: 0 auto 20px;
@@ -297,9 +314,6 @@ h2 {
       font-family: Strait;
       font-size: 24px;
       line-height: 31px; }
-    .job__info a {
-      color: #2082D8;
-      text-decoration: none; }
     .job__info--shrink {
       width: auto;
       max-width: 550px;
