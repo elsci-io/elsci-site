@@ -13,11 +13,9 @@ services:
       - ./injections:/opt/injections
     environment:
       server.port: 8080
-      jdbc.driverClassName: org.postgresql.Driver
-      jdbc.url: jdbc:postgresql://peakseldb:5432/elsci
+      db.url: jdbc:postgresql://peakseldb:5432/elsci?currentSchema=peaksel
       db.user: peaksel
       db.pass: HuCZSQUH
-      db.schema: peaksel
       user.log_dir: /var/log
   peakseldb:
     container_name: peakseldb
