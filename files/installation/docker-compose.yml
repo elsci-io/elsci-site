@@ -17,7 +17,7 @@ services:
       jdbc.url: jdbc:postgresql://peakseldb:5432/elsci
       db.user: peaksel
       db.pass: HuCZSQUH
-      hibernate.default_schema: peaksel
+      db.schema: peaksel
       user.log_dir: /var/log
   peakseldb:
     container_name: peakseldb
