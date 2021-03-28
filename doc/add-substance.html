@@ -30,11 +30,36 @@
 		</header>
 	</div>
 	<div class="container home__features docs">
-		<h2>Extract & associate chromatograms with chemical structures (SMILES, MOL/SD, InChI)</h2>
+		<h2>Excel, CSV, SDF/MOL, SMILES, InChI, MF</h2>
+		<p>It's possible to upload a structure (EICs will be created automatically) either to individual injections or
+			to many injections at a time in a Batch. Possible options:
+		</p>
+		<ul>
+			<li>Add a single structure using SMILES, InChI, Molecular Formula (MF)</li>
+			<li>SDF/MOL (both V2000 and V3000) with 1 or more structures:
+				<ul>
+					<li><code>name</code> field (optional) will be used for the alias of the structure</li>
+					<li><code>injection</code> field (optional, Batch level) determines which injections receive the structure</li>
+				</ul></li>
+			<li>
+				CSV:
+				<ul>
+					<li>1st column: structure or MF</li>
+					<li>2nd column (optional): alias for the structure</li>
+					<li>3d column (optional, Batch level): names of injections to receive respective structures</li>
+					<li>Possible separators are: <code>;</code> and <code>\t</code> (tabs).</li>
+				</ul>
+			</li>
+			<li>
+				Excel: same columns as with CSV.
+			</li>
+		</ul>
+		<p>You can either upload/drag'n'drop files or just copy-paste their content directly into Peaksel forms. See demos below.</p>
+		<h2>Uploading a single chemical structure (SMILES, SDF/MOL, InChI)</h2>
 		<section>
 			<iframe class="video" width="1024" height="582" src="https://www.youtube.com/embed/kVg0EzdLwgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</section>
-		<h2>Add structure to the whole batch</h2>
+		<h2>Add same structure to the whole batch</h2>
 		<video autoplay loop muted playsinline src="../img/batch-add-substance.mp4"></video>
 	</div>
 </body>
