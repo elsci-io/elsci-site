@@ -1,4 +1,3 @@
--- need to read about encoding & collate at some point to ensure UTF8
 create database elsci;
 \connect elsci;
 
