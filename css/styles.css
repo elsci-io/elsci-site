@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 h1 {
   margin: 0 0 20px;
@@ -46,7 +47,7 @@ h2 {
 
 h3 {
   margin: 0 auto;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   line-height: 30px;
 }
@@ -67,7 +68,7 @@ video, .video {
   line-height: 40px;
 }
 .docs a {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 40px;
 }
 
@@ -115,7 +116,7 @@ video, .video {
     background-color: #1967ac; }
 
 .header {
-  padding-top: 40px;
+  padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,7 +149,7 @@ video, .video {
     padding: 7px 5px 6px;
     color: #000;
     font-size: 10px;
-    font-weight: 500;
+    font-weight: 300;
     text-decoration: none; }
     @media all and (min-width: 576px) {
       .header__item {
@@ -208,9 +209,9 @@ video, .video {
 .home__item {
   margin: 0;
   list-style: none;
-  color: #727272;
+  /*color: #727272;*/
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 20px;
   line-height: 30px; }
   @media all and (min-width: 576px) {
@@ -293,6 +294,8 @@ video, .video {
         .job__type img {
           margin-right: 55px; } }
   .job__info {
+    font-size: 20px;
+    line-height: 31px;
     width: 100%; }
     @media all and (min-width: 965px) {
       .job__info {
@@ -309,8 +312,7 @@ video, .video {
           line-height: 60px; } }
     .job__info p {
       margin: 0;
-      font-size: 24px;
-      line-height: 31px; }
+    }
     .job__info--shrink {
       width: auto;
       max-width: 550px;
