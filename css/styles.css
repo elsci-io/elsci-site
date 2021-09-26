@@ -64,12 +64,10 @@ video, .video {
   text-align: center;
 }
 .docs p, .docs li {
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 18px;
 }
 .docs a {
-  font-size: 20px;
-  line-height: 40px;
+  font-size: 18px;
 }
 
 .container {
