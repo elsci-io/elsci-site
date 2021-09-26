@@ -127,6 +127,7 @@ video, .video {
   .header__logo {
     margin: 0;
     color: #2082D8;
+    font-weight: 400;
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none; }
