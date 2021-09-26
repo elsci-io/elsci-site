@@ -342,3 +342,9 @@ video, .video {
 .greyarea {
   background-color: #F9F9F9;
 }
+.footer {
+  text-align: center;
+  height: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
