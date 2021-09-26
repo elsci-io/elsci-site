@@ -317,3 +317,21 @@ video, .video {
       max-width: 550px;
       -ms-flex-negative: 1;
       flex-shrink: 1; }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  min-width: 300px;
+  width: 30%;
+  float: left;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.cardtitle {
+  padding: 10px;
+}
+.hugetext {
+  font-size: 50px;
+}
+.greyarea {
+  background-color: #F9F9F9;
+}
