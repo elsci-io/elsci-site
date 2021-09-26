@@ -74,7 +74,14 @@ video, .video {
   margin: 0 auto;
   padding: 0 10px;
   width: 100%;
-  max-width: 1250px; }
+  max-width: 1250px;
+}
+.container::after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
 
 .btn {
   margin: 0;
