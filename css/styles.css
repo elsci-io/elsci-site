@@ -337,6 +337,10 @@ video, .video {
 .hugetext {
   font-size: 50px;
 }
+.landingtext{
+  font-size: 7vw;
+  line-height: 6vw
+}
 .hcentered {
   text-align: center;
 }
