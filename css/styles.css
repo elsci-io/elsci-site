@@ -273,8 +273,9 @@ video, .video {
         width: 200px; } }
 
 .job {
-  padding-bottom: 35px;
-  background-color: #F9F9F9; }
+  padding: 35px 10px 0 10px ;
+  background-color: #F9F9F9;
+}
   .job__type {
     margin: 0 auto;
     display: -webkit-box;
