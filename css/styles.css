@@ -57,12 +57,28 @@ h3 {
     line-height: 40px;
   }
 }
+
 video, .video {
-  margin: 0 auto 40px;
   max-width: 100%;
   display: block;
-  text-align: center;
 }
+
+.motion {
+  position: absolute;
+  z-index: -1;
+}
+
+.plate-motion {
+  top: 20px;
+  left: 85%;
+}
+
+.quad-motion {
+  top: 57%;
+  right: 90%;
+  transform: rotate(-10deg); 
+}
+
 .docs p, .docs li {
   font-size: 18px;
 }
@@ -81,6 +97,14 @@ video, .video {
   display: block;
   height: 0;
   clear: both;
+}
+
+.docs-header-container {
+  margin-bottom: 40px;
+}
+
+.buy-header-container {
+  margin-bottom: 40px;
 }
 
 .btn {
@@ -171,6 +195,14 @@ video, .video {
     .header__item--bordered {
       color: #2082D8;
       border-bottom: 2px solid #2082D8;}
+
+.home-container {
+  position:relative;
+  max-width: 70%;
+  margin: 0 auto 20px; 
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 
 .home__main {
   margin: 0 auto 40px;
@@ -345,6 +377,13 @@ video, .video {
 .hcentered {
   text-align: center;
 }
+
+.subtitle {
+  display: inline-block;
+  max-width: 80%;
+  line-height: 3.5vw;
+}
+
 .greyarea {
   background-color: #F9F9F9;
 }
@@ -353,4 +392,70 @@ video, .video {
   height: 80px;
   margin-top: 80px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 601px) and (max-width: 848px) {
+  .plate-motion {
+    top: 14px;
+    left: 82%;
+    width: 175px;
+  }
+
+  .quad-motion {
+    top: 55%;
+    right: 86%;
+    width: 167px;
+  }
+}
+
+@media (max-width: 600px) {
+  .motion {    
+    margin: 10px auto 20px;
+  }
+
+  .plate-motion {
+    position: static;
+    width: 165px;
+  }
+
+  .quad-motion {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 159px;
+  }
+
+  .home-container {
+    padding: 0;
+  } 
+  
+  .landingtext {
+    line-height: 2vw;
+  }
+
+  .subtitle {
+    line-height: 4.5vw;
+  }
+
+  .container {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-page-header-container {
+    margin-bottom: 80px;
+  }
+
+  .home-container {
+    margin-bottom: 100px;
+  }
+  
+  .hcentered h1:last-child {
+    margin-bottom: 2vw;
+  }
+
+  .subtitle {
+    font-size: 1.3vw;
+  }
 }

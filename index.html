@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/styles.css?v=19">
 </head>
 <body>
-	<div class="container">
+	<div class="main-page-header-container container">
 		<header class="header">
 			<a class="header__logo" href="index.html">PEAK<span>SEL</span></a>
 			<div class="header__list">
@@ -18,16 +18,16 @@
 			</div>
 		</header>
 	</div>
-	<div class="home">
-		<video autoplay loop muted playsinline src="img/plate.mp4?v=1" width="190vw"
-					 style="position: absolute; top: 10vh; right: 5vw; z-index: -1"></video>
-		<video autoplay loop muted playsinline src="img/quad.mp4?v=1" width="190vw"
-					 style="transform: rotate(-10deg); position: absolute; top: 60vh; left: 5vw;z-index: -1"></video>
-		<section class="hcentered" style="min-height: 80vh; padding-top: 20vh;">
-			<h1 class="landingtext">High throughput</h1>
-			<h1 class="landingtext">chromatogram processing</h1>
-			<span style="line-height: 4vw">Speed up your analytical workflow with modern web-based technology</span>
-		</section>
+	<div class="home">		
+		<div class="home-container">			
+			<video class="motion plate-motion" autoplay loop muted playsinline src="img/plate.mp4?v=1" width="190vw"></video>			
+			<section class="hcentered">
+				<h1 class="landingtext">High throughput</h1>
+				<h1 class="landingtext">chromatogram processing</h1>
+				<span class="subtitle">Speed up your analytical workflow with modern web-based technology</span>
+			</section>
+			<video class="motion quad-motion" autoplay loop muted playsinline src="img/quad.mp4?v=1" width="190vw"></video>
+		</div>
 		<section class="home__video" id="learn-more">
 			<iframe width="1024" height="582" src="https://www.youtube.com/embed/q5XsihtzP5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</section>
