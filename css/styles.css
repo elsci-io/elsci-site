@@ -69,7 +69,7 @@ video, .video {
 }
 
 .plate-motion {
-  top: 20px;
+  top: 0;
   left: 85%;
 }
 
@@ -198,7 +198,7 @@ video, .video {
 
 .home-container {
   position:relative;
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto 20px; 
   padding-top: 100px;
   padding-bottom: 100px;
@@ -427,10 +427,6 @@ video, .video {
 
   .home-container {
     padding: 0;
-  } 
-  
-  .landingtext {
-    line-height: 2vw;
   }
 
   .subtitle {
