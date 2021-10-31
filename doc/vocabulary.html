@@ -40,6 +40,12 @@
 		<p id="injection"><b>Injection</b> - represents data (spectra, chromatograms) with all detector measurements
 			for the injected aliquot. Note that it's not the same as <a href="#sample">Sample</a> - which can be injected
 			multiple times.</p>
+		<p><b>MISER</b> (Multiple Injections in a Single Experimental Run) - is a way to leverage
+			Flow Injection Analysis (FIA) of analytical instruments. Typical workflow is injecting a sample, then washing,
+			then injecting again. In MISER runs you inject, then inject again without washing. In the end you wind up with
+		  a single long chromatogram for many injections. This may not be as clean (because column could be dirtied), but
+			it's a way of speeding up analysis. Peaksel will split MISER chromatogram into many different injections and
+		  will report values for each of them separately to simplify further data analysis.</p>
 		<p><b>LargestPeak</b> - peak with maximum area count among the peaks of the same substance on the same
 			chromatogram.</p>
 		<p><b>MF</b> - Molecular Formula</p>
