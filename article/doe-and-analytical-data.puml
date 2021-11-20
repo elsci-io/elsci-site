@@ -1,0 +1,8 @@
+@startuml
+title DoE & Analytical Data
+
+top to bottom direction
+"DoE system" --> [Structures\nExperimental Conditions] "Peaksel\n(or another CDS)"
+"Peaksel\n(or another CDS)" --> [Yield\nConversion\nPeak areas\nImages\nLinks] "DoE system"
+
+@enduml

@@ -42,16 +42,8 @@
 			(Extracted Ion Chromatogram), in DAD it's a chromatogram with some particular wavelength.
 			As opposed to <a href="#total-chromatogram">Total Chromatogram</a>.</p>
 		<p><b>EMW</b> (exact molecular weight) - the molecular weight of the primary isotope of a compound.</p>
-		<p>MS <b>ScanMode</b> - Mass Spectrometer mode in which it scans for a range of m/z (e.g. from 150 to 1000),
-		  in the end we receive a spectrum of masses detected at that range. Opposite of SIM.</p>
-		<p id="sim">MS <b>SIM</b> (Selected Ion Monitoring) - a mode of Mass Spectrometer in which only specific m/z values
-			(selected by user) are selected to be measured. Usually vendors allow to choose 1 or multiple m/z values
-		  and the instrument will spend time measuring 1st, then 2nd, etc. Also most vendors allow measuring different
-			values of m/z at different <a href="#rt">RT</a>.</p>
-		<p>MS <b>SRM</b> (Selective Reaction Monitoring), aka MRM (Multiple Reaction Monitoring) - a mode of
-			triple quadrupole (QqQ) in which first quadrupole selects a particular ion, then it's fragmented in a
-			collision cell, then yet another m/z is measured by the final quadrupole. Basically both 1st and final
-			quadrupoles work in <a href="#sim">SIM mode</a>.</p>
+		<p>Mass Spectrometry types, modes and data processing:
+			<a href="../article/mass-spec.html">ScanMode, SIM, TOF, QTOF, Quadrupole, SQD, SRM, Product Ion Scan, etc.</a></p>
 		<p id="injection"><b>Injection</b> - represents data (spectra, chromatograms) with all detector measurements
 			for the injected aliquot. Note that it's not the same as <a href="#sample">Sample</a> - which can be injected
 			multiple times.</p>

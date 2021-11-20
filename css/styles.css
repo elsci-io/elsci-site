@@ -457,6 +457,9 @@ video, .video {
   }
 }
 
+article h1 {
+  margin-top: 60px;
+}
 article img {
   width: 90vw; border: #444343 solid 1px;
   max-width: 1000px;
