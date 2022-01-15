@@ -19,7 +19,7 @@ services:
       user.log_dir: /var/log
   peakseldb:
     container_name: peakseldb
-    image: postgres:13.2
+    image: postgres:14.1
     environment:
       - POSTGRES_PASSWORD=Pa3pJXs7
     restart: always
