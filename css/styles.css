@@ -82,6 +82,7 @@ video, .video {
 
 .docs p, .docs li {
   font-size: 18px;
+  line-height: 26px;
 }
 .docs a {
   font-size: 18px;
