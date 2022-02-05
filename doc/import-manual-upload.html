@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manual Upload of RAW data</title>
+	<link rel="stylesheet" href="../css/styles.css?v=23">
+</head>
+<body>
+<div class="container">
+	<header class="header">
+		<a class="header__logo" href="../index.html">PEAK<span>SEL</span></a>
+		<div class="header__list">
+			<a href="../index.html" class="header__item" id="why-btn">Why Peaksel?</a>
+			<a href="../docs.html" class="header__item header__item--bordered">Documentation</a>
+			<a href="../buy.html" class="header__item">Try it</a>
+			<a href="../about.html" class="header__item">About us</a>
+		</div>
+	</header>
+</div>
+<article class="container docs">
+	<h1>Manual upload of raw data</h1>
+	<p>
+		Most scientists prefer to set up an automatic import of raw data from the instruments, but if you want to
+		play with some injections and just quickly get the results, Peaksel allows uploading data manually as well.
+		For this you simply open ANALYZE NEW INJECTIONS and drag'n'drop your zip with raw data.</p>
+	<p>Depending on a vendor, zip archive should contain:</p>
+	<ol>
+		<li><b>Waters</b>: a directory or multiple directories with extension RAW, like this: <code>001.RAW</code></li>
+		<li><b>Agilent</b>: a directory with the sequence, inside of it there should be multiple .D folders.</li>
+		<li><b>MzML</b>: a directory or multiple directories with mzml extension, like this: <code>001.mzml</code>.
+			Inside the directory there should be one or more files for each detector with <code>*.MzML</code> extension.</li>
+	</ol>
+	<p>Zip can't be greater than 1GB in size and the size of uncompressed data shouldn't be larger than 10GB. If you need to upload more data, you should either set up automatic import or split your data into multiple zip archives.</p>
+
+	<video autoplay loop muted playsinline src="../img/import-upload-raw.mp4"></video>
+</article>
+<div class="footer">
+	Follow our updates: <a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>, <a href="https://www.facebook.com/elsci.io">Facebook</a>, <a href="https://twitter.com/elsci_io">Twitter</a>, <a href="https://t.me/elsci_peaksel">Telegram</a> || <a href="https://github.com/elsci-io/public/discussions">Support</a> || <a href="mailto:peaksel@elsci.io">Contact us</a>
+</div>
+</body>
+</html>
