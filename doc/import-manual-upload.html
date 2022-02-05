@@ -21,17 +21,20 @@
 <article class="container docs">
 	<h1>Manual upload of raw data</h1>
 	<p>
-		Most scientists prefer to set up an automatic import of raw data from the instruments, but if you want to
+		Most scientists prefer to set up an <a href="import-automation.html">automatic import of raw data</a> from
+		the instruments, but if you want to
 		play with some injections and just quickly get the results, Peaksel allows uploading data manually as well.
-		For this you simply open ANALYZE NEW INJECTIONS and drag'n'drop your zip with raw data.</p>
+		For this you simply open <code>Analyze new injections</code> page and drag'n'drop your zip with raw data.</p>
 	<p>Depending on a vendor, zip archive should contain:</p>
-	<ol>
+	<ul>
 		<li><b>Waters</b>: a directory or multiple directories with extension RAW, like this: <code>001.RAW</code></li>
 		<li><b>Agilent</b>: a directory with the sequence, inside of it there should be multiple .D folders.</li>
 		<li><b>MzML</b>: a directory or multiple directories with mzml extension, like this: <code>001.mzml</code>.
 			Inside the directory there should be one or more files for each detector with <code>*.MzML</code> extension.</li>
-	</ol>
-	<p>Zip can't be greater than 1GB in size and the size of uncompressed data shouldn't be larger than 10GB. If you need to upload more data, you should either set up automatic import or split your data into multiple zip archives.</p>
+	</ul>
+	<p>Zip can't be greater than 1GB in size and the size of uncompressed data shouldn't be larger than 10GB.
+		If you need to upload more data, you should either set up <a href="import-automation.html">automatic import</a>
+		or split your data into multiple zip archives.</p>
 
 	<video autoplay loop muted playsinline src="../img/import-upload-raw.mp4"></video>
 </article>
