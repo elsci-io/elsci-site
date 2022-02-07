@@ -465,3 +465,7 @@ article img {
   width: 90vw; border: #444343 solid 1px;
   max-width: 1000px;
 }
+article video {
+  width: 90vw; border: #444343 solid 1px;
+  max-width: 1000px;
+}
