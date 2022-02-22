@@ -177,6 +177,16 @@
     could be isobaric species either in the original mixture or in the fragments from different precursors.</p>
   <img src="mass-spec-srm.png" style="border: none">
 
+  <h4>Data-dependent acquisition (DDA)</h4>
+  <p>Before selecting ion transitions for SRM we need to determine the precursor ions and the fragments they
+    are split into. It's possible to first run a Scan, then for each of the ion we're interested in, we can run
+    additional Product Ion Scan. But this is very time consuming. DDA solves this problem by allowing you to
+    run a typical SQD Scan Mode and once high intensities of m/z are detected - automatically switch into
+    another mode (e.g. Product Ion Scan).</p>
+  <p>This allows for a much faster method development. E.g. if you're looking for 3 precursors - you'd have to run
+    a Scan Mode and 3 Product Ion Scans to gather all the necessary information for the future SRMs. With DDA it's
+    just a single run. Once a high level of signal is reached - the instrument will check all high m/z's detected.</p>
+
   <h2>Types of chromatograms in Peaksel</h2>
   <p>Peaksel uses prefixes to differentiate between different types of detector modes and chromatograms.
     Full chromatogram name consists of <code>DETECTOR-IONIZATION-CHROMATOGRAM</code> sequence.</p>
