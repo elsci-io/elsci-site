@@ -59,6 +59,15 @@ h3 {
   }
 }
 
+.text {
+  font-size: 20px;
+  line-height: 31px;
+  width: 100%;
+}
+
+.job__info p {
+  margin: 0;
+}
 video, .video {
   max-width: 100%;
   display: block;
@@ -383,7 +392,7 @@ video, .video {
 .subtitle {
   display: inline-block;
   max-width: 80%;
-  line-height: 3.5vw;
+  line-height: 3vw;
 }
 
 .greyarea {
