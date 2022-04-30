@@ -10,12 +10,12 @@
 <div class="container">
   <header class="header">
     <a class="header__logo" href="../index.html">PEAK<span>SEL</span></a>
-    <div class="header__list">
+    <nav class="header__list">
       <a href="../index.html" class="header__item">Overview</a>
       <a href="../docs.html" class="header__item">Documentation</a>
       <a href="../buy.html" class="header__item">Try it</a>
       <a href="../about.html" class="header__item">About us</a>
-    </div>
+    </nav>
   </header>
 </div>
 <article class="container docs">
@@ -49,9 +49,9 @@
   <ol>
     <li>Integration Method may need to be changed and the whole batch requires re-integration</li>
     <li>The quality of the signal is low (a lot of noise and/or coelution) which complicates peak detection</li>
-    <li>If the number of peaks generally was 6 or smaller than it could simply mean that some of the analytes weren’t present in some injections.</li>
-    <li>Detector runs are misaligned and therefore peaks are selected on one chromatogram, but they aren’t found on others at respective retention times.</li>
-    <li>There’s a co-elution, but peaks on Total chromatograms (TIC, TWC) could be associated only with 1 of analytes.</li>
+    <li>If the number of peaks generally was 6 or fewer than it could simply mean that some of the analytes weren’t present in some injections</li>
+    <li>Detector runs are misaligned and therefore peaks are selected on one chromatogram, but they aren’t found on others at respective retention times</li>
+    <li>There’s a co-elution, but peaks on Total chromatograms (TIC, TWC) could be associated only with 1 of analytes</li>
   </ol>
   <p>To know for sure we need to open problematic injections and look at them. In this particular case changing the Integration Method for the batch solved almost all problems.</p>
   <h2>Stable Retention Time across batch</h2>
