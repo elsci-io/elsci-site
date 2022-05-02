@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peaksel - High-Throughput Analysis</title>
+  <link rel="stylesheet" href="css/styles.css?v=23">
+  <link rel="stylesheet" href="css/styles2.css?v=23">
+</head>
+<body>
+<header>
+  <a class="header__logo">
+    <h1 class="visuallyhidden">Peaksel</h1>
+    <div aria-hidden="true">PEAK<span>SEL</span></div>
+  </a>
+  <nav class="header__list">
+    <a class="header__item header__item--bordered">Overview</a>
+    <a href="./docs.html" class="header__item">Documentation</a>
+    <a href="./buy.html" class="header__item">Try it</a>
+    <a href="./about.html" class="header__item">About us</a>
+  </nav>
+</header>
+<main>
+  <section class="home-container hcentered">
+    <video aria-hidden="true" class="motion plate-motion" autoplay loop muted playsinline src="img/plate.mp4?v=1" width="190vw"></video>
+    <h2 class="landingtext">Minable analytical data</h2>
+    <p class="subtitle">Speed up analytical workflows, centralize data, simplify access</p>
+    <!--Video quality is too low-->
+    <!--<video aria-hidden="true" class="motion quad-motion" autoplay loop muted playsinline src="img/quad.mp4?v=1" width="190vw"></video>-->
+  </section>
+
+  <section class="home__video">
+    <h2 class="visuallyhidden">Demo video</h2>
+    <iframe width="1024" height="582" src="https://www.youtube.com/embed/q5XsihtzP5w" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+
+  <section class="job">
+    <h2 class="visuallyhidden">Problems that can be solved with Peaksel</h2>
+    <section class="job__type">
+      <div class="job__info job__info--shrink">
+        <h3>Keep up with synthesis</h3>
+        <p>High Throughput Experimentation (HTE) and High Throughput Screening (HTS) generate huge number of
+          samples. Analyzing them using traditional tools takes hours if not days.
+          Peaksel's batch-level QC, quick navigation and batch editing drastically shorten this time,
+          sometimes to minutes » <a href="article/hte-qc-peaks.html">Read more</a></p>
+      </div>
+      <div id="problem-keep-up-with-synthesis" class="home__problems-img"></div>
+    </section>
+    <section class="job__type">
+      <div class="job__info job__info--shrink">
+        <h3>Data at your fingertips</h3>
+        <p>Peaksel provides a searchable database which lets you quickly get access to
+          historical data. Not only to you, but to anyone on your team.</p>
+      </div>
+      <div class="home__problems-img" style="background-image: url('img/Illustration-11.png')"></div>
+    </section>
+    <section class="job__type">
+      <div class="job__info job__info--shrink">
+        <h3>One tool to rule them all</h3>
+        <p>Keep terabytes of chromatographic data from all your vendors (Waters, Agilent, etc) and all instrument
+          types (Mass Spec, UV and so on) in a single database. Use web browser to analyze, modify and share
+          them with colleagues.</p>
+      </div>
+      <div class="home__problems-img" style="background-image: url('img/Illustration-10.png')"></div>
+    </section>
+    <section class="job__type">
+      <div class="job__info job__info--shrink">
+        <h3><i>In situ</i> data analysis</h3>
+        <p>You don't have to export data to analyze it elsewhere anymore - Peaksel provides native data analysis
+          capabilities. Flexible data tables, beautiful visualizations, statistics, custom formulae, you name it.
+          But if you do need to export - you can do this either manually (CSV) or programmatically via REST API.
+        </p>
+      </div>
+      <div class="home__problems-img" style="background-image: url('img/Illustration-12.png')"></div>
+    </section>
+  </section>
+</main>
+
+<footer class="footer">
+  Follow our updates: <a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>, <a
+    href="https://www.facebook.com/elsci.io">Facebook</a>, <a href="https://twitter.com/elsci_io">Twitter</a>, <a
+    href="https://t.me/elsci_peaksel">Telegram</a> || <a
+    href="https://github.com/elsci-io/public/discussions">Support</a> || <a href="mailto:peaksel@elsci.io">Contact
+  us</a>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

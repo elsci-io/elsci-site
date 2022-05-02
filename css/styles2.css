@@ -1,0 +1,40 @@
+.visuallyhidden:not(:focus):not(:active) {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+header {
+    padding: 10px 50px 0 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.home__problems-img {
+    width: 270px;
+    height: 270px;
+    background-size: cover;
+}
+#problem-keep-up-with-synthesis {
+    background-image: url('../img/Illustration-09.png')
+}
+#data-at-your-fingertips {
+    background-image: url('../img/Illustration-11.png')
+}
