@@ -8,22 +8,24 @@
   <link rel="stylesheet" href="css/styles2.css?v=23">
 </head>
 <body>
-<header>
-  <a class="header__logo">
-    <h1 class="visuallyhidden">Peaksel</h1>
-    <div aria-hidden="true">PEAK<span>SEL</span></div>
+<header class="header">
+  <a class="header__logo" aria-hidden="true">
+    <p>PEAK<span>SEL</span></p>
   </a>
   <nav class="header__list">
-    <a class="header__item header__item--bordered">Overview</a>
-    <a href="./docs.html" class="header__item">Documentation</a>
-    <a href="./buy.html" class="header__item">Try it</a>
-    <a href="./about.html" class="header__item">About us</a>
+    <ul>
+      <!-- class renamed: bordered -> header__item--main  -->
+      <li><a class="header__item header__item--current">Overview</a></li>
+      <li><a href="./docs.html" class="header__item">Documentation</a></li>
+      <li><a href="./buy.html" class="header__item">Try it</a></li>
+      <li><a href="./about.html" class="header__item">About us</a></li>
+    </ul>
   </nav>
 </header>
 <main>
   <section class="home-container hcentered">
     <video aria-hidden="true" class="motion plate-motion" autoplay loop muted playsinline src="img/plate.mp4?v=1" width="190vw"></video>
-    <h2 class="landingtext">Minable analytical data</h2>
+    <h1 class="landingtext">Minable analytical data</h1>
     <p class="subtitle">Speed up analytical workflows, centralize data, simplify access</p>
     <!--Video quality is too low-->
     <!--<video aria-hidden="true" class="motion quad-motion" autoplay loop muted playsinline src="img/quad.mp4?v=1" width="190vw"></video>-->
@@ -37,7 +39,7 @@
 
   <section class="job">
     <h2 class="visuallyhidden">Problems that can be solved with Peaksel</h2>
-    <section class="job__type">
+    <article class="job__type">
       <div class="job__info job__info--shrink">
         <h3>Keep up with synthesis</h3>
         <p>High Throughput Experimentation (HTE) and High Throughput Screening (HTS) generate huge number of
@@ -46,16 +48,16 @@
           sometimes to minutes » <a href="article/hte-qc-peaks.html">Read more</a></p>
       </div>
       <div id="problem-keep-up-with-synthesis" class="home__problems-img"></div>
-    </section>
-    <section class="job__type">
+    </article>
+    <article class="job__type">
       <div class="job__info job__info--shrink">
         <h3>Data at your fingertips</h3>
         <p>Peaksel provides a searchable database which lets you quickly get access to
           historical data. Not only to you, but to anyone on your team.</p>
       </div>
       <div class="home__problems-img" style="background-image: url('img/Illustration-11.png')"></div>
-    </section>
-    <section class="job__type">
+    </article>
+    <article class="job__type">
       <div class="job__info job__info--shrink">
         <h3>One tool to rule them all</h3>
         <p>Keep terabytes of chromatographic data from all your vendors (Waters, Agilent, etc) and all instrument
@@ -63,8 +65,8 @@
           them with colleagues.</p>
       </div>
       <div class="home__problems-img" style="background-image: url('img/Illustration-10.png')"></div>
-    </section>
-    <section class="job__type">
+    </article>
+    <article class="job__type">
       <div class="job__info job__info--shrink">
         <h3><i>In situ</i> data analysis</h3>
         <p>You don't have to export data to analyze it elsewhere anymore - Peaksel provides native data analysis
@@ -73,16 +75,22 @@
         </p>
       </div>
       <div class="home__problems-img" style="background-image: url('img/Illustration-12.png')"></div>
-    </section>
+    </article>
   </section>
 </main>
 
 <footer class="footer">
-  Follow our updates: <a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>, <a
-    href="https://www.facebook.com/elsci.io">Facebook</a>, <a href="https://twitter.com/elsci_io">Twitter</a>, <a
-    href="https://t.me/elsci_peaksel">Telegram</a> || <a
-    href="https://github.com/elsci-io/public/discussions">Support</a> || <a href="mailto:peaksel@elsci.io">Contact
-  us</a>
+  <p>Follow our updates:</p>
+  <ul>
+  <li><a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,</li>
+  <li><a href="https://www.facebook.com/elsci.io">Facebook</a>,</li>
+  <li><a href="https://twitter.com/elsci_io">Twitter</a>,</li>
+  <li><a href="https://t.me/elsci_peaksel">Telegram</a></li>
+  </ul>
+  <span class="visuallyhidden"> ||</span>
+  <a href="https://github.com/elsci-io/public/discussions">Support</a>
+  <span class="visuallyhidden"> ||</span>
+  <a href="mailto:peaksel@elsci.io">Contact us</a>
 </footer>
 
 <script src="js/main.js"></script>
