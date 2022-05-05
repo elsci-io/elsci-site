@@ -12,80 +12,80 @@
   <a class="header__logo" aria-hidden="true">
     <p>PEAK<span>SEL</span></p>
   </a>
-  <nav class="header__list">
-    <ul>
+  <nav class="main-nav">
+    <ul class="main-nav__list">
       <!-- class renamed: bordered -> header__item--main  -->
-      <li><a class="header__item header__item--current">Overview</a></li>
-      <li><a href="./docs.html" class="header__item">Documentation</a></li>
-      <li><a href="./buy.html" class="header__item">Try it</a></li>
-      <li><a href="./about.html" class="header__item">About us</a></li>
+      <li class="main-nav__item main-nav__item--current"><a>Overview</a></li>
+      <li class="main-nav__item"><a href="./docs.html">Documentation</a></li>
+      <li class="main-nav__item"><a href="./buy.html">Try it</a></li>
+      <li class="main-nav__item"><a href="./about.html">About us</a></li>
     </ul>
   </nav>
 </header>
 <main>
-  <section class="home-container hcentered">
-    <video aria-hidden="true" class="motion plate-motion" autoplay loop muted playsinline src="img/plate.mp4?v=1" width="190vw"></video>
-    <h1 class="landingtext">Minable analytical data</h1>
-    <p class="subtitle">Speed up analytical workflows, centralize data, simplify access</p>
+  <section class="slogan">
+    <video aria-hidden="true" class="slogan--decor-video slogan__decor-video--top" autoplay loop muted playsinline src="img/plate.mp4?v=1"></video>
+    <h1 class="slogan__main-text">Minable analytical data</h1>
+    <p class="slogan__secondary-text">Speed up analytical workflows, centralize data, simplify access</p>
     <!--Video quality is too low-->
     <!--<video aria-hidden="true" class="motion quad-motion" autoplay loop muted playsinline src="img/quad.mp4?v=1" width="190vw"></video>-->
   </section>
 
-  <section class="home__video">
+  <section class="promo-video">
     <h2 class="visuallyhidden">Demo video</h2>
     <iframe width="1024" height="582" src="https://www.youtube.com/embed/q5XsihtzP5w" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </section>
 
-  <section class="job">
+  <section class="main-features">
     <h2 class="visuallyhidden">Problems that can be solved with Peaksel</h2>
-    <article class="job__type">
-      <div class="job__info job__info--shrink">
-        <h3>Keep up with synthesis</h3>
-        <p>High Throughput Experimentation (HTE) and High Throughput Screening (HTS) generate huge number of
+    <article class="main-features__item main-feature">
+      <div class="main-feature__content-container">
+        <h3 class="main-feature__title">Keep up with synthesis</h3>
+        <p class="main-feature__text">High Throughput Experimentation (HTE) and High Throughput Screening (HTS) generate huge number of
           samples. Analyzing them using traditional tools takes hours if not days.
           Peaksel's batch-level QC, quick navigation and batch editing drastically shorten this time,
           sometimes to minutes » <a href="article/hte-qc-peaks.html">Read more</a></p>
       </div>
-      <div id="problem-keep-up-with-synthesis" class="home__problems-img"></div>
+      <div class="main-feature__feature-img" style="background-image: url('img/Illustration-09.png')"></div>
     </article>
-    <article class="job__type">
-      <div class="job__info job__info--shrink">
-        <h3>Data at your fingertips</h3>
-        <p>Peaksel provides a searchable database which lets you quickly get access to
+    <article class="main-features__item main-feature">
+      <div class="main-feature__content-container">
+        <h3 class="main-feature__title">Data at your fingertips</h3>
+        <p class="main-feature__text">Peaksel provides a searchable database which lets you quickly get access to
           historical data. Not only to you, but to anyone on your team.</p>
       </div>
-      <div class="home__problems-img" style="background-image: url('img/Illustration-11.png')"></div>
+      <div class="main-feature__feature-img" style="background-image: url('img/Illustration-11.png')"></div>
     </article>
-    <article class="job__type">
-      <div class="job__info job__info--shrink">
-        <h3>One tool to rule them all</h3>
-        <p>Keep terabytes of chromatographic data from all your vendors (Waters, Agilent, etc) and all instrument
+    <article class="main-features__item main-feature">
+      <div class="main-feature__content-container">
+        <h3 class="main-feature__title">One tool to rule them all</h3>
+        <p class="main-feature__text">Keep terabytes of chromatographic data from all your vendors (Waters, Agilent, etc) and all instrument
           types (Mass Spec, UV and so on) in a single database. Use web browser to analyze, modify and share
           them with colleagues.</p>
       </div>
-      <div class="home__problems-img" style="background-image: url('img/Illustration-10.png')"></div>
+      <div class="main-feature__feature-img" style="background-image: url('img/Illustration-10.png')"></div>
     </article>
-    <article class="job__type">
-      <div class="job__info job__info--shrink">
-        <h3><i>In situ</i> data analysis</h3>
-        <p>You don't have to export data to analyze it elsewhere anymore - Peaksel provides native data analysis
+    <article class="main-features__item main-feature">
+      <div class="main-feature__content-container">
+        <h3 class="main-feature__title"><i>In situ</i> data analysis</h3>
+        <p class="main-feature__text">You don't have to export data to analyze it elsewhere anymore - Peaksel provides native data analysis
           capabilities. Flexible data tables, beautiful visualizations, statistics, custom formulae, you name it.
           But if you do need to export - you can do this either manually (CSV) or programmatically via REST API.
         </p>
       </div>
-      <div class="home__problems-img" style="background-image: url('img/Illustration-12.png')"></div>
+      <div class="main-feature__feature-img" style="background-image: url('img/Illustration-12.png')"></div>
     </article>
   </section>
 </main>
 
 <footer class="footer">
   <p>Follow our updates:</p>
-  <ul>
-  <li><a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,</li>
-  <li><a href="https://www.facebook.com/elsci.io">Facebook</a>,</li>
-  <li><a href="https://twitter.com/elsci_io">Twitter</a>,</li>
-  <li><a href="https://t.me/elsci_peaksel">Telegram</a></li>
+  <ul class="social-links">
+  <li class="social-links__item"><a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,</li>
+  <li class="social-links__item"><a href="https://www.facebook.com/elsci.io">Facebook</a>,</li>
+  <li class="social-links__item"><a href="https://twitter.com/elsci_io">Twitter</a>,</li>
+  <li class="social-links__item"><a href="https://t.me/elsci_peaksel">Telegram</a></li>
   </ul>
   <span class="visuallyhidden"> ||</span>
   <a href="https://github.com/elsci-io/public/discussions">Support</a>
