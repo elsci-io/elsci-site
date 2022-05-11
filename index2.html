@@ -4,27 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Peaksel - High-Throughput Analysis</title>
-  <link rel="stylesheet" href="css/styles.css?v=23">
-  <link rel="stylesheet" href="css/styles2.css?v=23">
+  <link rel="stylesheet" href="css/00_defaults.css?v=23">
+  <link rel="stylesheet" href="css/01_utils.css?v=23">
+  <link rel="stylesheet" href="css/02_header.css?v=23">
+  <link rel="stylesheet" href="css/components.css?v=23">
 </head>
 <body>
+<div class="container">
 <header class="header">
-  <a class="header__logo" aria-hidden="true">
-    <p>PEAK<span>SEL</span></p>
+  <a class="header__logo logo" aria-hidden="true">
+    <p class="logo__text main-color1">PEAK<span class="main-color2">SEL</span></p>
   </a>
-  <nav class="main-nav">
-    <ul class="main-nav__list">
-      <!-- class renamed: bordered -> header__item--main  -->
-      <li class="main-nav__item main-nav__item--current"><a>Overview</a></li>
-      <li class="main-nav__item"><a href="./docs.html">Documentation</a></li>
-      <li class="main-nav__item"><a href="./buy.html">Try it</a></li>
-      <li class="main-nav__item"><a href="./about.html">About us</a></li>
+  <nav>
+    <ul class="main-nav">
+      <li class="main-nav__item main-nav__item--active"><a class="main-nav-item__link main-nav-item__link--active">Overview</a></li>
+      <li class="main-nav__item"><a class="main-nav-item__link" href="./docs.html">Documentation</a></li>
+      <li class="main-nav__item"><a class="main-nav-item__link" href="./buy.html">Try it</a></li>
+      <li class="main-nav__item"><a class="main-nav-item__link" href="./about.html">About us</a></li>
     </ul>
   </nav>
 </header>
 <main>
   <section class="slogan">
-    <video aria-hidden="true" class="slogan--decor-video slogan__decor-video--top" autoplay loop muted playsinline src="img/plate.mp4?v=1"></video>
+    <video aria-hidden="true" class="slogan__decor-video slogan__decor-video--top" autoplay loop muted playsinline src="img/plate.mp4?v=1"></video>
     <h1 class="slogan__main-text">Minable analytical data</h1>
     <p class="slogan__secondary-text">Speed up analytical workflows, centralize data, simplify access</p>
     <!--Video quality is too low-->
@@ -82,17 +84,17 @@
 <footer class="footer">
   <p>Follow our updates:</p>
   <ul class="social-links">
-  <li class="social-links__item"><a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,</li>
-  <li class="social-links__item"><a href="https://www.facebook.com/elsci.io">Facebook</a>,</li>
-  <li class="social-links__item"><a href="https://twitter.com/elsci_io">Twitter</a>,</li>
-  <li class="social-links__item"><a href="https://t.me/elsci_peaksel">Telegram</a></li>
+    <li class="social-links__item"><a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,</li>
+    <li class="social-links__item"><a href="https://www.facebook.com/elsci.io">Facebook</a>,</li>
+    <li class="social-links__item"><a href="https://twitter.com/elsci_io">Twitter</a>,</li>
+    <li class="social-links__item"><a href="https://t.me/elsci_peaksel">Telegram</a></li>
   </ul>
   <span class="visuallyhidden"> ||</span>
   <a href="https://github.com/elsci-io/public/discussions">Support</a>
   <span class="visuallyhidden"> ||</span>
   <a href="mailto:peaksel@elsci.io">Contact us</a>
 </footer>
-
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

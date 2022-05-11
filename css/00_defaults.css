@@ -1,0 +1,13 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+h1, .h1-like {
+    color: #444343;
+    font-size: 26px;
+    line-height: 34px;
+}
+p {
+    color: #444343;
+    font-weight: 200;
+}
