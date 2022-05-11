@@ -1,15 +1,14 @@
 .slogan {
-    position:relative;
-    max-width: 80%;
-    margin: 0 auto 20px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .slogan__main-text {
     font-size: 5vw;
     font-weight: normal;
-    line-height: 4vw
+    line-height: 4vw;
+    margin: initial;
 }
 .slogan__secondary-text {
     display: inline-block;
@@ -17,13 +16,12 @@
     line-height: 3vw;
 }
 .slogan__decor-video {
-    width: 190vw;
-    position: absolute;
+    width: 190px;
+    height: 190px;
     z-index: -1;
 }
 .slogan__decor-video--top {
-    top: 0;
-    left: 85%;
+    align-self: flex-end;
 }
 .home__feature-img {
     width: 270px;
