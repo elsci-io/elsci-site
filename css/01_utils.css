@@ -1,6 +1,7 @@
 :root {
     --main-color1: #2082D8;
     --main-color2: #61D66D;
+    --home-content-max-width: 1250px;
 }
 .main-color1 {
     color: var(--main-color1);
@@ -10,10 +11,10 @@
 }
 
 .container {
-    margin: 0 auto;
-    padding: 0 10px;
     width: 100%;
-    max-width: 1250px;
+}
+.container--striped {
+    background-color: #F9F9F9;
 }
 
 .visuallyhidden:not(:focus):not(:active) {

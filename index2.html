@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Peaksel - High-Throughput Analysis</title>
-  <link rel="stylesheet" href="css/00_defaults.css?v=24">
-  <link rel="stylesheet" href="css/01_utils.css?v=24">
-  <link rel="stylesheet" href="css/02_header.css?v=24">
-  <link rel="stylesheet" href="css/components.css?v=24">
+  <link rel="stylesheet" href="css/00_defaults.css?v=26">
+  <link rel="stylesheet" href="css/01_utils.css?v=26">
+  <link rel="stylesheet" href="css/02_header.css?v=26">
+  <link rel="stylesheet" href="css/components.css?v=26">
 </head>
-<body class="container">
+<body>
 <header class="header">
-  <a class="header__logo logo" aria-hidden="true">
+  <a aria-hidden="true">
     <p class="logo__text main-color1">PEAK<span class="main-color2">SEL</span></p>
   </a>
   <nav>
@@ -24,21 +24,22 @@
   </nav>
 </header>
 <main>
-  <section class="slogan">
+  <div class="container">
+  <section class="home-content--centered">
     <video height="190" aria-hidden="true" class="slogan__decor-video slogan__decor-video--top" autoplay loop muted playsinline src="img/plate.mp4?v=1"></video>
     <h1 class="slogan__main-text">Minable analytical data</h1>
     <p class="slogan__secondary-text">Speed up analytical workflows, centralize data, simplify access</p>
     <!--Video quality is too low-->
     <!--<video aria-hidden="true" class="motion quad-motion" autoplay loop muted playsinline src="img/quad.mp4?v=1" width="190vw"></video>-->
-  </section>
 
-  <section class="promo-video">
     <h2 class="visuallyhidden">Demo video</h2>
-    <iframe width="1024" height="582" src="https://www.youtube.com/embed/q5XsihtzP5w" frameborder="0"
+    <iframe class="slogan__video" width="1024" height="582" src="https://www.youtube.com/embed/q5XsihtzP5w" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </section>
+  </div>
 
-  <section class="main-features">
+  <div class="container container--striped">
+  <section class="home-content--centered">
     <h2 class="visuallyhidden">Problems that can be solved with Peaksel</h2>
     <article class="main-features__item main-feature">
       <div class="main-feature__content-container">
@@ -78,6 +79,7 @@
       <div class="main-feature__feature-img" style="background-image: url('img/Illustration-12.png')"></div>
     </article>
   </section>
+  </div>
 </main>
 
 <footer class="footer">

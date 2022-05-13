@@ -1,9 +1,11 @@
-.slogan {
+.home-content--centered {
+    max-width: var(--home-content-max-width);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 50px 0;
 }
-
 .slogan__main-text {
     font-size: 5vw;
     font-weight: normal;
@@ -13,20 +15,47 @@
 .slogan__secondary-text {
     display: inline-block;
     max-width: 80%;
+    margin-bottom: 8vw;
     line-height: 3vw;
 }
 .slogan__decor-video {
-    width: 190px;
-    height: 190px;
+    width: 200px;
+    height: 200px;
     z-index: -1;
 }
 .slogan__decor-video--top {
     align-self: flex-end;
 }
-.home__feature-img {
+.slogan__video {
+    max-width: 1024px;
+    min-height: 200px;
+    /*height: auto;*/
+    display: block;
+}
+
+.main-feature {
+
+}
+.main-features__item {
+    display: flex;
+}
+.main-feature__title {
+    font-size: 47px;
+    line-height: 60px;
+    margin: 0;
+    font-weight: 400;
+    color: #444343;
+}
+.main-feature__text {
+    max-width: 550px;
+    font-size: 20px;
+    line-height: 31px;
+}
+.main-feature__feature-img {
     width: 270px;
     height: 270px;
     background-size: cover;
+    align-self: center;
 }
 
 @media (min-width: 601px) and (max-width: 848px) {
