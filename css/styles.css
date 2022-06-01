@@ -3,6 +3,11 @@
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+:root {
+  --main-color1: #2082D8;
+  --main-color2: #61D66D;
+  --home-content-max-width: 1250px;
+}
 html{
   width: 100vw;
   overflow-x: hidden;
@@ -493,4 +498,54 @@ article img {
 article video {
   width: 90vw; border: #444343 solid 1px;
   max-width: 1000px;
+}
+
+blockquote {
+  quotes: "“" "”" "‘" "’";
+  margin: 0;
+  margin-inline-start: 0;
+  margin-block-start: 0;
+}
+blockquote::before, blockquote::after {
+  position: relative;
+  font-size: 5em;
+  left: 0;
+  top: .3em;
+  color: var(--main-color1)
+}
+blockquote::before {
+  /*content: open-quote;*/
+}
+
+.quotation {
+  /*border: 1px solid rgba(211, 211, 211, 0.51);*/
+  /*background: #F9F9F9;*/
+  /*border-bottom-right-radius: 1em;*/
+  /*border-top-right-radius: 1em;*/
+  /*border-top: 4px solid var(--main-color1);*/
+  /*border-right: 4px solid var(--main-color1);*/
+  padding: .05vw 2vw;
+  margin: 4em 0 0 0;
+}
+.quotation__line {
+  width: 10em;
+  background: var(--main-color1);
+  height: 1px;
+  margin: 30px auto;
+}
+.quotation__text {
+  font-size: 130%;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.quotation__author {
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  font-size: 80%;
+  padding-top: 1em;
+}
+.quotation__author a {
+  margin: 0 .1em;
 }
