@@ -23,8 +23,6 @@
     list-style-type: none;
 }
 .main-nav__item {
-    margin: 0 20px;
-    padding: 0 15px;
     line-height: 30px;
 }
 .main-nav__item--active {
@@ -35,6 +33,7 @@
     text-decoration: none;
     font-weight: 200;
     color: black;
+    padding: 0 2em;
 }
 .main-nav-item__link:hover {
     color: var(--main-color1);

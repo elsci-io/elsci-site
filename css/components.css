@@ -78,3 +78,25 @@
         font-size: 1.3vw;
     }
 }
+.slogan__video {
+    height: 528px;
+    width: 1024px;
+    max-width: 90vw;
+    max-height: 50vw;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer__list {
+    padding: 0;
+}
+.footer__item {
+    list-style: none;
+    height: 2em;
+}
+.footer__link {
+    text-decoration: underline;
+    padding: 1em 0;
+}
