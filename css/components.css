@@ -33,9 +33,26 @@
     display: block;
 }
 
-.main-feature {
-
+.main-features__item::after {
+    content: "";
+    width: 270px;
+    height: 270px;
+    background-size: cover;
+    align-self: center;
 }
+.main-features__item--hte::after {
+    background-image: url("../img/feature__plate-w-liquid-handler.png");
+}
+.main-features__item--db-search::after {
+    background-image: url("../img/feature__db-search.png");
+}
+.main-features__item--many-instruments::after {
+    background-image: url("../img/feature__many-instruments.png");
+}
+.main-features__item--data-analysis::after {
+    background-image: url('../img/feature__data-analysis.png');
+}
+
 .main-features__item {
     display: flex;
 }
