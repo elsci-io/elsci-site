@@ -1,12 +1,14 @@
-body {
+html {
     font-family: Helvetica, sans-serif;
+    font-size: clamp(1em, 4vw, 18px);
 }
 
-h1, .h1-like {
+h1 {
     color: #444343;
-    font-size: 26px;
+    font-size: min(max(2em, 5vw), 26px);
     line-height: 34px;
 }
+
 p {
     color: #444343;
     font-weight: 200;

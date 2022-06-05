@@ -7,24 +7,23 @@
     padding: 50px 0;
 }
 .slogan__main-text {
-    font-size: 5vw;
+    font-size: clamp(1.5em, 1.5em + 2vw, 5vw);
     font-weight: normal;
-    line-height: 4vw;
     margin: initial;
 }
 .slogan__secondary-text {
-    display: inline-block;
-    max-width: 80%;
+    text-align: center;
     margin-bottom: 8vw;
-    line-height: 3vw;
+    font-size: clamp(1.2em, 1.2em + 2vw, 2vw);
 }
 .slogan__decor-video {
-    width: 200px;
+    width: 175px;
     height: 200px;
     z-index: -1;
 }
 .slogan__decor-video--top {
     align-self: flex-end;
+    width: 175px;
 }
 .slogan__video {
     max-width: 1024px;
@@ -57,7 +56,7 @@
     display: flex;
 }
 .main-feature__title {
-    font-size: 47px;
+    font-size: clamp(1.5em, 1.5em + 2vw, 47px);
     line-height: 60px;
     margin: 0;
     font-weight: 400;
@@ -73,27 +72,6 @@
     height: 270px;
     background-size: cover;
     align-self: center;
-}
-
-@media (min-width: 601px) and (max-width: 848px) {
-    .slogan__decor-video--top {
-        top: 14px;
-        left: 82%;
-        width: 175px;
-    }
-}
-@media (max-width: 600px) {
-    .slogan__decor-video--top {
-        margin: 10px auto 20px;
-    }
-    .slogan__secondary-text {
-        line-height: 4.5vw;
-    }
-}
-@media (min-width: 1000px) {
-    .slogan__secondary-text {
-        font-size: 1.3vw;
-    }
 }
 .slogan__video {
     height: 528px;
