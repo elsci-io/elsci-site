@@ -10,6 +10,7 @@
     align-items: center;
     max-width: var(--home-content-max-width);
     margin: 0 auto;
+    height: 4em;
 }
 @media (min-width: 768px) {
     .logo__text {
@@ -31,9 +32,13 @@
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
+    padding: 0;
 }
+
 .main-nav__item {
-    line-height: 30px;
+    display: flex;
+    height: 2em;
+    align-items: center;
 }
 .main-nav__item--active {
     border-bottom: 2px solid var(--main-color1);
@@ -43,11 +48,71 @@
     text-decoration: none;
     font-weight: 200;
     color: black;
-    padding: 0 2em;
+    padding: 1em 2em;
 }
 .main-nav-item__link:hover {
     color: var(--main-color1);
 }
 .main-nav-item__link--active {
     color: var(--main-color1);
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    right: 1em;
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.hamburger-checkbox, .hamburger-overlay {
+    display: none;
+    position: fixed;
+    overflow: visible;
+}
+.hamburger-overlay {
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.hamburger:hover {
+    color: var(--main-color1);
+}
+.hamburger::before {
+    content: "\2630";
+    font-size: 3em;
+}
+
+/*for small screens - hide the menu and show hamburger*/
+@media (max-width: 790px) {
+    .hamburger {
+        display: block;
+    }
+    .main-nav {
+        display: none;
+    }
+    /*don't show the main-nav until user clicks on the hamburger*/
+    .hamburger-checkbox:checked ~ .main-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 5em;
+        top: 1em;
+        background-color: white;
+        box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
+    }
+    .hamburger-checkbox:checked ~ .hamburger-overlay {
+        display: block;
+    }
+    .main-nav-item__link {
+        flex-grow: 1;
+    }
+    .main-nav__item--active {
+        border-bottom: none;
+    }
+    .main-nav__item {
+        margin: .5em;
+    }
 }
