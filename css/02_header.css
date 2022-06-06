@@ -12,7 +12,9 @@
     margin: 0 auto;
     height: 4em;
 }
-
+.logo {
+    margin-left: 1em;
+}
 .logo__text {
     margin: 0;
     font-size: clamp(1.5em, 1.5em + 2vw, 2.5em);

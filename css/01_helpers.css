@@ -7,6 +7,7 @@
 
 .container {
     width: 100%;
+    padding: 0 1em;
 }
 .container--striped {
     background-color: var(--background-color2);

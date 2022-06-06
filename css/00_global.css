@@ -5,7 +5,9 @@
     --main-color2: #61D66D;
     --background-color2: #F9F9F9;
 }
-
+* {
+    box-sizing: border-box;
+}
 html {
     font-family: Helvetica, sans-serif;
     font-size: clamp(1em, 4vw, 18px);
