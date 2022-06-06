@@ -1,92 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Peaksel - High-Throughput Analysis</title>
-	<link rel="stylesheet" href="css/styles.css?v=39">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peaksel - High-Throughput Analysis</title>
+  <link rel="stylesheet" href="css/00_global.css?v=40">
+  <link rel="stylesheet" href="css/01_helpers.css?v=40">
+  <link rel="stylesheet" href="css/02_header.css?v=40">
+  <link rel="stylesheet" href="css/02_components.css?v=40">
+  <link rel="stylesheet" href="css/02_quotation.css?v=40">
 </head>
 <body>
-	<div class="main-page-header-container container">
-		<header class="header">
-      <!-- Add visuallyhidden h1-->
-			<a class="header__logo">PEAK<span>SEL</span></a>
-			<nav class="header__list">
-				<a class="header__item header__item--bordered">Overview</a>
-				<a href="./docs.html" class="header__item">Documentation</a>
-				<a href="./buy.html" class="header__item">Try it</a>
-				<a href="./about.html" class="header__item">About us</a>
-			</nav>
-		</header>
-	</div>
-	<main>
-	<section class="home">
-		<div class="home-container">			
-			<video class="motion plate-motion" autoplay loop muted playsinline src="img/plate.mp4?v=1" width="190vw"></video>			
-			<section class="hcentered">
-				<h1 class="landingtext">Minable analytical data</h1>
-				<span class="subtitle">Speed up analytical workflows, centralize data, simplify access</span>
-			</section>
-			<figure class="quotation">
-				<blockquote class="quotation__text">
-					Have to say I'm grateful that Peaksel has greatly improved our efficiency of HTE analysis recently!
-				</blockquote>
+<header class="header">
+  <a aria-hidden="true" class="logo">
+    <p class="logo__text main-color1">PEAK<span class="main-color2">SEL</span></p>
+  </a>
+  <nav>
+    <input id="hamburger" class="hamburger-checkbox" type="checkbox">
+    <label for="hamburger" class="hamburger-overlay" tabindex="-1"></label>
+    <label for="hamburger" class="hamburger"></label>
+    <ul class="main-nav">
+      <li class="main-nav__item main-nav__item--active"><a class="main-nav-item__link main-nav-item__link--active">Overview</a></li>
+      <li class="main-nav__item"><a class="main-nav-item__link" href="./docs.html">Documentation</a></li>
+      <li class="main-nav__item"><a class="main-nav-item__link" href="./buy.html">Try it</a></li>
+      <li class="main-nav__item"><a class="main-nav-item__link" href="./about.html">About us</a></li>
+    </ul>
 
-				<figcaption class="quotation__author"><p>— Shimin Su, the <a href="https://www.x-mol.com/groups/Liao_Kuangbiao?lang=en">Liao Group</a> at
-					Guangzhou National Laboratory, China</p>
-				</figcaption>
-			</figure>
-      <!--Video quality is too low-->
-<!--			<video class="motion quad-motion" autoplay loop muted playsinline src="img/quad.mp4?v=1" width="190vw"></video>-->
-		</div>
-		<section class="home__video">
-			<iframe width="1024" height="582" src="https://www.youtube.com/embed/q5XsihtzP5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</section>
-		<section class="job">
-			<div class="job__type">
-				<section class="job__info job__info--shrink">
-					<h2>Keep up with synthesis</h2>
-					<p>High Throughput Experimentation (HTE) and High Throughput Screening (HTS) generate huge number of
-						samples. Analyzing them using traditional tools takes hours if not days.
-					  Peaksel's batch-level QC, quick navigation and batch editing drastically shorten this time,
-						sometimes to minutes » <a href="article/hte-qc-peaks.html">Read more</a></p>
-				</section>
-				<img src="img/feature__plate-w-liquid-handler.png" alt="liquid handler" style="width: 270px">
-			</div>
-			<section class="job__type">
-				<div class="job__info job__info--shrink">
-					<h2>Data at your fingertips</h2>
-					<p>Peaksel provides a searchable database which lets you quickly get access to
-						historical data. Not only to you, but to anyone on your team.</p>
-				</div>
-				<img src="img/feature__db-search.png" alt="search in database" style="width: 270px">
-			</section>
-			<section class="job__type">
-				<div class="job__info job__info--shrink">
-					<h2>One tool to rule them all</h2>
-					<p>Keep terabytes of chromatographic data from all your vendors (Waters, Agilent, etc) and all instrument
-						types (Mass Spec, UV and so on) in a single database. Use web browser to analyze, modify and share
-						them with colleagues.</p>
-				</div>
-				<img src="img/feature__many-instruments.png" alt="many HPLC instruments" style="width: 270px; float: left">
-			</section>
-			<section class="job__type">
-				<div class="job__info job__info--shrink">
-					<h2><i>In situ</i> data analysis</h2>
-					<p>You don't have to export data to analyze it elsewhere anymore - Peaksel provides native data analysis
-						capabilities. Flexible data tables, beautiful visualizations, statistics, custom formulae, you name it.
-						But if you do need to export - you can do this either manually (CSV) or programmatically via REST API.
-					</p>
-				</div>
-				<img src="img/feature__data-analysis.png" alt="visualizations" style="width: 270px; float: left">
-			</section>
-		</section>
-	</section>
-	</main>
-	<footer class="footer">
-		Follow our updates: <a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>, <a href="https://www.facebook.com/elsci.io">Facebook</a>, <a href="https://twitter.com/elsci_io">Twitter</a>, <a href="https://t.me/elsci_peaksel">Telegram</a> || <a href="https://github.com/elsci-io/public/discussions">Support</a> || <a href="mailto:peaksel@elsci.io">Contact us</a>
-	</footer>
+  </nav>
+</header>
+<main>
+  <div class="container">
+  <section class="slogan home-content--centered">
+    <video height="190" aria-hidden="true" class="slogan__decor-video slogan__decor-video--top" autoplay loop muted playsinline src="img/plate.mp4?v=1"></video>
+    <h1 class="slogan__main-text">Minable analytical data</h1>
+    <p class="slogan__secondary-text">Speed up analytical workflows, centralize data, simplify access</p>
+    <!--Video quality is too low-->
+    <!--<video aria-hidden="true" class="motion quad-motion" autoplay loop muted playsinline src="img/quad.mp4?v=1" width="190vw"></video>-->
 
-	<script src="js/main.js"></script>
+    <figure class="quotation">
+      <blockquote class="quotation__text">
+        Have to say I'm grateful that Peaksel has greatly improved our efficiency of HTE analysis recently!
+      </blockquote>
+
+      <figcaption class="quotation__author"><p>— Shimin Su, the <a href="https://www.x-mol.com/groups/Liao_Kuangbiao?lang=en">Liao Group</a> at
+        Guangzhou National Laboratory, China</p>
+      </figcaption>
+    </figure>
+
+    <h2 class="visuallyhidden">Demo video</h2>
+    <iframe class="slogan__video" src="https://www.youtube.com/embed/q5XsihtzP5w" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+  </div>
+
+  <div class="container container--striped">
+  <section class="main-features home-content--centered">
+    <h2 class="visuallyhidden">Problems that can be solved with Peaksel</h2>
+    <article class="main-features__item main-features__item--hte main-feature">
+      <div class="main-feature__content-container main-feature__content-container--hte">
+        <h3 class="main-feature__title">Keep up with synthesis</h3>
+        <p class="main-feature__text">High Throughput Experimentation (HTE) and High Throughput Screening (HTS) generate huge number of
+          samples. Analyzing them using traditional tools takes hours if not days.
+          Peaksel's batch-level QC, quick navigation and batch editing drastically shorten this time,
+          sometimes to minutes » <a href="article/hte-qc-peaks.html">Read more</a></p>
+      </div>
+    </article>
+    <article class="main-features__item main-features__item--db-search main-feature">
+      <div class="main-feature__content-container">
+        <h3 class="main-feature__title">Data at your fingertips</h3>
+        <p class="main-feature__text">Peaksel provides a searchable database which lets you quickly get access to
+          historical data. Not only to you, but to anyone on your team.</p>
+      </div>
+    </article>
+    <article class="main-features__item main-features__item--many-instruments main-feature">
+      <div class="main-feature__content-container">
+        <h3 class="main-feature__title">One tool to rule them all</h3>
+        <p class="main-feature__text">Keep terabytes of chromatographic data from all your vendors (Waters, Agilent, etc) and all instrument
+          types (Mass Spec, UV and so on) in a single database. Use web browser to analyze, modify and share
+          them with colleagues.</p>
+      </div>
+    </article>
+    <article class="main-features__item main-features__item--data-analysis main-feature">
+      <div class="main-feature__content-container">
+        <h3 class="main-feature__title"><i>In situ</i> data analysis</h3>
+        <p class="main-feature__text">You don't have to export data to analyze it elsewhere anymore - Peaksel provides native data analysis
+          capabilities. Flexible data tables, beautiful visualizations, statistics, custom formulae, you name it.
+          But if you do need to export - you can do this either manually (CSV) or programmatically via REST API.
+        </p>
+      </div>
+    </article>
+  </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <section class="footer__social">
+  <p>Follow our updates:</p>
+  <ul class="footer__list">
+    <li class="footer__item"><a target="_blank" class="footer__link" href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a></li>
+    <li class="footer__item"><a target="_blank" class="footer__link" href="https://www.facebook.com/elsci.io">Facebook</a></li>
+    <li class="footer__item"><a target="_blank" class="footer__link" href="https://twitter.com/elsci_io">Twitter</a></li>
+  </ul>
+  </section>
+  <section class="footer__contacts">
+    <p>Contact us:</p>
+    <ul class="footer__list">
+      <li class="footer__item"><a target="_blank" class="footer__link" href="https://github.com/elsci-io/public/discussions">Public QnA</a></li>
+      <li class="footer__item"><a class="footer__link" href="mailto:peaksel@elsci.io">Email</a></li>
+      <li class="footer__item"><a target="_blank" class="footer__link" href="https://t.me/elsci_peaksel">Telegram IM</a></li>
+    </ul>
+  </section>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
