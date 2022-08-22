@@ -2,7 +2,7 @@ version: "3.9"
 services:
   peaksel:
     container_name: peaksel
-    image: elsci/peaksel:VERSION
+    image: elsci/peaksel:PEAKSEL_VERSION
     depends_on:
       peakseldb:
         condition: service_healthy
@@ -12,6 +12,16 @@ services:
       - ./logs:/var/log/peaksel
       - ./injections:/opt/injections
     environment:
+      security.in_memory_users.name: user
+      security.in_memory_users.password: user
+      security.in_memory_users.role: USER
+      # In case you want to enable OAuth2
+#      spring.active.profiles: oauth2
+#      security.oauth2.authorization-uri: https://...
+#      security.oauth2.token-uri: https://...
+#      security.oauth2.user-info-uri: https://...
+#      security.oauth2.client-id: ...
+
       server.port: 8080
       db.url: jdbc:postgresql://peakseldb:5432/elsci?currentSchema=peaksel
       db.user: peaksel
