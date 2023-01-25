@@ -138,6 +138,23 @@ video, .video {
 .buy-header-container {
   margin-bottom: 40px;
 }
+.billing-plans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.billing-plan {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  min-width: 300px;
+  width: 30%;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.billing-plan__title {
+  padding: 10px;
+}
 
 .btn {
   margin: 0;
@@ -387,18 +404,6 @@ video, .video {
       max-width: 550px;
       -ms-flex-negative: 1;
       flex-shrink: 1; }
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  min-width: 300px;
-  width: 30%;
-  float: left;
-  margin-left: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-.cardtitle {
-  padding: 10px;
-}
 .hugetext {
   font-size: 50px;
 }
