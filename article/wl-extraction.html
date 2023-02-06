@@ -79,8 +79,8 @@
   <h2>How Peaksel extracts UV chromatograms</h2>
   <p>Suppose you want to extract a <code>254±4nm</code>, what Peaksel will do is:</p>
   <ol>
-    <li>Sum all wavelengths between <code>250nm</code> and <code>258nm</code>. Note, that other software may
-      integrate area in range instead.</li>
+    <li>Sum intensities of all wavelengths between <code>250nm</code> and <code>258nm</code>. Note, that other software may
+      <i>integrate area</i> (instead of summing) in the range instead.</li>
     <li>And divide by the number of points summed to get an average. So if your instrument gathered
       250, 251, …, 258 nm, then Peaksel will divide by 9.</li>
   </ol>
