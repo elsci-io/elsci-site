@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
 :root {
     --home-content-max-width: 1250px;
     --text-color: #444343;
@@ -9,7 +10,7 @@
     box-sizing: border-box;
 }
 html {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: clamp(1em, 4vw, 18px);
 }
 body {
