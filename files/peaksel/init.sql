@@ -1,6 +1,9 @@
 create database elsci
   template template0
   encoding = 'utf8'
+  -- Ensure we're NOT using ICU (which it may be by default depending on how initdb script was ran and maybe also
+  -- depending some OS & defaults). Otherwise lc_collate will be ignored.
+  locale_provider = 'libc'
   -- How should the text fields be compared during sorting. 'C' means they are compared by their code points - which
   -- is the simplest, but it does mean that the text isn't always sorted alphabetically. Since we use text-based
   -- IDs, it's important to keep ID-generation consistent with the DB collation - ID that was generated later
@@ -12,6 +15,6 @@ create database elsci
   lc_ctype = 'en_US.utf8';
 \connect elsci;
 
-create role peaksel with encrypted password 'HuCZSQUH' login;
+create role peaksel with encrypted password 'p_uC1SQUH' login;
 create schema peaksel authorization peaksel;
 create extension pg_trgm with schema pg_catalog;
