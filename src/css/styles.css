@@ -46,6 +46,8 @@ li {
 	}
 }
 
+/*            HEADER           */
+
 .header-elsci {
 	height: 4em;
 	display: flex;
@@ -122,14 +124,34 @@ li {
 		margin: 8px;
 	}
 }
-.products{
+
+
+/*           PRODUCTS        */
+
+.products-title {
+ text-align: center;
+ font-size: 3rem;
+ letter-spacing: 0.3px;
+}
+.products-list{
 	display: flex;
+
+}
+.products-item {
+	flex: 1 0 33.3%;
+	max-width: 33.3%;
 }
 .product-card {
+	box-sizing: border-box;
 	max-width: 350px;
 	border: 1px solid #2082d8;
-	padding: 30px;
+	padding: 1.5rem;
+	padding-bottom: 1rem;
 	border-radius: 5px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 .product-card__header {
 	display: flex;
@@ -143,6 +165,7 @@ li {
 }
 .product-card__header--tag {
 	color: gray;
+	text-align: right;
 }
 .product-card__title {
 	color: #2082d8;
@@ -154,4 +177,6 @@ li {
 }
 .product-card__description {
 	line-height: 1.7;
+	flex-grow: 1;
+	margin: 0;
 }
