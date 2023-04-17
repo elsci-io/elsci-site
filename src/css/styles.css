@@ -138,7 +138,8 @@ li {
 	text-align: center;
 	font-size: 3rem;
 	letter-spacing: 0.3px;
-	background: #444343;
+	color: #444343;
+	font-weight: 500;
 	/* background-clip: inherit;
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent; */
@@ -215,6 +216,7 @@ li {
 	color: #2082d8;
 	font-size: 3rem;
 	margin: 2rem 0;
+	font-weight: 500;
 }
 .product-card__title span {
 	color: #61d66d;
