@@ -7,6 +7,7 @@ let fs = require('fs');
 const header = fs.readFileSync(__dirname + '/src/header.html');
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
@@ -38,8 +39,7 @@ module.exports = {
         ]
     },
     devServer: {
-        static: path.resolve(__dirname, '..'),
-        historyApiFallback: true,
+        static: './dist',
         hot: true,
         host: 'localhost',
         port: 3457
