@@ -138,10 +138,10 @@ li {
 	text-align: center;
 	font-size: 3rem;
 	letter-spacing: 0.3px;
-	background: var(--gradient-blue);
-	background-clip: inherit;
+	background: #444343;
+	/* background-clip: inherit;
 	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
+  	-webkit-text-fill-color: transparent; */
 }
 .products-list {
 	display: flex;
