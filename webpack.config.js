@@ -5,6 +5,7 @@ const path = require('path');
 let fs = require('fs');
 
 const header = fs.readFileSync(__dirname + '/src/header.html');
+const footer = fs.readFileSync(__dirname + '/src/footer.html');
 
 module.exports = {
     mode: 'development',
@@ -16,7 +17,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            header: header
+            header: header,
+            footer: footer
         }),
         new CopyWebpackPlugin({
             patterns: [
