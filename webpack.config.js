@@ -7,6 +7,18 @@ let fs = require('fs');
 const header = fs.readFileSync(__dirname + '/src/header.html');
 const footer = fs.readFileSync(__dirname + '/src/footer.html');
 
+// find all html files in src directory and create a new HtmlWebpackPlugin for each one
+
+let files = fs.readdirSync(__dirname + '/src');
+let htmlPlugins = files.filter(file => file.endsWith('.html')).map(file => {
+    return new HtmlWebpackPlugin({
+        template: __dirname + '/src/' + file,
+        filename: file,
+        header: header,
+        footer: footer
+    });
+});
+
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
@@ -15,11 +27,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            header: header,
-            footer: footer
-        }),
+        ...htmlPlugins,
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/css', to: 'css' },
