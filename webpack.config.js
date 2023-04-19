@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 let fs = require('fs');
@@ -32,20 +33,29 @@ module.exports = {
             patterns: [
                 { from: 'src/css', to: 'css' },
                 { from: 'src/js', to: 'js' },
-                { from: 'src/images', to: 'images' }
+                { from: 'src/images', to: 'images' },
+                { from: 'src/peaksel', to: 'peaksel' }
             ]
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'styles.css',
+            chunkFilename: '*.css'
         }),
     ],
     module: {
         rules: [
+            // {
+            //     test: /\.css$/,
+            //     use:
+            //         [
+            //             'style-loader',
+            //             'css-loader',
+            //         ]
+            // },
             {
-                test: /\.css$/,
-                use:
-                    [
-                        'style-loader',
-                        'css-loader',
-                    ]
-            }
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+            },
         ]
     },
     devServer: {

@@ -1,0 +1,104 @@
+.home-content--centered {
+    max-width: var(--home-content-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+.slogan__main-text {
+    font-size: clamp(1.5em, 1.5em + 2vw, 5vw);
+    font-weight: normal;
+    margin: initial;
+}
+.slogan__secondary-text {
+    text-align: center;
+    margin-bottom: 8vw;
+    font-size: clamp(1.2em, 1.2em + 2vw, 2vw);
+}
+.slogan__decor-video {
+    width: 175px;
+    height: 200px;
+    z-index: -1;
+}
+.slogan__decor-video--top {
+    align-self: flex-end;
+    width: 175px;
+}
+.slogan__video {
+    max-width: 1024px;
+    min-height: 200px;
+    /*height: auto;*/
+    display: block;
+}
+
+.main-features__item {
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-features__item::after {
+    content: "";
+    width: 270px;
+    height: 270px;
+    background-size: cover;
+    align-self: center;
+}
+.main-features__item--hte::after {
+    background-image: url("../img/feature__plate-w-liquid-handler.png");
+}
+.main-features__item--db-search::after {
+    background-image: url("../img/feature__db-search.png");
+}
+.main-features__item--many-instruments::after {
+    background-image: url("../img/feature__many-instruments.png");
+}
+.main-features__item--data-analysis::after {
+    background-image: url('../img/feature__data-analysis.png');
+}
+.main-features__item--cro-cmo::after {
+    background-image: url('../img/feature__cro-cmo--alpha.png');
+}
+
+.main-feature__title {
+    font-size: clamp(1.5em, 1.5em + 2vw, 47px);
+    line-height: 60px;
+    margin: 0;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.main-feature__text {
+    max-width: 550px;
+    font-size: 20px;
+    line-height: 31px;
+}
+.main-feature__feature-img {
+    width: 270px;
+    height: 270px;
+    background-size: cover;
+    align-self: center;
+}
+.slogan__video {
+    height: 528px;
+    width: 1024px;
+    max-width: 90vw;
+    max-height: 50vw;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer__list {
+    padding: 0;
+}
+.footer__item {
+    list-style: none;
+    height: 2em;
+}
+.footer__link {
+    text-decoration: underline;
+    padding: 1em 0;
+}
+.footer_address {
+    font-style: italic;
+}

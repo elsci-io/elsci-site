@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>DAD/PDA: Extracted and Reference wavelengths</title>
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<script src="../js/app.js"></script>
+		<style>
+			#toc div.h1 {
+				display: none;
+			}
+			#toc div {
+				margin-top: 0.5em;
+			}
+			#toc div.h2 {
+				margin-left: 1em;
+			}
+			#doc div {
+				margin-top: 5em;
+			}
+			h2 {
+				border-bottom: 1px solid lightgrey;
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<a class="header__logo" href="../index.html">PEAK<span>SEL</span></a>
+				<nav class="header__list">
+					<a href="../index.html" class="header__item">Overview</a>
+					<a href="../docs.html" class="header__item">Documentation</a>
+					<a href="../buy.html" class="header__item">Try it</a>
+					<a href="../about.html" class="header__item">About us</a>
+				</nav>
+			</header>
+		</div>
+
+		<article class="container docs">
+			<h1>DAD/PDA: Extracted and Reference wavelengths</h1>
+			<div id="toc"></div>
+			<p>
+				If you gather full DAD/PDA spectra, then instead of extracting a
+				wavelength during acquisition, you can do this digitally offline. Unless
+				you’re standing next to the instrument and want to know peak shapes
+				right away, there’s little value (and may be some harm) in extracting
+				wavelengths right in the acquisition CDS. You can always do this offline
+				after all spectra are gathered.
+			</p>
+
+			<h2>Problems with online wavelength extraction</h2>
+			<p>
+				First, the way your instrument sets up wavelength extraction isn’t
+				obvious. From Waters and Agilent documentation it’s not clear if they
+				acquire requested wavelength separately. Meaning, does DAD switch
+				between gathering full-spectra and selected-wavelength? Or maybe it
+				keeps acquiring the spectra and simply extracts the chromatogram
+				afterwards in the software? If it’s the former, then extracting
+				digitally afterwards will give slightly different values. Which is
+				probably not a big deal, but it’s not perfect either.
+			</p>
+			<p>
+				A bigger problem with this is that when reading files by offline
+				processing software, you don’t know if it displays whatever was
+				acquired. And if that software does display the original trace, the
+				results may differ if you do this again in the offline software. Because
+				integration algorithms can be different between 2 software. For this
+				reason if spectra are available, Peaksel will discard the original
+				traces and will re-extract it itself. This way we ensure all
+				chromatograms are extracted the same way and guarantee some consistency.
+			</p>
+
+			<h2>Reference wavelength - how does it work?</h2>
+			<p>
+				If you use a gradient elution, you may end up with a baseline drift. To
+				compensate for this some scientists use a Reference Wavelength. The
+				thinking is:
+			</p>
+			<ol>
+				<li>
+					If changing solvent composition has a global impact on all wavelengths
+					(e.g. due to changes in refractive index), then it adds/subtracts xAU
+					both at <code>254nm</code> as well as at <code>300nm</code>.
+				</li>
+				<li>
+					Therefore if we subtract whatever the signal is at
+					<code>300nm</code> from <code>254nm</code>, we correct for the drift
+					and end up with a straight baseline.
+				</li>
+			</ol>
+			<p>
+				There are problems with this thinking though: what if at some point a
+				substance is eluted that absorbs at 300nm? Then by subtracting
+				<code>300nm</code> from <code>254nm</code> we get an unjustifiable
+				signal reduction. This is one of the reasons you may have dips on UV
+				chromatograms. But if there’s no clear dip - you may just get a smaller
+				peak area. So the data will lie and you wouldn’t know it.
+			</p>
+			<p>
+				Now let’s say you extract a <code>254nm - 300±50nm</code> and discard
+				spectra. Without the original spectra, how do you check if there weren’t
+				true absorptions at <code>300nm</code>? This is a reason you can’t
+				discard spectra in case you subtract a Reference Wavelength. Or at least
+				you should extract Reference Wavelength as a separate trace - in
+				addition to the wavelength of interest.
+			</p>
+			<p>
+				Additionally, suppose there’s a range of wavelengths that aren’t
+				absorbed by any substance. So you can subtract it. But how do you know
+				that range? You’ll first have to extract Reference Wavelength to ensure
+				there are no peaks. Would you want to do 2 injections then? Probably
+				not.
+			</p>
+			<p>
+				These are the reasons it doesn't make sense to subtract online and
+				always prefer post-processing. See also
+				<a
+					href="https://hplctips.blogspot.com/2011/03/reference-wavelengths-as-used-in-hplc.html"
+					target="_blank"
+					>an article by HPLC EXPERT</a
+				>.
+			</p>
+
+			<h2>How Peaksel extracts UV chromatograms</h2>
+			<p>
+				Suppose you want to extract a <code>254±4nm</code>, what Peaksel will do
+				is:
+			</p>
+			<ol>
+				<li>
+					Sum intensities of all wavelengths between <code>250nm</code> and
+					<code>258nm</code>. Note, that other software may
+					<i>integrate area</i> (instead of summing) in the range instead.
+				</li>
+				<li>
+					And divide by the number of points summed to get an average. So if
+					your instrument gathered 250, 251, …, 258 nm, then Peaksel will divide
+					by 9.
+				</li>
+			</ol>
+			<p>
+				Why averaging? In general the reason you specify
+				<code>254±4</code> instead of just <code>254nm</code>
+				is because you want to reduce noise. Since any measured signal always
+				has random noise, sometimes we get a little bigger signal than the true
+				value, sometimes we get a little smaller value. So by summing multiple
+				values we cancel it out. Then we calculate the average to give an
+				approximation to whatever was at
+				<code>254nm</code>.
+			</p>
+			<p>
+				Averaging also means that we most likely will have a lower signal. So
+				the wider the bandwidth, the smaller the peaks get. This is because your
+				λ<small>max</small> is usually the apex of the peak on a spectrum and
+				the rest of the points are located lower. Well, unless there's an
+				overlap with another spectral peak and a shoulder is formed. But in that
+				case you're better off selecting a different wavelength anyway.
+			</p>
+			<p>
+				Note that the <code>Total</code> (aka TWC) signal is different. This one
+				is just a summation without averaging. So they can’t be compared.
+			</p>
+
+			<h2>How Peaksel subtracts Reference Wavelength</h2>
+			<p>A chromatogram <code>254±4 - 300±50</code> is calculated this way:</p>
+			<ol>
+				<li>Get an average extracted wavelength at <code>254±4</code></li>
+				<li>
+					Get an average of the Reference Wavelength at <code>300±50nm</code>
+				</li>
+				<li>Subtract 2nd from the 1st</li>
+			</ol>
+		</article>
+
+		<footer class="footer">
+			Follow our updates:
+			<a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,
+			<a href="https://www.facebook.com/elsci.io">Facebook</a>,
+			<a href="https://twitter.com/elsci_io">Twitter</a>,
+			<a href="https://t.me/elscipeaksel">Telegram</a> ||
+			<a href="https://github.com/elsci-io/public/discussions">Support</a> ||
+			<a href="mailto:peaksel@elsci.io">Contact us</a>
+		</footer>
+	</body>
+</html>

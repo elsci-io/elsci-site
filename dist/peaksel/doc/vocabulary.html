@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Analytical Vocabulary and Abbreviations</title>
+		<link rel="stylesheet" href="../../css/styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<a class="header__logo" href="../index.html">PEAK<span>SEL</span></a>
+				<nav class="header__list">
+					<a href="../index.html" class="header__item">Overview</a>
+					<a href="../docs.html" class="header__item header__item--bordered"
+						>Documentation</a
+					>
+					<a href="../buy.html" class="header__item">Try it</a>
+					<a href="../about.html" class="header__item">About us</a>
+				</nav>
+			</header>
+		</div>
+		<div class="container docs">
+			<p>
+				Some of the terminology that Peaksel uses differs from the terminology
+				in other CDS - usually the intent is to make it more precise or more
+				generic to cover a broader set of instruments. Use Ctrl+F or Cmd+F to
+				search for terms on this page.
+			</p>
+			<h1>Peaksel Vocabulary and Abbreviations</h1>
+			<p>
+				<b>Base</b> - the most abundant spectrum value (on the X axis) at
+				specific RT or within a peak. In terms of Mass Spectrometry it's usually
+				called <i>Base Peak Mass</i> (<i>BPM</i>) - the prevailing m/z. In terms
+				of UV/IR/Vis detectors it's the wavelength of maximum absorbance.
+			</p>
+			<p id="rt">
+				<b>RT</b> - Retention Time, an X point on a chromatogram. Usually
+				measured in minutes. Peak RT is the time of its highest point.
+			</p>
+			<p>
+				<b>Batch</b> - a set of instrument
+				<a href="#injection">injections</a> grouped together. Usually they
+				represent 1 logical experiment.
+			</p>
+			<p id="dad">
+				<b>DAD</b> (Diode Array Detection) or <b>PDA</b> (Photodiode-Array
+				Detection) - a type of detectors which measures the absorbance of
+				wavelengths in UV and Visible range. Each diode measures some specific
+				wavelengths, and since there are many diodes (an array) we get a whole
+				spectrum gathered with one measurement (as opposed to UV detector which
+				measures only 1 wavelength at a time).
+			</p>
+			<p id="total-chromatogram">
+				<b>Total Chromatogram</b> aka <i>TIC</i> (Total Ion Chromatogram) in
+				Mass Spec, <i>TWC</i> (Total Wave Chromatogram) in
+				<a href="#dad">DAD</a>. As opposed to
+				<a href="#extracted-chromatogram">Extracted Chromatogram</a>.
+			</p>
+			<p id="extracted-chromatogram">
+				<b>Extracted Chromatogram</b> - in Mass Spec it's an EIC (Extracted Ion
+				Chromatogram), in DAD it's a chromatogram with some particular
+				wavelength. As opposed to
+				<a href="#total-chromatogram">Total Chromatogram</a>.
+			</p>
+			<p>
+				<b>EMW</b> (exact molecular weight) - the molecular weight of the
+				primary isotope of a compound.
+			</p>
+			<p>
+				Mass Spectrometry types, modes and data processing:
+				<a href="../article/mass-spec.html"
+					>ScanMode, SIM, TOF, QTOF, Quadrupole, SQD, SRM, Product Ion Scan,
+					etc.</a
+				>
+			</p>
+			<p id="injection">
+				<b>Injection</b> - represents data (spectra, chromatograms) with all
+				detector measurements for the injected aliquot. Note that it's not the
+				same as <a href="#sample">Sample</a> - which can be injected multiple
+				times.
+			</p>
+			<p>
+				<b>MISER</b> (Multiple Injections in a Single Experimental Run) - is a
+				way to leverage Flow Injection Analysis (FIA) of analytical instruments.
+				Typical workflow is injecting a sample, then washing, then injecting
+				again. In MISER runs you inject, then inject again without washing. In
+				the end you wind up with a single long chromatogram for many injections.
+				This may not be as clean (because column could be dirtied), but it's a
+				way of speeding up analysis. Peaksel will split MISER chromatogram into
+				many different injections and will report values for each of them
+				separately to simplify further data analysis.
+			</p>
+			<p>
+				<b>LargestPeak</b> - peak with maximum area count among the peaks of the
+				same substance on the same chromatogram.
+			</p>
+			<p><b>MF</b> - Molecular Formula</p>
+			<p id="sample">
+				<b>Sample</b> - a mixture or a pure compound that needs to be analyzed.
+				Sample sample can be injected multiple times resulting in multiple
+				<a href="#injection">Injections</a>, so these are not synonyms.
+			</p>
+		</div>
+		<footer class="footer">
+			Follow our updates:
+			<a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,
+			<a href="https://www.facebook.com/elsci.io">Facebook</a>,
+			<a href="https://twitter.com/elsci_io">Twitter</a>,
+			<a href="https://t.me/elscipeaksel">Telegram</a> ||
+			<a href="https://github.com/elsci-io/public/discussions">Support</a> ||
+			<a href="mailto:peaksel@elsci.io">Contact us</a>
+		</footer>
+	</body>
+</html>

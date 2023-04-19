@@ -1,0 +1,30 @@
+.main-color1 {
+    color: var(--main-color1);
+}
+.main-color2 {
+    color: var(--main-color2);
+}
+
+.container {
+    width: 100%;
+    padding: 0 1em;
+}
+.container--striped {
+    background-color: var(--background-color2);
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

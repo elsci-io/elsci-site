@@ -1,0 +1,45 @@
+version: "3.9"
+services:
+  peaksel:
+    container_name: peaksel
+    image: elsci/peaksel:PEAKSEL_VERSION
+    depends_on:
+      peakseldb:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+    volumes:
+      - ./logs:/var/log/peaksel
+      - ./injections:/opt/injections
+    environment:
+      security.in_memory_users.name: user
+      security.in_memory_users.password: user
+      security.in_memory_users.role: USER
+      # In case you want to enable OAuth2
+#      security.oauth2.enabled: 'true'
+#      security.oauth2.authorization-uri: https://...
+#      security.oauth2.token-uri: https://...
+#      security.oauth2.user-info-uri: https://...
+#      security.oauth2.client-id: ...
+
+      server.port: 8080
+      db.url: jdbc:postgresql://peakseldb:5432/elsci?currentSchema=peaksel
+      db.user: peaksel
+      db.pass: HuCZSQUH
+      user.log_dir: /var/log
+  peakseldb:
+    container_name: peakseldb
+    image: postgres:15.2
+    environment:
+      - POSTGRES_PASSWORD=Pa3pJXs7
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
