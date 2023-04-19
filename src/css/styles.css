@@ -17,7 +17,7 @@ body {
 	font-size: clamp(1em, 4vw, 18px);
 	font-weight: 300;
 	margin: 0;
-	min-width: 280px;
+	min-width: 300px;
 }
 html {
 	height: 100%;
@@ -35,18 +35,33 @@ li {
 	margin: 0;
 	padding: 0;
 }
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.list-of-three {
+	display: flex;;
+}
+.list-of-three__item {
+	flex: 0 1 auto;
+	min-width: 33.33333%;
+}
+@media (max-width: 768px){
+.list-of-three {
+	flex-wrap: wrap;
+}
+.list-of-three__item {
+	flex: 1 1 100%;
+}}
 
 .container {
 	max-width: 100%;
 	margin: 0 auto;
 	padding-right: 15px;
 	padding-left: 15px;
-}
-.wrapper {
-	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
 }
 @media (min-width: 576px) {
 	.container {
@@ -168,16 +183,14 @@ li {
   	-webkit-text-fill-color: transparent; */
 }
 .products-list {
-	display: flex;
 	max-width: 990px;
 	justify-content: center;
 	margin: 0 auto;
 }
 .products-item {
-	flex: 1 0 33.3%;
-	max-width: 33.3%;
-	padding: 0 0.5rem;
+	padding: 1rem;
 }
+
 .product-card {
 	border: 1px solid #2082d8;
 	padding: 1rem;
@@ -223,22 +236,14 @@ li {
 	.products-list {
 		margin: 0 -0.5rem;
 	}
+	.products-item {
+		padding: 0.5rem;
+	}
 }
 @media (max-width: 768px) {
 	.product-card__title {
 		font-size: 3rem;
-		margin: 1rem 0;
-	}
-	.products-list {
-		flex-wrap: wrap;
-	}
-	.products-item {
-		max-width: 100%;
-		padding: 0.5rem;
-		flex: 1 1 100%;
-	}
-	.product-card {
-		max-width: 100%;
+		margin: 0.5rem 0;
 	}
 }
 @media (max-width: 362px) {
@@ -302,25 +307,29 @@ li {
 }
 
 /*        ABOUT        */
+.location, .business-model, .difference {
+	padding: 1.5rem 0;
+}
 
 .location-row {
 }
 .about-title {
 }
 .location-list {
+	padding-left: 3rem;
+}
+.location-list li {
+	list-style: circle;
 }
 .business-model {
 }
 .business-model-row {
 }
 .business-model-list {
-	display: flex;
 	justify-content: space-between;
 	margin: 0 -1rem;
 }
 .business-model-item {
-	flex: 0 1 auto;
-	min-width: 33.333%;
 	padding: 1rem;
 }
 .business-model-card {
@@ -341,24 +350,6 @@ li {
 	font-weight: 700;
 	font-size: 3rem;
 }
-@media (max-width: 768px) {
-		.business-model-list {
-		flex-wrap: wrap;
-	}
-	.business-model-item {
-		max-width: 100%;
-		padding: 0.5rem;
-		flex: 1 1 100%;
-	}
-	
-}
 
-.list-of-three {
-		flex-wrap: wrap;
-	}
-	.list-of-three__item {
-		max-width: 100%;
-		padding: 0.5rem;
-		flex: 1 1 100%;
-	}
-	
+
+
