@@ -7,17 +7,8 @@
 		<link rel="stylesheet" href="../css/styles.css" />
 	</head>
 	<body>
-		<div class="container">
-			<header class="header">
-				<a class="header__logo" href="./index.html">PEAK<span>SEL</span></a>
-				<nav class="header__list">
-					<a href="./index.html" class="header__item">Overview</a>
-					<a href="./docs.html" class="header__item">Documentation</a>
-					<a href="./buy.html" class="header__item">Try it</a>
-					<a href="./about.html" class="header__item">About us</a>
-				</nav>
-			</header>
-		</div>
+		<div class="wrapper">
+			<%= htmlWebpackPlugin.options.header %>
 		<article class="container docs">
 			<h1>Build products with us</h1>
 			<section>
@@ -140,15 +131,7 @@
 				</ol>
 			</section>
 		</article>
-
-		<footer class="footer">
-			Follow our updates:
-			<a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,
-			<a href="https://www.facebook.com/elsci.io">Facebook</a>,
-			<a href="https://twitter.com/elsci_io">Twitter</a>,
-			<a href="https://t.me/elscipeaksel">Telegram</a> ||
-			<a href="https://github.com/elsci-io/public/discussions">Support</a> ||
-			<a href="mailto:peaksel@elsci.io">Contact us</a>
-		</footer>
+		<%= htmlWebpackPlugin.options.footer %>
+		</div>
 	</body>
 </html>

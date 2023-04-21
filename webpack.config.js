@@ -103,7 +103,6 @@ module.exports = {
                 { from: 'src/css', to: 'css' },
                 { from: 'src/js', to: 'js' },
                 { from: 'src/images', to: 'images' },
-                { from: 'src/peaksel', to: 'peaksel' }
             ]
         }),
     ],
