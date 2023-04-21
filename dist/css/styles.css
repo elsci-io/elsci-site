@@ -293,6 +293,7 @@ video,
 	letter-spacing: 0.3px;
 	color: #444343;
 	font-weight: 400;
+	margin: 1rem;
 	/* background: var(--gradient-blue);
 	background-clip: inherit;
 	-webkit-background-clip: text;
@@ -343,6 +344,7 @@ video,
 	line-height: 1.7;
 	flex-grow: 1;
 	margin: 0.5rem 0;
+	color: var(--main-color-text);
 }
 
 @media (max-width: 992px) {
@@ -954,7 +956,12 @@ blockquote::before {
 
 .location-row {
 }
-.about-title {
+.section-title {
+	font-size: 2rem;
+	letter-spacing: 0.3px;
+	color: #444343;
+	font-weight: 400;
+	margin-bottom: 1rem;
 }
 .location-list {
 	padding-left: 3rem;

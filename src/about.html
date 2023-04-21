@@ -2,66 +2,74 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/styles.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>About us</title>
+		<link rel="stylesheet" href="../css/styles.css" />
 	</head>
 	<body>
-        <div class="wrapper">
-        <%= htmlWebpackPlugin.options.header %>
-		<main class="about">
-            <section class="location">
-                <div class="container">
-                    <div class="location-row">
-                        <h2 class="about-title">Our location</h2>
-                        <p>We are based in Armenia:</p>
-                        <ul class="location-list">
-                            <li>Arabkir district, Komitas ave, 1st lane, b. 20, Yerevan, Armenia 0051</li>
-                            <li>peaksel@elsci.io</li>
-                            <li>+374 93 15 12 24</li>
-                        </ul>
-                        <p>But our team is actually spread across multiple countries and timezones.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="business-model">
-                <div class="container">
-                    <div class="business-model-row">
-                        <h2 class="about-title">Our business model</h2>
-                    </div>
-                    <ul class="business-model-list list-of-three">
-                        <li class="business-model-item list-of-three__item">
-                            <div class="business-model-card">
-                                <h3 class="business-model-card__description">You can buy licenses to the software we`ve already build</h3>
-                                <div class="business-model-card__symbol">$</div>
-                            </div>
-                        </li>
-                        <li class="business-model-item list-of-three__item">
-                            <div class="business-model-card">
-                                <h3 class="business-model-card__description">We create new products with your needs in mind</h3>
-                                <div class="business-model-card__symbol">$$</div>
-                            </div>
-                        </li>
-                        <li class="business-model-item list-of-three__item">
-                            <div class="business-model-card">
-                                <h3 class="business-model-card__description">We create new products with you and share the Intellectual Property</h3>
-                                <div class="business-model-card__symbol">$$$</div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="difference">
-                <div class="container">
-                    <div class="difference-row">
-                        <h2 class="about-title">What makes us different</h2>
-                    </div>
-                </div>
-            </section>
-        </main>
-		<%= htmlWebpackPlugin.options.footer %>
-        </div>
+		<div class="wrapper">
+			<%= htmlWebpackPlugin.options.header %>
+			<div class="container">
+				<section class="about">
+					<h1 class="page-title">Boosting science</h1>
+					<p class="page-description">
+						If you're interested in collaboratively creating new products with
+						us, read about our
+						<a href="./business-model.html">Business Model</a>.
+					</p>
+					<ul class="about__list">
+						<li class="about__item">
+							<div class="job__type">
+								<img
+									src="images/about/about-sad-scientist.png"
+									alt="sad chemist"
+									style="width: 270px" />
+								<p class="job__info job__info--shrink">
+									One commonality that we noticed while working with
+									pharmaceutical companies is frustration about software. While
+									in theory scientists are people who dedicate their lives to
+									pushing humanity forward, in practice they spend most of their
+									time working around issues introduced by poorly written
+									programs.
+								</p>
+							</div>
+						</li>
+						<li class="about__item">
+							<div class="job__type">
+								<img
+									src="images/about/about-scared-it.png"
+									alt="frightened programmer"
+									style="width: 270px" />
+								<p class="job__info job__info--shrink">
+									We think that this is a natural consequence of the complexity
+									of the field - not many software experts agree to spend years
+									studying science in addition to programming. Thus we end up
+									with software written by scientists out of frustration or by
+									developers who don't really understand what they are doing.
+								</p>
+							</div>
+						</li>
+						<li class="about__item">
+							<div class="job__type">
+								<img
+									src="images/about/about-hero.png"
+									alt="hero"
+									style="width: 270px" />
+								<p class="job__info job__info--shrink">
+									Well, we are those experts - we are a team of software
+									professionals specializing in life sciences. Our mission is
+									creating software that makes scientists productive. Software
+									that respects your time and understands your problems.
+									Software that removes obstacles and lets you concentrate on
+									creative aspects of the job.
+								</p>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<%= htmlWebpackPlugin.options.footer %>
+		</div>
+		<script src="js/script.js"></script>
 	</body>
-	<script src="js/script.js"></script>
 </html>
