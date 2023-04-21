@@ -485,7 +485,7 @@ video,
 	text-decoration: underline;
 }
 
-.footer-elsci_address p {
+.footer-elsci__address p {
 	margin: 0.3rem 0;
 	font-style: italic;
 }
@@ -513,7 +513,7 @@ video,
 		flex: 1 1 50%;
 		margin-bottom: 1rem;
 	}
-	.footer-elsci_address {
+	.footer-elsci__address {
 		flex: 1 1 100%;
 	}
 }
@@ -804,12 +804,6 @@ video,
 .greyarea {
 	background-color: #f9f9f9;
 }
-.footer {
-	text-align: center;
-	height: 80px;
-	margin-top: 80px;
-	margin-bottom: 20px;
-}
 
 @media (min-width: 601px) and (max-width: 848px) {
 	.plate-motion {
@@ -902,7 +896,7 @@ blockquote::after {
 	color: var(--main-color1);
 }
 blockquote::before {
-	/*content: open-quote;*/
+	/* content: open-quote; */
 }
 
 .quotation {

@@ -902,7 +902,7 @@ blockquote::after {
 	color: var(--main-color1);
 }
 blockquote::before {
-	/*content: open-quote;*/
+	content: open-quote;
 }
 
 .quotation {
