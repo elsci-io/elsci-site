@@ -19,9 +19,9 @@
 					<span></span>
 				</div>
 				<nav>
-					<ul class="header-elsci__navigation">
-						<li class="header-elsci__link"><a href="business-model.html">Our business model</a></li>
-						<li class="header-elsci__link"><a href="about.html">About us</a></li>
+					<ul class="header-elsci__navigation list-style-none">
+						<li class="header-elsci__link" data-page="business-model"><a href="business-model.html">Our business model</a></li>
+						<li class="header-elsci__link"  data-page="about"><a href="about.html">About us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -30,71 +30,73 @@
 </header>
 
 
-			<div class="container">
-				<section class="about">
-					<h1 class="page-title">Boosting science</h1>
-					<p class="page-description">
-						If you're interested in collaboratively creating new products with
-						us, read about our
-						<a href="./business-model.html">Business Model</a>.
-					</p>
-					<ul class="about__list">
-						<li class="about__item">
-							<div class="job__type">
-								<img
-									src="images/about/about-sad-scientist.png"
-									alt="sad chemist"
-									style="width: 270px" />
-								<p class="job__info job__info--shrink">
-									One commonality that we noticed while working with
-									pharmaceutical companies is frustration about software. While
-									in theory scientists are people who dedicate their lives to
-									pushing humanity forward, in practice they spend most of their
-									time working around issues introduced by poorly written
-									programs.
-								</p>
-							</div>
-						</li>
-						<li class="about__item">
-							<div class="job__type">
-								<img
-									src="images/about/about-scared-it.png"
-									alt="frightened programmer"
-									style="width: 270px" />
-								<p class="job__info job__info--shrink">
-									We think that this is a natural consequence of the complexity
-									of the field - not many software experts agree to spend years
-									studying science in addition to programming. Thus we end up
-									with software written by scientists out of frustration or by
-									developers who don't really understand what they are doing.
-								</p>
-							</div>
-						</li>
-						<li class="about__item">
-							<div class="job__type">
-								<img
-									src="images/about/about-hero.png"
-									alt="hero"
-									style="width: 270px" />
-								<p class="job__info job__info--shrink">
-									Well, we are those experts - we are a team of software
-									professionals specializing in life sciences. Our mission is
-									creating software that makes scientists productive. Software
-									that respects your time and understands your problems.
-									Software that removes obstacles and lets you concentrate on
-									creative aspects of the job.
-								</p>
-							</div>
-						</li>
-					</ul>
-				</section>
-			</div>
-			<footer class="footer-elsci">
+			<main data-page="about">
+				<div class="container">
+					<section class="about">
+						<h1 class="page-title">Boosting science</h1>
+						<p class="page-description">
+							If you're interested in collaboratively creating new products with
+							us, read about our
+							<a href="./business-model.html">Business Model</a>.
+						</p>
+						<ul class="about__list list-style-none">
+							<li class="about__item">
+								<div class="job__type">
+									<img
+										src="images/about/about-sad-scientist.png"
+										alt="sad chemist"
+										style="width: 270px" />
+									<p class="job__info job__info--shrink">
+										One commonality that we noticed while working with
+										pharmaceutical companies is frustration about software. While
+										in theory scientists are people who dedicate their lives to
+										pushing humanity forward, in practice they spend most of their
+										time working around issues introduced by poorly written
+										programs.
+									</p>
+								</div>
+							</li>
+							<li class="about__item">
+								<div class="job__type">
+									<img
+										src="images/about/about-scared-it.png"
+										alt="frightened programmer"
+										style="width: 270px" />
+									<p class="job__info job__info--shrink">
+										We think that this is a natural consequence of the complexity
+										of the field - not many software experts agree to spend years
+										studying science in addition to programming. Thus we end up
+										with software written by scientists out of frustration or by
+										developers who don't really understand what they are doing.
+									</p>
+								</div>
+							</li>
+							<li class="about__item">
+								<div class="job__type">
+									<img
+										src="images/about/about-hero.png"
+										alt="hero"
+										style="width: 270px" />
+									<p class="job__info job__info--shrink">
+										Well, we are those experts - we are a team of software
+										professionals specializing in life sciences. Our mission is
+										creating software that makes scientists productive. Software
+										that respects your time and understands your problems.
+										Software that removes obstacles and lets you concentrate on
+										creative aspects of the job.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</main>
+			<footer class="footer">
 	<div class="container">
-		<div class="footer-elsci-row">
-			<section class="footer-elsci__social">
-				<p class="footer-elsci__section-title">Follow our updates</p>
-				<ul class="footer-elsci__list">
+		<div class="footer-row">
+			<section class="footer__social">
+				<p class="footer__section-title">Follow our updates</p>
+				<ul class="footer__list list-style-none">
 					<li class="footer__item">
 						<a
 							target="_blank"
@@ -121,9 +123,9 @@
 					</li>
 				</ul>
 			</section>
-			<section class="footer-elsci__contacts">
-				<p class="footer-elsci__section-title">Contact us</p>
-				<ul class="footer-elsci__list">
+			<section class="footer__contacts">
+				<p class="footer__section-title">Contact us</p>
+				<ul class="footer__list list-style-none">
 					<li class="footer__item">
 						<a
 							target="_blank"
@@ -146,12 +148,12 @@
 				</ul>
 			</section>
 			<section>
-				<p class="footer-elsci__section-title">Company</p>
-				<div class="footer-elsci__address">
+				<p class="footer__section-title">Company</p>
+				<address class="footer__address">
 					<p>Elsci LLC, Yerevan, Armenia</p>
 					<p>Arabkir district, Komitas ave</p>
 					<p>1st lane, b. 20, 0051</p>
-				</div>
+				</address>
 			</section>
 		</div>
 	</div>
