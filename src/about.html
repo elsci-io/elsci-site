@@ -8,17 +8,13 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<%= htmlWebpackPlugin.options.header %>
+			<%= require('html-loader!./partials/header.html').default %>
 			<main data-page="about">
 				<div class="container">
 					<section class="about">
 						<h1 class="page-title">Boosting science</h1>
-						<p class="page-description">
-							If you're interested in collaboratively creating new products with
-							us, read about our
-							<a href="./business-model.html">Business Model</a>.
-						</p>
-						<ul class="about__list list-style-none">
+						
+						<ul class="about__list">
 							<li class="about__item">
 								<div class="job__type">
 									<img
@@ -70,7 +66,7 @@
 					</section>
 				</div>
 			</main>
-			<%= htmlWebpackPlugin.options.footer %>
+			<%= require('html-loader!./partials/footer.html').default %>
 		</div>
 		<script src="js/script.js"></script>
 	</body>

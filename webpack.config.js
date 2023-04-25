@@ -4,18 +4,15 @@ const path = require('path');
 
 let fs = require('fs');
 
-const header = fs.readFileSync(__dirname + '/src/header.html');
-const footer = fs.readFileSync(__dirname + '/src/footer.html');
 
 // find all html files in src directory and create a new HtmlWebpackPlugin for each one
 
 let files = fs.readdirSync(__dirname + '/src');
 let htmlPlugins = files.filter(file => file.endsWith('.html')).map(file => {
+    console.log(file);
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/' + file,
-        filename: file,
-        header: header,
-        footer: footer
+        filename: file
     });
 });
 
@@ -28,11 +25,19 @@ module.exports = {
     },
     plugins: [
         ...htmlPlugins,
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/peaksel/docs.html',
+            filename: '/peaksel/docs.html'
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/css', to: 'css' },
                 { from: 'src/js', to: 'js' },
                 { from: 'src/images', to: 'images' },
+                // { from: 'src/peaksel/article', to: 'peaksel/article' },
+                // { from: 'src/peaksel/doc', to: 'peaksel/doc' },
+                // { from: 'src/peaksel/js', to: 'peaksel/js' },
+                // { from: 'src/peaksel/img', to: 'peaksel/img' },
             ]
         }),
     ],

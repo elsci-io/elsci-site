@@ -1,82 +1,69 @@
-<head><script defer src="bundle.js"></script></head><link rel="stylesheet" href="css/styles.css">
-
-<style>
-.product-card__title-test {
-    display: flex;
-    flex-wrap: nowrap;
-    font-size: 4rem;
-    align-items: end;
-}
-.product-card__element {
-    height: 6rem;
-    width: 6rem;
-    border: 2px solid #2082d8;
-    border-radius: 0.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.25rem;
-    line-height: 1;
-    background: #2082d8;
-}
-.product-card__letters {
-    height: 6rem;
-    color: #61d66d;
-}
-.product-card__element--header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.75rem;
-}
-.product-card__element-number {
-      color: white;
-
-}
-.product-card__element-weight {
-      color: white;
-   
-}
-.product-card__element-symbol {
-    font-weight: 700;
-    color: white;
-}
-.product-card__title-test {
-    margin: 20px;
-}
-</style>
-<div>
-    <div class="product-card__title-test">
-        <div class="product-card__element">
-            <div class="product-card__element--header">
-                <div class="product-card__element-number">15</div>
-                <div class="product-card__element-weight">3.15</div>
-            </div>
-            <div class="product-card__element-symbol">P</div>
-
-        </div>
-        <div class="product-card__letters">eakSel</div>
-    </div>
-    <div class="product-card__title-test">
-        <div class="product-card__element">
-            <div class="product-card__element--header">
-                <div class="product-card__element-number">42</div>
-                <div class="product-card__element-weight">96</div>
-            </div>
-            <div class="product-card__element-symbol">Mo</div>
-
-        </div>
-        <div class="product-card__letters">lEvent</div>
-    </div>
-    <div class="product-card__title-test">
-        <div class="product-card__element">
-            <div class="product-card__element--header">
-                <div class="product-card__element-number">24</div>
-                <div class="product-card__element-weight">52</div>
-            </div>
-            <div class="product-card__element-symbol">Cr</div>
-
-        </div>
-        <div class="product-card__letters">ystaLine</div>
-    </div>
-</div>
+<head><script defer src="bundle.js"></script></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve './logo.png' in 'C:\work\elsci\elsci-site\src\partials'
+  ModuleNotFoundError: Module not found: Error: Can't resolve './logo.png' in 'C:\work\elsci\elsci-site\src\partials'
+      at C:\work\elsci\elsci-site\node_modules\webpack\lib\Compilation.js:2016:28
+      at C:\work\elsci\elsci-site\node_modules\webpack\lib\NormalModuleFactory.js:799:13
+      at eval (eval at create (C:\work\elsci\elsci-site\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at C:\work\elsci\elsci-site\node_modules\webpack\lib\NormalModuleFactory.js:271:22
+      at eval (eval at create (C:\work\elsci\elsci-site\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at C:\work\elsci\elsci-site\node_modules\webpack\lib\NormalModuleFactory.js:435:22
+      at C:\work\elsci\elsci-site\node_modules\webpack\lib\NormalModuleFactory.js:117:11
+      at C:\work\elsci\elsci-site\node_modules\webpack\lib\NormalModuleFactory.js:671:25
+      at C:\work\elsci\elsci-site\node_modules\webpack\lib\NormalModuleFactory.js:875:8
+      at C:\work\elsci\elsci-site\node_modules\webpack\lib\NormalModuleFactory.js:995:5
+  
+  - Compilation.js:2016 
+    [elsci-site]/[webpack]/lib/Compilation.js:2016:28
+  
+  - NormalModuleFactory.js:799 
+    [elsci-site]/[webpack]/lib/NormalModuleFactory.js:799:13
+  
+  
+  - NormalModuleFactory.js:271 
+    [elsci-site]/[webpack]/lib/NormalModuleFactory.js:271:22
+  
+  
+  - NormalModuleFactory.js:435 
+    [elsci-site]/[webpack]/lib/NormalModuleFactory.js:435:22
+  
+  - NormalModuleFactory.js:117 
+    [elsci-site]/[webpack]/lib/NormalModuleFactory.js:117:11
+  
+  - NormalModuleFactory.js:671 
+    [elsci-site]/[webpack]/lib/NormalModuleFactory.js:671:25
+  
+  - NormalModuleFactory.js:875 
+    [elsci-site]/[webpack]/lib/NormalModuleFactory.js:875:8
+  
+  - NormalModuleFactory.js:995 
+    [elsci-site]/[webpack]/lib/NormalModuleFactory.js:995:5
+  
+  - child-compiler.js:169 
+    [elsci-site]/[html-webpack-plugin]/lib/child-compiler.js:169:18
+  
+  - Compiler.js:551 finalCallback
+    [elsci-site]/[webpack]/lib/Compiler.js:551:5
+  
+  - Compiler.js:577 
+    [elsci-site]/[webpack]/lib/Compiler.js:577:11
+  
+  - Compiler.js:1196 
+    [elsci-site]/[webpack]/lib/Compiler.js:1196:17
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [elsci-site]/[tapable]/lib/Hook.js:18:14
+  
+  - Compiler.js:1192 
+    [elsci-site]/[webpack]/lib/Compiler.js:1192:33
+  
+  - Compilation.js:2787 finalCallback
+    [elsci-site]/[webpack]/lib/Compilation.js:2787:11
+  
+  - Compilation.js:3092 
+    [elsci-site]/[webpack]/lib/Compilation.js:3092:11
+  
+  
+</pre>

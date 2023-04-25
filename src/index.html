@@ -9,19 +9,19 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<%= htmlWebpackPlugin.options.header %>
+			<%= require('html-loader!./partials/header.html').default %>
 			<main>
 				<section class="products">
 					<div class="container">
 						<h2 class="page-title">Our products</h2>
-						<ul class="products-list list-of-three list-style-none">
+						<ul class="products-list list-of-three">
 							<li class="products-item list-of-three__item">
 								<a href="../peaksel/index.html">
 									<div class="product-card">
 										<h3 class="product-card__title">Peak<span>Sel</span></h3>
-										<p class="product-card__header--tag">#analitical chemistry</p>
+										<p class="product-card__tag">#analytical chemistry</p>
 										<p class="product-card__description">
-											Gather data from all your Analitical Instruments, build
+											Gather data from all your Analytical Instruments, build
 											reports, analyze thousands of samples quickly.
 										</p>
 									</div>
@@ -31,7 +31,7 @@
 								<a>
 									<div class="product-card">
 										<h3 class="product-card__title">Mol<span>Event</span></h3>
-										<p class="product-card__header--tag">#datamining</p>
+										<p class="product-card__tag">#datamining</p>
 										<p class="product-card__description">
 											Register virtual compounds, know what`s happening to your
 											molecules across teams, projects or whole organization.
@@ -43,7 +43,7 @@
 								<a>
 									<div class="product-card">
 										<h3 class="product-card__title">Crysta<span>Line</span></h3>
-										<p class="product-card__header--tag">#crystallography</p>
+										<p class="product-card__tag">#crystallography</p>
 										<p class="product-card__description">
 											Grow, harvest and track crystals. Organize, share, mine data.
 										</p>
@@ -54,7 +54,7 @@
 					</div>
 				</section>
 			</main>
-			<%= htmlWebpackPlugin.options.footer %>
+			<%= require('html-loader!./partials/footer.html').default %>
 		</div>
 		<script src="js/script.js"></script>
 	</body>
