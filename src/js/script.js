@@ -5,7 +5,6 @@ document.querySelector(".header__burger").addEventListener("click", () => {
     document
         .querySelector(".header-elsci__navigation")
         .classList.toggle("active");
-    // document.querySelector(".wrapper").classList.toggle("lock");
     document.body.classList.toggle("lock");
 });
 
