@@ -25,15 +25,15 @@ module.exports = {
     },
     plugins: [
         ...htmlPlugins,
-        new HtmlWebpackPlugin({
-            template: __dirname + '/src/peaksel/docs.html',
-            filename: '/peaksel/docs.html'
-        }),
+        // new HtmlWebpackPlugin({
+        //     template: __dirname + '/src/peaksel/docs.html',
+        //     filename: '/peaksel/docs.html'
+        // }),
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/css', to: 'css' },
                 { from: 'src/js', to: 'js' },
-                { from: 'src/images', to: 'images' },
+                { from: 'src/img', to: 'img' },
                 // { from: 'src/peaksel/article', to: 'peaksel/article' },
                 // { from: 'src/peaksel/doc', to: 'peaksel/doc' },
                 // { from: 'src/peaksel/js', to: 'peaksel/js' },

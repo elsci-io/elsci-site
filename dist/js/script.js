@@ -4,8 +4,9 @@ document.querySelector(".header-elsci__menu-burger").addEventListener("click", (
             .classList.toggle("active");
         document
             .querySelector(".header-elsci__navigation")
-            .classList.toggle("active");
+        .classList.toggle("active");
+    document.querySelector("body").classList.toggle("lock")
 });
 
 const pageName = document.querySelector('main').dataset.page;
-document.querySelector(`.header-elsci__link[data-page="${pageName}"]`).classList.add("active");
+document.querySelector(`.header__link[data-page="${pageName}"]`).classList.add("active");
