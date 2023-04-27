@@ -8,6 +8,10 @@ document.querySelector(".header__burger").addEventListener("click", () => {
     document.body.classList.toggle("lock");
 });
 
+window.addEventListener('scroll', (el) => {
+    document.querySelector('.header-elsci').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
+})
+
 // const pageName = document.querySelector('main').dataset.page;
 // document.querySelector(`.navigation-list__item[data-page="${pageName}"]`).classList.add("active");
 
