@@ -79,7 +79,7 @@
 }
 .slogan__video {
     height: 528px;
-    width: 1024px;
+    width: 100%;
     max-width: 90vw;
     max-height: 50vw;
 }
