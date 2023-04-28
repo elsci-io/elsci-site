@@ -415,13 +415,15 @@ content: "";
 /*           HERO           */
 .hero-body {
 	padding: 2rem;
-	height: 100vh;
+	min-height: calc(100vh - 4rem);
+	display: flex;
+	align-items: center;
 }
 
 .hero-title {
 	font-family: "Indie Flower", cursive;
 	line-height: 2.5;
-	font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
+	font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
 	text-align: center;
 	font-weight: 900;
 	max-width: 990px;
@@ -434,13 +436,13 @@ content: "";
     height: 50px;
     width: auto;
 }
-.correct,
-.wrong {
+.word-box__correct,
+.word-box__wrong {
     white-space: nowrap;
     overflow: visible;
 }
 
-.correct {
+.word-box__correct {
     white-space: nowrap;
     overflow: visible;
 	position: absolute;
@@ -454,12 +456,12 @@ content: "";
 	transition: all 500ms ease-in;
 	transform: scale(0) translate(-50%);
 }
-.wrong {
+.word-box__wrong {
     white-space: nowrap;
     overflow: visible;
 	padding: 0 30px;
 }
-.correct.visible {
+.word-box__correct.visible {
 	/* display: inline-block; */
 	opacity: 1;
 	transform: scale(1) translate(-50%);
@@ -493,12 +495,15 @@ content: "";
 	animation-fill-mode: forwards;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 675px) {
 	.hero-body {
-		padding: 3rem 0;
+		padding-top: 2rem;
 	}
 	.hero-title {
-		line-height: 1.8;
+		line-height: 1.9;
+	}
+	.word-box__correct{
+top: -50%
 	}
 }
 
@@ -531,7 +536,7 @@ content: "";
 	margin: 0 auto;
 }
 .products-item {
-	padding: 1rem;
+	padding: 0.5rem;
 	flex: 0 1 auto;
 	min-width: 33.33333%;
 }
