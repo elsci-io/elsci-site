@@ -166,29 +166,6 @@ video,
 	padding-left: 15px;
 }
 
-/* @media (min-width: 576px) {
-	.container {
-		max-width: 540px;
-	}
-}
-
-@media (min-width: 768px) {
-	.container {
-		max-width: 720px;
-	}
-}
-
-@media (min-width: 992px) {
-	.container {
-		max-width: 960px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.container {
-		max-width: 1140px;
-	}
-}  */
 
 /*            HEADER-ELSCI           */
 
@@ -249,11 +226,8 @@ video,
 }
 .navigation-list__item {
 	position: relative;
-	padding: 0 1rem;
 }
-.navigation-list__item:not(:last-child) {
-	margin-right: 1.25rem;
-}
+
 .navigation-list__item.active::after {
 	content: "";
 	position: absolute;
@@ -418,15 +392,16 @@ video,
 	min-height: calc(100vh - 4rem);
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .hero-title {
 	font-family: "Indie Flower", cursive;
 	line-height: 2.5;
-	font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
+	font-size: clamp(2rem, 2vw + 1rem, 3rem);
 	text-align: center;
 	font-weight: 900;
-	max-width: 990px;
+	/* max-width: 990px; */
 	vertical-align: middle;
 }
 
@@ -508,8 +483,14 @@ video,
 }
 
 /*           PRODUCTS        */
-.products {
+/* .products {
 	margin-bottom: 3rem;
+} */
+.products-body {
+display: flex;
+min-height: calc(100vh - 4rem);
+justify-content: center;
+flex-direction: column;
 }
 
 .page-title {
@@ -530,7 +511,7 @@ video,
 }
 
 .products-list {
-	max-width: 990px;
+	/* max-width: 990px; */
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
