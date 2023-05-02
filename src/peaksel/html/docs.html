@@ -4,132 +4,141 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Documentation</title>
-		<link rel="stylesheet" href="../css/styles.css" />
+		<link rel="stylesheet" href="../../css/styles.css" />
 	</head>
 	<body>
-		<main class="container docs_container docs">
-			<section>
-				<h1>Documentation</h1>
-				<ul>
-					<li>
-						<a target="_blank" href="https://youtu.be/owGaIn9PnGA"
-							>Getting Started (video)</a
-						>
-					</li>
-					<li>
-						<a
-							target="_blank"
-							href="https://github.com/elsci-io/public/discussions/1"
-							>Installation Guide</a
-						>
-					</li>
-					<li>
-						<a href="./doc/vocabulary.html"
-							>Vocabulary, Abbreviations, Definitions</a
-						>
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h3>Our articles</h3>
-				<ul>
-					<li>
-						<a href="./article/mass-spec.html"
-							>Mass Spectrometry: types, modes, data processing</a
-						>
-					</li>
-					<li>
-						<a href="./article/wl-extraction.html"
-							>DAD/PDA: Extracted and Reference wavelengths</a
-						>
-					</li>
-					<li>
-						<a href="./article/hte-qc-peaks.html"
-							>HTE: speed up analysis with proper visualizations</a
-						>
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h3>Batches, Injections, chromatograms</h3>
-				<ul>
-					<li>
-						<a href="doc/peaks.html"
-							>Peaks: automatic detection, integration, manual editing</a
-						>
-					</li>
-					<li><a href="doc/align-detectors.html">Aligning detectors</a></li>
-					<li><a href="doc/zoom.html">Zooming</a></li>
-					<li><a href="doc/batch-navigation.html">Batch: navigation, QC</a></li>
-					<li><a href="doc/reports.html">Reports</a></li>
-				</ul>
-			</section>
-
-			<section>
-				<h3>Chemical Structures, EICs</h3>
-				<ul>
-					<li>
-						<a href="doc/add-substance.html"
-							>Substances: upload structures, create EIC's</a
-						>
-					</li>
-					<li>
-						<a href="doc/waters-structures.html"
-							>Parsing structures from Waters RAW</a
-						>
-					</li>
-					<li>
-						Create
-						<a target="_blank" href="https://youtu.be/FtpFpazNnWw"
-							>Transient Traces</a
-						>
-						by clicking on spectra
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h3>Visualizations</h3>
-				<ul>
-					<li>
-						<a
-							href="https://github.com/elsci-io/public/blob/master/docs/expression-language.md"
-							target="_blank"
-							>Custom columns: Expression Language</a
-						>
-					</li>
-					<li><a href="doc/vis-templates.html">Templates</a></li>
-					<li>
-						<a target="_blank" href="https://youtu.be/Itb5D5Vh-a0"
-							>Determine large coelutions using BPM</a
-						>
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h3>Importing raw data</h3>
-				<ul>
-					<li>
-						<a href="doc/import-automation.html"
-							>Automatic import from vendor folders</a
-						>
-					</li>
-					<li><a href="doc/import-manual-upload.html">Manual Upload</a></li>
-				</ul>
-			</section>
+		<%= require('html-loader!../../partials/header.html').default %> 
+		<%=	require('html-loader!../../partials/headerPeaksel.html').default %>
+		<main class="documentation" data-page="documentation" data-context="peaksel">
+			<div class="wrapper">
+				<section>
+					<div class="container">
+						<h1>Documentation</h1>
+						<ul class="documentation-list">
+							<li class="documentation-item">
+								<a target="_blank" href="https://youtu.be/owGaIn9PnGA"
+									>Getting Started (video)</a
+								>
+							</li>
+							<li class="documentation-item">
+								<a
+									target="_blank"
+									href="https://github.com/elsci-io/public/discussions/1"
+									>Installation Guide</a
+								>
+							</li>
+							<li class="documentation-item">
+								<a href="./doc/vocabulary.html"
+									>Vocabulary, Abbreviations, Definitions</a
+								>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+				<section>
+				<div class="container">
+						<h3>Our articles</h3>
+						<ul class="documentation-list">
+							<li class="documentation-item">
+								<a href="./article/mass-spec.html"
+									>Mass Spectrometry: types, modes, data processing</a
+								>
+							</li>
+							<li class="documentation-item">
+								<a href="./article/wl-extraction.html"
+									>DAD/PDA: Extracted and Reference wavelengths</a
+								>
+							</li>
+							<li class="documentation-item">
+								<a href="./article/hte-qc-peaks.html"
+									>HTE: speed up analysis with proper visualizations</a
+								>
+							</li>
+						</ul>
+				</div>
+				</section>
+	
+				<section>
+					<div class="container">
+						<h3>Batches, Injections, chromatograms</h3>
+						<ul class="documentation-list">
+							<li class="documentation-item">
+								<a href="doc/peaks.html"
+									>Peaks: automatic detection, integration, manual editing</a
+								>
+							</li>
+							<li class="documentation-item"><a href="doc/align-detectors.html">Aligning detectors</a></li>
+							<li class="documentation-item"><a href="doc/zoom.html">Zooming</a></li>
+							<li class="documentation-item"><a href="doc/batch-navigation.html">Batch: navigation, QC</a></li>
+							<li class="documentation-item"><a href="doc/reports.html">Reports</a></li>
+						</ul>
+					</div>
+				</section>
+	
+				<section>
+					<div class="container">
+						<h3>Chemical Structures, EICs</h3>
+						<ul class="documentation-list">
+							<li class="documentation-item">
+								<a href="doc/add-substance.html"
+									>Substances: upload structures, create EIC's</a
+								>
+							</li>
+							<li class="documentation-item">
+								<a href="doc/waters-structures.html"
+									>Parsing structures from Waters RAW</a
+								>
+							</li>
+							<li class="documentation-item">
+								Create
+								<a target="_blank" href="https://youtu.be/FtpFpazNnWw"
+									>Transient Traces</a
+								>
+								by clicking on spectra
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+				<section>
+					<div class="container">
+						<h3>Visualizations</h3>
+						<ul class="documentation-list">
+							<li class="documentation-item">
+								<a
+									href="https://github.com/elsci-io/public/blob/master/docs/expression-language.md"
+									target="_blank"
+									>Custom columns: Expression Language</a
+								>
+							</li>
+							<li class="documentation-item"><a href="doc/vis-templates.html">Templates</a></li>
+							<li class="documentation-item">
+								<a target="_blank" href="https://youtu.be/Itb5D5Vh-a0"
+									>Determine large coelutions using BPM</a
+								>
+							</li>
+						</ul>
+					</div>
+				</section>
+	
+				<section>
+					<div class="container">
+						<h3>Importing raw data</h3>
+						<ul class="documentation-list">
+							<li class="documentation-item">
+								<a href="doc/import-automation.html"
+									>Automatic import from vendor folders</a
+								>
+							</li>
+							<li class="documentation-item"><a href="doc/import-manual-upload.html">Manual Upload</a></li>
+						</ul>
+					</div>
+				</section>
+			</div>
 		</main>
 
-		<footer class="footer">
-			Follow our updates:
-			<a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,
-			<a href="https://www.facebook.com/elsci.io">Facebook</a>,
-			<a href="https://twitter.com/elsci_io">Twitter</a>,
-			<a href="https://t.me/elscipeaksel">Telegram</a> ||
-			<a href="https://github.com/elsci-io/public/discussions">Support</a> ||
-			<a href="mailto:peaksel@elsci.io">Contact us</a>
-		</footer>
+		<%= require('html-loader!../../partials/footer.html').default %>
+		<script src="../../js/script.js"></script>
 	</body>
 </html>
