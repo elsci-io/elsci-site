@@ -208,6 +208,7 @@ video,
 	}
 	.sub-header.header-elsci::before {
 		background: #2082d8;
+		/* background:#6ED4FF; */
 	}
 	.header-elsci.sub-header.scroll {
 		display: none;
@@ -734,8 +735,17 @@ video,
 	line-height: 26px;
 }
 
+@media (max-width: 767px) {
+	.documentation {
+	padding-top: 6rem;
+}
+}
 
+/*      TRY-IT     */
 
+.try-it {
+margin: 2rem 0 4rem;
+}
 
 .buy-header-container {
 	margin-bottom: 40px;
@@ -750,12 +760,18 @@ video,
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	min-width: 300px;
 	width: 30%;
-	margin-left: 30px;
+	margin-left: 10px;
 	margin-bottom: 30px;
 	text-align: center;
 }
 .billing-plan__title {
 	padding: 10px;
+}
+
+@media (max-width: 767px) {
+	.try-it {
+	padding-top: 6rem;
+}
 }
 
 .btn {
