@@ -135,14 +135,6 @@ video,
 	transform: rotate(-10deg);
 }
 
-.docs p,
-.docs li {
-	font-size: 18px;
-	line-height: 26px;
-}
-.docs a {
-	font-size: 18px;
-}
 
 /* .container {
   margin: 0 auto;
@@ -511,9 +503,8 @@ video,
 }
 
 /*           PRODUCTS        */
-/* .products {
-	margin-bottom: 3rem;
-} */
+
+
 .products-body {
 	display: flex;
 	min-height: calc(100vh - 4rem);
@@ -615,12 +606,6 @@ video,
 		padding: 0.5rem;
 	}
 }
-
-/* @media (max-width: 576px) {
-	.about__body {
-		padding: 1rem 0;
-	}
-} */
 
 /*         BUSINESS-MODEL       */
 
@@ -732,9 +717,25 @@ video,
 	}
 }
 
-.docs-header-container {
-	margin-bottom: 40px;
+
+/*     DOCUMENTATION   */
+
+.documentation {
+	padding: 2rem 0 4rem 0;
 }
+
+.documentation-list {
+	padding-left: 40px;
+	
+}
+.documentation-item {
+	list-style: initial;
+	font-size: 18px;
+	line-height: 26px;
+}
+
+
+
 
 .buy-header-container {
 	margin-bottom: 40px;

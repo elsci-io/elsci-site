@@ -4,113 +4,103 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Buy</title>
-		<link rel="stylesheet" href="../css/styles.css" />
+				<link rel="stylesheet" href="../../css/styles.css" />
+
 	</head>
 	<body>
-		<div class="buy-header-container container">
-			<header class="header">
-				<a class="header__logo" href="./index.html">PEAK<span>SEL</span></a>
-				<nav class="header__list">
-					<a href="./index.html" class="header__item">Overview</a>
-					<a href="./docs.html" class="header__item">Documentation</a>
-					<a class="header__item header__item--bordered">Try it</a>
-					<a href="./about.html" class="header__item">About us</a>
-				</nav>
-			</header>
+		<div class="wrapper">
+			<%= require('html-loader!../../partials/header.html').default %> <%=
+			require('html-loader!../../partials/headerPeaksel.html').default %>
+			<main class="try-it" data-page="try-it" data-context="peaksel">
+				<div class="container">
+					<section class="job__type">
+						<img src="./../img/Illustration-07.png" alt="call" style="height: 234px" />
+						<div class="job__info job__info--shrink">
+							<p>
+								If you want to play with our Demo Instance, contact us and we'll
+								send the URL and credentials:
+								<a href="mailto:peaksel@elsci.io">peaksel@elsci.io</a>
+							</p>
+						</div>
+					</section>
+					<div class="hcentered" style="margin-top: 150px">
+						<h1>On-premise</h1>
+					</div>
+					<div class="billing-plans">
+						<div class="billing-plan">
+							<div class="billing-plan__title">
+								<h3>Academic</h3>
+								<span>For non-profit use</span>
+							</div>
+							<div class="greyarea">
+								$<span class="hugetext">0</span> per user/year
+							</div>
+						</div>
+						<div class="billing-plan">
+							<div class="billing-plan__title">
+								<h3>Small business</h3>
+								<span>Per-user billing</span>
+							</div>
+							<div class="greyarea">
+								$<span class="hugetext">500</span> per user/year
+							</div>
+						</div>
+						<div class="billing-plan">
+							<div class="billing-plan__title">
+								<h3>Enterprise</h3>
+								<span>Unlimited users, special offers</span>
+							</div>
+							<div class="greyarea" style="height: 58px">
+								<a
+									data-email-btn
+									style="
+										height: 29px;
+										border: 1px solid;
+										border-radius: 2px;
+										padding: 10px;
+										position: relative;
+										top: 20px;
+									"
+									href="mailto:peaksel@elsci.io"
+									>Contact us</a
+								>
+							</div>
+						</div>
+					</div>
+		
+					<div class="hcentered">
+						<h1>SaaS</h1>
+					</div>
+					<div class="billing-plans">
+						<div class="billing-plan">
+							<div class="billing-plan__title">
+								<h3>SaaS</h3>
+								<span>Hosted by us, per-GB billing</span>
+							</div>
+							<div class="greyarea" style="height: 58px">
+								<a
+									data-email-btn
+									style="
+										height: 29px;
+										border: 1px solid;
+										border-radius: 2px;
+										padding: 10px;
+										position: relative;
+										top: 20px;
+									"
+									href="mailto:peaksel@elsci.io"
+									>Contact us</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+	
+			<%= require('html-loader!../../partials/footer.html').default %>
 		</div>
-		<div class="container">
-			<div class="job__type">
-				<img src="img/Illustration-07.png" alt="call" style="height: 234px" />
-				<div class="job__info job__info--shrink">
-					<p>
-						If you want to play with our Demo Instance, contact us and we'll
-						send the URL and credentials:
-						<a href="mailto:peaksel@elsci.io">peaksel@elsci.io</a>
-					</p>
-				</div>
-			</div>
-			<div class="hcentered" style="margin-top: 150px">
-				<h1>On-premise</h1>
-			</div>
-			<div class="billing-plans">
-				<div class="billing-plan">
-					<div class="billing-plan__title">
-						<h3>Academic</h3>
-						<span>For non-profit use</span>
-					</div>
-					<div class="greyarea">
-						$<span class="hugetext">0</span> per user/year
-					</div>
-				</div>
-				<div class="billing-plan">
-					<div class="billing-plan__title">
-						<h3>Small business</h3>
-						<span>Per-user billing</span>
-					</div>
-					<div class="greyarea">
-						$<span class="hugetext">500</span> per user/year
-					</div>
-				</div>
-				<div class="billing-plan">
-					<div class="billing-plan__title">
-						<h3>Enterprise</h3>
-						<span>Unlimited users, special offers</span>
-					</div>
-					<div class="greyarea" style="height: 58px">
-						<a
-							data-email-btn
-							style="
-								height: 29px;
-								border: 1px solid;
-								border-radius: 2px;
-								padding: 10px;
-								position: relative;
-								top: 20px;
-							"
-							href="mailto:peaksel@elsci.io"
-							>Contact us</a
-						>
-					</div>
-				</div>
-			</div>
+		<script src="../../js/script.js"></script>
 
-			<div class="hcentered">
-				<h1>SaaS</h1>
-			</div>
-			<div class="billing-plans">
-				<div class="billing-plan">
-					<div class="billing-plan__title">
-						<h3>SaaS</h3>
-						<span>Hosted by us, per-GB billing</span>
-					</div>
-					<div class="greyarea" style="height: 58px">
-						<a
-							data-email-btn
-							style="
-								height: 29px;
-								border: 1px solid;
-								border-radius: 2px;
-								padding: 10px;
-								position: relative;
-								top: 20px;
-							"
-							href="mailto:peaksel@elsci.io"
-							>Contact us</a
-						>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<footer class="footer">
-			Follow our updates:
-			<a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,
-			<a href="https://www.facebook.com/elsci.io">Facebook</a>,
-			<a href="https://twitter.com/elsci_io">Twitter</a>,
-			<a href="https://t.me/elscipeaksel">Telegram</a> ||
-			<a href="https://github.com/elsci-io/public/discussions">Support</a> ||
-			<a href="mailto:peaksel@elsci.io">Contact us</a>
-		</footer>
 	</body>
 	<script type="text/javascript">
 		let emailBtns = document.querySelectorAll("[data-email-btn]");

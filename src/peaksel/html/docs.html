@@ -7,10 +7,13 @@
 		<link rel="stylesheet" href="../../css/styles.css" />
 	</head>
 	<body>
-		<%= require('html-loader!../../partials/header.html').default %> 
-		<%=	require('html-loader!../../partials/headerPeaksel.html').default %>
-		<main class="documentation" data-page="documentation" data-context="peaksel">
-			<div class="wrapper">
+		<div class="wrapper">
+			<%= require('html-loader!../../partials/header.html').default %> <%=
+			require('html-loader!../../partials/headerPeaksel.html').default %>
+			<main
+				class="documentation"
+				data-page="documentation"
+				data-context="peaksel">
 				<section>
 					<div class="container">
 						<h1>Documentation</h1>
@@ -35,9 +38,9 @@
 						</ul>
 					</div>
 				</section>
-	
+
 				<section>
-				<div class="container">
+					<div class="container">
 						<h3>Our articles</h3>
 						<ul class="documentation-list">
 							<li class="documentation-item">
@@ -56,9 +59,9 @@
 								>
 							</li>
 						</ul>
-				</div>
+					</div>
 				</section>
-	
+
 				<section>
 					<div class="container">
 						<h3>Batches, Injections, chromatograms</h3>
@@ -68,14 +71,22 @@
 									>Peaks: automatic detection, integration, manual editing</a
 								>
 							</li>
-							<li class="documentation-item"><a href="doc/align-detectors.html">Aligning detectors</a></li>
-							<li class="documentation-item"><a href="doc/zoom.html">Zooming</a></li>
-							<li class="documentation-item"><a href="doc/batch-navigation.html">Batch: navigation, QC</a></li>
-							<li class="documentation-item"><a href="doc/reports.html">Reports</a></li>
+							<li class="documentation-item">
+								<a href="doc/align-detectors.html">Aligning detectors</a>
+							</li>
+							<li class="documentation-item">
+								<a href="doc/zoom.html">Zooming</a>
+							</li>
+							<li class="documentation-item">
+								<a href="doc/batch-navigation.html">Batch: navigation, QC</a>
+							</li>
+							<li class="documentation-item">
+								<a href="doc/reports.html">Reports</a>
+							</li>
 						</ul>
 					</div>
 				</section>
-	
+
 				<section>
 					<div class="container">
 						<h3>Chemical Structures, EICs</h3>
@@ -100,7 +111,7 @@
 						</ul>
 					</div>
 				</section>
-	
+
 				<section>
 					<div class="container">
 						<h3>Visualizations</h3>
@@ -112,7 +123,9 @@
 									>Custom columns: Expression Language</a
 								>
 							</li>
-							<li class="documentation-item"><a href="doc/vis-templates.html">Templates</a></li>
+							<li class="documentation-item">
+								<a href="doc/vis-templates.html">Templates</a>
+							</li>
 							<li class="documentation-item">
 								<a target="_blank" href="https://youtu.be/Itb5D5Vh-a0"
 									>Determine large coelutions using BPM</a
@@ -121,7 +134,7 @@
 						</ul>
 					</div>
 				</section>
-	
+
 				<section>
 					<div class="container">
 						<h3>Importing raw data</h3>
@@ -131,14 +144,16 @@
 									>Automatic import from vendor folders</a
 								>
 							</li>
-							<li class="documentation-item"><a href="doc/import-manual-upload.html">Manual Upload</a></li>
+							<li class="documentation-item">
+								<a href="doc/import-manual-upload.html">Manual Upload</a>
+							</li>
 						</ul>
 					</div>
 				</section>
-			</div>
-		</main>
+			</main>
 
-		<%= require('html-loader!../../partials/footer.html').default %>
+			<%= require('html-loader!../../partials/footer.html').default %>
+		</div>
 		<script src="../../js/script.js"></script>
 	</body>
 </html>

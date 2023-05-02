@@ -718,8 +718,6 @@ video,
 }
 
 
-
-
 /*     DOCUMENTATION   */
 
 .documentation {
@@ -736,6 +734,11 @@ video,
 	line-height: 26px;
 }
 
+/*      TRY-IT     */
+
+.try-it {
+margin: 2rem 0 4rem;
+}
 
 .buy-header-container {
 	margin-bottom: 40px;
@@ -750,7 +753,7 @@ video,
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	min-width: 300px;
 	width: 30%;
-	margin-left: 30px;
+	margin-left: 10px;
 	margin-bottom: 30px;
 	text-align: center;
 }
