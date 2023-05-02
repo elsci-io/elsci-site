@@ -11,7 +11,8 @@ let files = fs.readdirSync(__dirname + '/src');
 let htmlPlugins = files.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/' + file,
-        filename: file
+        filename: file,
+        title: 'blah-blah'
     });
 });
 
@@ -19,7 +20,8 @@ let peakselFiles = fs.readdirSync(__dirname + '/src/peaksel/html');
 let htmlPluginsForPeaksel = peakselFiles.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/' + file,
-        filename: '/peaksel/html/' + file
+        filename: '/peaksel/html/' + file,
+        title: 'blah-blah'
     });
 });
 

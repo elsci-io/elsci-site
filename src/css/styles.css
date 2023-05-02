@@ -175,6 +175,7 @@ video,
 	z-index: 50;
 	padding-left: 15px;
 }
+
 .header-elsci.scroll {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -198,8 +199,26 @@ video,
 }
 .header-peaksel {
 	background: #fff;
-	margin-top: 4rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
+.header-peaksel.scroll {
+	position: fixed;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+	.header-elsci.sub-header {
+		position: relative;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	.header-elsci.sub-header.scroll {
+		display: none;
+	}
+}
+
 .header-elsci__logo {
 	z-index: 3;
 }
@@ -258,6 +277,10 @@ video,
 	background: var(--main-color1);
 }
 
+.header-elsci__logo-peaksel {
+	display: none;
+}
+
 .header-peaksel__logo,
 .header-elsci__logo-peaksel {
 	font-size: clamp(1.5em, 1.5em + 2vw, 2.5em);
@@ -268,9 +291,6 @@ video,
 .header-peaksel__logo span,
 .header-elsci__logo-peaksel span {
 	color: var(--main-color2);
-}
-.header-elsci__logo-peaksel {
-	display: none;
 }
 
 .navigation-list {
@@ -361,8 +381,9 @@ video,
 	.navigation-list li:hover {
 		font-weight: 400;
 	}
-	.header-elsci__logo-peaksel {
+	.sub-header .header-elsci__logo-peaksel {
 		display: block;
+		z-index: 4;
 	}
 	.header-peaksel {
 		display: none;
@@ -572,8 +593,8 @@ video,
 
 /*     ABOUT       */
 
-.about {
-	padding: 2rem 0;
+.about__body {
+	padding: 6rem 0;
 }
 .about__item {
 	padding: 0.75rem;
@@ -586,21 +607,21 @@ video,
 	}
 }
 
-@media (max-width: 576px) {
-	.about {
+/* @media (max-width: 576px) {
+	.about__body {
 		padding: 1rem 0;
 	}
-}
+} */
 
-/*         BUSSINESS-MODEL       */
+/*         BUSINESS-MODEL       */
 
 .business-model__list li {
 	list-style: decimal;
 	margin: 0.5rem;
 }
-.business-model {
+.business-model__body {
 	max-width: 990px;
-	padding: 2rem 0;
+	padding: 6rem 0;
 	margin: 0 auto;
 }
 .business-model__section {
@@ -679,30 +700,23 @@ video,
 	flex-direction: row-reverse;
 }
 
-@media (max-width: 876px){
- .advantages-card {
-	flex-wrap: wrap;
-	justify-content: center;
- }
- .advantages-card__img {
-	max-width: 380px;
- }
- .advantages-card__img img {
-	width: 100%;
- }
- .advantages-card__body {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
- }
+@media (max-width: 876px) {
+	.advantages-card {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.advantages-card__img {
+		max-width: 380px;
+	}
+	.advantages-card__img img {
+		width: 100%;
+	}
+	.advantages-card__body {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
 }
-
-
-
-
-
-
-
 
 .docs-header-container {
 	margin-bottom: 40px;
