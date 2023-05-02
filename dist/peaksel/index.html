@@ -12,7 +12,8 @@
 		<link rel="stylesheet" href="../../css/styles.css" />
 	<script defer src="../work/elsci/elsci-site/dist/bundle.js"></script></head>
 	<body>
-		<header class="header-elsci">
+		<div class="wrapper">
+			<header class="header-elsci">
 	<div class="container">
 		<div class="header-elsci__body">
 			<a href="/" class="header-elsci__logo">
@@ -59,8 +60,7 @@
 		</div>
 	</div>
 </header>
-
-		<header class="header-peaksel">
+ <header class="header-peaksel">
 	<div class="container">
 		<div class="header-peaksel__body">
 			<a class="header-peaksel__logo main-color1" href="/"
@@ -87,8 +87,7 @@
 		</div>
 	</div>
 </header>
-		<main data-page="overview" data-context="peaksel">
-			<div class="wrapper">
+			<main data-page="overview" data-context="peaksel">
 				<section class="peaksel-hero">
 					<div class="container">
 						<div class="peaksel-hero__body">
@@ -101,7 +100,7 @@
 									loop
 									muted
 									playsinline
-									src="./../img/plate.mp4?v=1"></video>
+									src="img/plate.mp4?v=1"></video>
 							</div>
 							<!--Video quality is too low-->
 							<!--<video aria-hidden="true" class="motion quad-motion" autoplay loop muted playsinline src="img/quad.mp4?v=1" width="190vw"></video>-->
@@ -172,7 +171,7 @@
 										</div>
 										<div class="advantages-card__img">
 											<img
-												src="./../img/feature__plate-w-liquid-handler.png"
+												src="img/feature__plate-w-liquid-handler.png"
 												alt="" />
 										</div>
 									</div>
@@ -190,7 +189,7 @@
 											</p>
 										</div>
 										<div class="advantages-card__img">
-											<img src="./../img/feature__db-search.png" alt="" />
+											<img src="img/feature__db-search.png" alt="" />
 										</div>
 									</div>
 								</li>
@@ -210,9 +209,7 @@
 											</p>
 										</div>
 										<div class="advantages-card__img">
-											<img
-												src="./../img/feature__many-instruments.png"
-												alt="" />
+											<img src="img/feature__many-instruments.png" alt="" />
 										</div>
 									</div>
 								</li>
@@ -232,7 +229,7 @@
 											</p>
 										</div>
 										<div class="advantages-card__img">
-											<img src="./../img/feature__data-analysis.png" alt="" />
+											<img src="img/feature__data-analysis.png" alt="" />
 										</div>
 									</div>
 								</li>
@@ -249,7 +246,7 @@
 											</p>
 										</div>
 										<div class="advantages-card__img">
-											<img src="./../img/feature__cro-cmo--alpha.png" alt="" />
+											<img src="img/feature__cro-cmo--alpha.png" alt="" />
 										</div>
 									</div>
 								</li>
@@ -257,9 +254,8 @@
 						</div>
 					</div>
 				</section>
-			</div>
-		</main>
-		<footer class="footer">
+			</main>
+			<footer class="footer">
 	<div class="container">
 		<div class="footer-row">
 			<section class="footer__social">
@@ -327,6 +323,7 @@
 	</div>
 </footer>
 
+		</div>
 		<script src="js/app.js"></script>
 		<script src="../../js/script.js"></script>
 	</body>

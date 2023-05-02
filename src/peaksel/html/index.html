@@ -12,10 +12,10 @@
 		<link rel="stylesheet" href="../../css/styles.css" />
 	</head>
 	<body>
-		<%= require('html-loader!../../partials/header.html').default %>
-		<%= require('html-loader!../../partials/headerPeaksel.html').default %>
-		<main data-page="overview" data-context="peaksel">
-			<div class="wrapper">
+		<div class="wrapper">
+			<%= require('html-loader!../../partials/header.html').default %> <%=
+			require('html-loader!../../partials/headerPeaksel.html').default %>
+			<main data-page="overview" data-context="peaksel">
 				<section class="peaksel-hero">
 					<div class="container">
 						<div class="peaksel-hero__body">
@@ -105,7 +105,7 @@
 									</div>
 								</li>
 								<li class="advantages-item">
-									<div class="advantages-card reverse">
+									<div class="advantages-card">
 										<div class="advantages-card__body">
 											<h3 class="advantages-card__title">
 												Data at your fingertips
@@ -137,14 +137,12 @@
 											</p>
 										</div>
 										<div class="advantages-card__img">
-											<img
-												src="img/feature__many-instruments.png"
-												alt="" />
+											<img src="img/feature__many-instruments.png" alt="" />
 										</div>
 									</div>
 								</li>
 								<li class="advantages-item">
-									<div class="advantages-card reverse">
+									<div class="advantages-card">
 										<div class="advantages-card__body">
 											<h3 class="advantages-card__title">
 												<i>In situ</i> data analysis
@@ -184,9 +182,9 @@
 						</div>
 					</div>
 				</section>
-			</div>
-		</main>
-		<%= require('html-loader!../../partials/footer.html').default %>
+			</main>
+			<%= require('html-loader!../../partials/footer.html').default %>
+		</div>
 		<script src="js/app.js"></script>
 		<script src="../../js/script.js"></script>
 	</body>

@@ -197,7 +197,7 @@ video,
 	width: 100%;
 }
 .header-peaksel.scroll {
-	position: fixed;
+	position: sticky;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -209,9 +209,6 @@ video,
 	.sub-header.header-elsci::before {
 		background: #2082d8;
 		/* background:#6ED4FF; */
-	}
-	.header-elsci.sub-header.scroll {
-		display: none;
 	}
 	.sub-header .header__link {
 		color: #fff;
@@ -690,9 +687,7 @@ video,
 	height: 100%;
 	object-fit: fill;
 }
-.advantages-card.reverse {
-	flex-direction: row-reverse;
-}
+
 @media (max-width: 767px) {
 .peaksel-hero__body {
 	min-height: calc(100vh - 4rem);
