@@ -208,6 +208,7 @@ video,
 	}
 	.sub-header.header-elsci::before {
 		background: #2082d8;
+		/* background:#6ED4FF; */
 	}
 	.header-elsci.sub-header.scroll {
 		display: none;
@@ -734,6 +735,12 @@ video,
 	line-height: 26px;
 }
 
+@media (max-width: 767px) {
+	.documentation {
+	padding-top: 6rem;
+}
+}
+
 /*      TRY-IT     */
 
 .try-it {
@@ -759,6 +766,12 @@ margin: 2rem 0 4rem;
 }
 .billing-plan__title {
 	padding: 10px;
+}
+
+@media (max-width: 767px) {
+	.try-it {
+	padding-top: 6rem;
+}
 }
 
 .btn {
