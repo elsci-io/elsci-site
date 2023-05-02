@@ -16,9 +16,10 @@ window.addEventListener('scroll', (el) => {
 })
 
 const pageName = document.querySelector('main').dataset.page;
-// if (pageName) {
-//     document.querySelector(`.navigation-list__item[data-page="${pageName}"]`).classList.add('active');
-// }
+console.log(pageName);
+if (pageName) {
+    document.querySelector(`.navigation-list__item[data-page="${pageName}"]`).classList.add('active');
+}
 
 const siteName = document.querySelector('main').dataset.context;
 if (siteName) {

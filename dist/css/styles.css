@@ -209,16 +209,22 @@ video,
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+
 @media (min-width: 768px) {
 	.header-elsci.sub-header {
 		position: relative;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	.sub-header.header-elsci::before {
+		background: #2082d8;
 	}
 	.header-elsci.sub-header.scroll {
 		display: none;
 	}
-	.header-elsci__logo-peaksel {
-		display: none;
+	.sub-header .header__link {
+		color: #fff;
+	}
+	.sub-header .header__link:hover {
+		color: #fff;
 	}
 }
 
@@ -278,6 +284,10 @@ video,
 	height: 2px;
 	width: 100%;
 	background: var(--main-color1);
+}
+
+.header-elsci__logo-peaksel {
+	display: none;
 }
 
 .header-peaksel__logo,
@@ -380,13 +390,14 @@ video,
 	.navigation-list li:hover {
 		font-weight: 400;
 	}
-	.header-elsci__logo-peaksel {
+	.sub-header .header-elsci__logo-peaksel {
 		display: block;
+		z-index: 4;
 	}
 	.header-peaksel {
 		display: none;
 	}
-	.navigation-list--peaksel {
+	.sub-header .navigation-list--peaksel {
 		display: block;
 		color: #fff;
 		position: relative;
@@ -632,10 +643,8 @@ video,
 
 /*                PEAKSEL-INDEX             */
 
-.peaksel-hero {
-	min-height: calc(100vh - 8rem);
-}
 .peaksel-hero__body {
+	min-height: calc(100vh - 8rem);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -654,6 +663,7 @@ video,
 }
 .peaksel-hero__subtitle {
 	font-size: clamp(1.2em, 1.2em + 2vw, 2vw);
+	text-align: center;
 }
 
 .video-body {
@@ -696,6 +706,12 @@ video,
 }
 .advantages-card.reverse {
 	flex-direction: row-reverse;
+}
+@media (max-width: 767px) {
+.peaksel-hero__body {
+	min-height: calc(100vh - 4rem);
+	justify-content: center;
+}
 }
 
 @media (max-width: 876px) {
