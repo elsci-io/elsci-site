@@ -7,34 +7,41 @@
 		<link rel="stylesheet" href="../../css/styles.css" />
 	</head>
 	<body>
-		<div class="container">
-			<header class="header">
-				<a class="header__logo" href="../index.html">PEAK<span>SEL</span></a>
-				<nav class="header__list">
-					<a href="../index.html" class="header__item">Overview</a>
-					<a href="../docs.html" class="header__item header__item--bordered"
-						>Documentation</a
-					>
-					<a href="../buy.html" class="header__item">Try it</a>
-					<a href="../about.html" class="header__item">About us</a>
-				</nav>
-			</header>
+		<div class="wrapper">
+			<%= require('html-loader!../../../partials/header.html').default %> <%=
+			require('html-loader!../../../partials/headerPeaksel.html').default %>
+
+			<main
+				class="zoom page-body"
+				data-page="documentation"
+				data-context="peaksel">
+				<div class="container">
+					<div class="home__features">
+						<h2 class="page-subtitle">Zoom in specific chromatogram by clicking on the legend</h2>
+						<div class="video-box">
+							<video class="video-item"
+								autoplay
+								loop
+								muted
+								playsinline
+								src="../img/landing-zoom.mp4"></video>
+						</div>
+						<h2 class="page-subtitle">Hold "z" to zoom in on spectrum</h2>
+						<div class="video-box">
+							<video class="video-item"
+								autoplay
+								loop
+								muted
+								playsinline
+								src="../img/landing-scan-zoom.mp4"></video>
+						</div>
+					</div>
+				</div>
+			</main>
+			<%= require('html-loader!../../../partials/footer.html').default %>
+
 		</div>
-		<div class="container home__features docs">
-			<h2>Zoom in specific chromatogram by clicking on the legend</h2>
-			<video
-				autoplay
-				loop
-				muted
-				playsinline
-				src="../img/landing-zoom.mp4"></video>
-			<h2>Hold "z" to zoom in on spectrum</h2>
-			<video
-				autoplay
-				loop
-				muted
-				playsinline
-				src="../img/landing-scan-zoom.mp4"></video>
-		</div>
+		<script src="../../js/script.js"></script>
+
 	</body>
 </html>
