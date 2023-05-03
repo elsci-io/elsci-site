@@ -562,7 +562,7 @@ video,
 
 .page-title {
 	text-align: center;
-	font-size: 3rem;
+	font-size: clamp(2.375rem, 3vw + 1.25rem, 3rem);
 	letter-spacing: 0.3px;
 	color: #444343;
 	font-weight: 400;
@@ -845,9 +845,6 @@ video,
 	max-width: 1030px;
 	margin: 0 auto;
 }
-
-
-
 
 
 .btn {
