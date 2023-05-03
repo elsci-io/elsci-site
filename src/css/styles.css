@@ -793,10 +793,6 @@ video,
 
 /*           MASS-SPEC           */
 
-.mass-spec img {
-	max-width: 100%;
-}
-
 .mass-spec .mass-spec__img--right {
 	margin: 0 0.5rem;
 	max-width: 25em;
@@ -815,6 +811,13 @@ video,
 /*    wl-extraction   */
 
 .wl-extraction li {
+	list-style: decimal;
+}
+
+
+/*    hte-qc-peaks */
+
+.hte-qc-peaks li {
 	list-style: decimal;
 }
 
@@ -1251,16 +1254,19 @@ video,
 	}
 }
 
-/* article h1 {
-	margin-top: 60px;
-} */
 article img {
-	width: 90vw;
 	border: #444343 solid 1px;
-	max-width: 1000px;
+	display: block;
+	margin: 0 auto;
+	max-width: 80%;
 }
 article video {
 	width: 90vw;
 	border: #444343 solid 1px;
 	max-width: 1000px;
+}
+@media (max-width: 900px) {
+	article img {
+	max-width: 100%;
+}
 }
