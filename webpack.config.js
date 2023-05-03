@@ -25,6 +25,15 @@ let htmlPluginsForPeaksel = peakselFiles.filter(file => file.endsWith('.html')).
     });
 });
 
+let peakselDocsFiles = fs.readdirSync(__dirname + '/src/peaksel/html/docs');
+let htmlPluginsForPeakselDocs = peakselDocsFiles.filter(file => file.endsWith('.html')).map(file => {
+    return new HtmlWebpackPlugin({
+        template: __dirname + '/src/peaksel/html/docs/' + file,
+        filename: '/peaksel/docs/' + file,
+        title: 'blah-blah'
+    });
+});
+
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
@@ -35,6 +44,7 @@ module.exports = {
     plugins: [
         ...htmlPlugins,
         ...htmlPluginsForPeaksel,
+        ...htmlPluginsForPeakselDocs,
         // new HtmlWebpackPlugin({
         //     template: __dirname + '/src/peaksel/docs.html',
         //     filename: '/peaksel/docs.html'
@@ -46,6 +56,7 @@ module.exports = {
                 { from: 'src/img', to: 'img' },
                 { from: 'src/peaksel/img', to: 'peaksel/img' },
                 { from: 'src/peaksel/js', to: 'peaksel/js' },
+                // { from: 'src/peaksel/docs', to: 'peaksel/docs' },
             ]
         }),
     ],

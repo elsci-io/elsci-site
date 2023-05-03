@@ -218,12 +218,21 @@ video,
 	}
 }
 
-.header-elsci__logo {
+.header-elsci-logo {
+	position: relative;
 	z-index: 3;
 }
-.header-elsci__logo img {
+.header-elsci-logo img {
 	height: 50px;
 }
+/* 
+.header-elsci__logo--white {
+	display: none;
+}
+
+.sub-header .header-elsci__logo--white {
+	display: block;
+} */
 .header__burger {
 	display: none;
 }
