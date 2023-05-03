@@ -135,10 +135,24 @@ li {
 .job__info p {
 	margin: 0;
 }
+
+.video-box {
+	margin: 2rem 0 4rem;
+	position: relative;
+	aspect-ratio: 16 / 9;
+}
+
+.video-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 video,
 .video {
 	max-width: 100%;
-	display: block;
+	/* display: block; */
 }
 
 .motion {
@@ -814,7 +828,6 @@ video,
 	list-style: decimal;
 }
 
-
 /*    hte-qc-peaks */
 
 .hte-qc-peaks li {
@@ -1260,13 +1273,13 @@ article img {
 	margin: 0 auto;
 	max-width: 80%;
 }
-article video {
-	width: 90vw;
+/* article video {
+	max-width: 80%;
+	margin: 0 auto;
 	border: #444343 solid 1px;
-	max-width: 1000px;
-}
+} */
 @media (max-width: 900px) {
 	article img {
-	max-width: 100%;
-}
+		max-width: 100%;
+	}
 }
