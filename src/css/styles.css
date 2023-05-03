@@ -61,15 +61,17 @@ main {
 h1 {
 	color: var(--main-color-text);
 	font-weight: 400;
-	font-size: 26px;
+	/* font-size: 35px; */
+	font-size: clamp(2.375rem, 3vw + 1.25rem, 3rem);
 	line-height: 1.3;
 }
-@media all and (min-width: 576px) {
+/* @media all and (min-width: 576px) {
 	h1 {
 		font-size: 47px;
 		line-height: 60px;
 	}
-}
+} */
+
 a {
 	color: #2082d8;
 	text-decoration: none;
@@ -79,28 +81,31 @@ h2 {
 	margin: 0 auto;
 	color: var(--main-color-text);
 	font-weight: 300;
-	font-size: 22px;
-	line-height: 40px;
+	/* font-size: 30px; */
+	font-size: clamp(1.875rem, 2vw + 1.25rem, 2.5rem);
+	line-height: 1.5;
 }
-@media all and (min-width: 576px) {
+/* @media all and (min-width: 576px) {
 	h2 {
 		font-size: 40px;
 		line-height: 60px;
 	}
-}
+} */
 
 h3 {
 	margin: 0 auto;
 	font-weight: 300;
-	font-size: 18px;
-	line-height: 30px;
+	/* font-size: 18px; */
+	/* font-size: clamp(1.5rem, 2vw + 1rem, 2rem); */
+	font-size: clamp(1.375rem, 1vw + 1rem, 2rem);
+	line-height: 1.5;
 }
-@media all and (min-width: 576px) {
+/* @media all and (min-width: 576px) {
 	h3 {
 		font-size: 30px;
 		line-height: 40px;
 	}
-}
+} */
 
 ul,
 li {
@@ -805,6 +810,12 @@ video,
 		width: 100%;
 		float: unset;
 	}
+}
+
+/*    wl-extraction   */
+
+.wl-extraction li {
+	list-style: decimal;
 }
 
 .btn {
