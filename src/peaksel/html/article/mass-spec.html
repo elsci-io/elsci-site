@@ -36,7 +36,7 @@
 			<%= require('html-loader!../../../partials/header.html').default %> <%=
 			require('html-loader!../../../partials/headerPeaksel.html').default %>
 
-			<main class="mass-spec" data-page="documentation" data-context="peaksel">
+			<main class="mass-spec page-body" data-page="documentation" data-context="peaksel">
 				<article class="container docs">
 					<h1>Mass Spectrometry: types, modes, data processing</h1>
 					<div id="toc"></div>
@@ -75,9 +75,8 @@
 						only the ions of the right m/z are passed through, while the rest
 						are filtered out:
 					</p>
-					<img
-						src="../img/article/mass-spec-quads.png"
-						style="max-width: 25em; float: right" />
+					<img class="mass-spec__img--right"
+						src="../img/article/mass-spec-quads.png"/>
 					<p>
 						When in <a href="#scanmode">Scan mode</a> - the m/z of interest
 						changes gradually from lower to the upper boundary, measuring this
