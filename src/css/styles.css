@@ -142,9 +142,11 @@ li {
 }
 
 .video-box {
-	margin: 2rem 0 4rem;
+	max-width: 80%;
+	margin: 2rem auto 4rem;
 	position: relative;
 	aspect-ratio: 16 / 9;
+	border: #444343 solid 1px;
 }
 
 .video-item {
@@ -877,6 +879,38 @@ video,
 }
 
 
+
+/*         waters-structures   */
+
+
+
+.waters-structures__table{
+	max-width: 100%;
+}
+
+
+
+
+/*         vis-templates       */
+
+.page-paragraph--margin{
+	margin: 2rem 0;
+}
+
+
+/*          import-automation       */
+
+.import-automation ol li {
+	list-style: decimal;
+}
+
+.import-automation ul {
+	margin: 40px;
+}
+.import-automation ul li {
+	list-style: initial;
+}
+
 .btn {
 	margin: 0;
 	min-width: 140px;
@@ -1323,5 +1357,8 @@ article img {
 @media (max-width: 900px) {
 	article img {
 		max-width: 100%;
+	}
+	.video-box {
+max-width: 100%;
 	}
 }
