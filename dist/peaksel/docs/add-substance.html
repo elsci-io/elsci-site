@@ -7,74 +7,217 @@
 		<link rel="stylesheet" href="../../css/styles.css" />
 	<script defer src="../../work/elsci/elsci-site/dist/bundle.js"></script></head>
 	<body>
-		<div class="container">
-			<header class="header">
-				<a class="header__logo" href="../index.html">PEAK<span>SEL</span></a>
-				<nav class="header__list">
-					<a href="../index.html" class="header__item">Overview</a>
-					<a href="../docs.html" class="header__item header__item--bordered"
-						>Documentation</a
-					>
-					<a href="../buy.html" class="header__item">Try it</a>
-					<a href="../about.html" class="header__item">About us</a>
-				</nav>
-			</header>
+		<div class="wrapper">
+			<header class="header-elsci">
+	<div class="container">
+		<div class="header-elsci__body">
+			<div class="header-elsci-logo">
+				<a href="/" class="header-elsci-logo--main">
+					<img src="../../work/elsci/elsci-site/dist/6c5a0122aa9f5b00d777.png" alt="" />
+				</a>
+				<a href="/" class="header-elsci-logo--white">
+					<img src="../../work/elsci/elsci-site/dist/07b7873450156d89e3f9.png" alt="" />
+				</a>
+			</div>
+			<a class="header-elsci__logo-peaksel" href="/">PEAK<span>SEL</span></a>
+			<div class="header__burger">
+				<span></span>
+			</div>
+			<nav class="header-elsci__navigation">
+				<ul class="header__list">
+					<li>
+						<ul class="navigation-list navigation-list--peaksel">
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/index.html">Overview</a>
+							</li>
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/docs.html">Documentation</a>
+							</li>
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/buy.html">Try it</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="navigation-list">
+							<li class="navigation-list__item" data-page="our-products">
+								<a class="header__link" href="/index.html#our-products"
+									>Our products</a
+								>
+							</li>
+							<li class="navigation-list__item" data-page="business-model">
+								<a class="header__link" href="/business-model.html"
+									>Business model</a
+								>
+							</li>
+							<li class="navigation-list__item" data-page="about">
+								<a class="header__link" href="/about.html">About us</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
 		</div>
-		<div class="container docs">
-			<h2>Excel, CSV, SDF/MOL, SMILES, InChI, MF</h2>
-			<p>
-				It's possible to upload a structure (EICs will be created automatically)
-				either to individual injections or to many injections at a time in a
-				Batch. Possible options:
-			</p>
-			<ul>
-				<li>
-					Add a single structure using SMILES, InChI, Molecular Formula (MF)
-				</li>
-				<li>
-					SDF/MOL (both V2000 and V3000) with 1 or more structures:
-					<ul>
-						<li>
-							<code>name</code> field (optional) will be used for the alias of
-							the structure
+	</div>
+</header>
+ <header class="header-peaksel">
+	<div class="container">
+		<div class="header-peaksel__body">
+			<a class="header-peaksel__logo main-color1" href="/peaksel/index.html"
+				>PEAK<span>SEL</span></a
+			>
+			<div>
+				<div class="header-peaksel__menu-burger">
+					<span></span>
+				</div>
+				<nav>
+					<ul class="header-peaksel__navigation">
+						<li class="navigation-list__item" data-page="overview">
+							<a class="header__link" href="/peaksel/index.html">Overview</a>
 						</li>
-						<li>
-							<code>injection</code> field (optional, Batch level) determines
-							which injections receive the structure
+						<li class="navigation-list__item" data-page="documentation">
+							<a class="header__link" href="/peaksel/docs.html">Documentation</a>
 						</li>
-					</ul>
-				</li>
-				<li>
-					Excel (you can copy-paste the cells instead of uploading a file)
-					<ul>
-						<li>1st column: structure or MF</li>
-						<li>2nd column (optional): alias for the structure</li>
-						<li>
-							3d column (optional, Batch level): names of injections to receive
-							respective structures
+						<li class="navigation-list__item" data-page="try-it">
+							<a class="header__link" href="/peaksel/buy.html">Try it</a>
 						</li>
 					</ul>
-				</li>
-				<li>
-					CSV with the delimiters <code>;</code> or <code>\t</code> (tabs).
-					Note, that commas are not supported because they can be part of InChI.
-				</li>
-			</ul>
-			<p>
-				You can either upload/drag'n'drop files or just copy-paste their content
-				directly into Peaksel forms. See demos below.
-			</p>
-			<h2>Video tutorial</h2>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+			<main
+				class="add-substance page-body"
+				data-page="documentation"
+				data-context="peaksel">
+				<div class="container home__features">
+					<h2 class="page-subtitle">Excel, CSV, SDF/MOL, SMILES, InChI, MF</h2>
+					<p>
+						It's possible to upload a structure (EICs will be created
+						automatically) either to individual injections or to many injections
+						at a time in a Batch. Possible options:
+					</p>
+					<ul class="add-substance__list">
+						<li class="add-substance__item">
+							Add a single structure using SMILES, InChI, Molecular Formula (MF)
+						</li>
+						<li class="add-substance__item">
+							SDF/MOL (both V2000 and V3000) with 1 or more structures:
+							<ul class="add-substance__sub-list">
+								<li class="add-substance__sub-item">
+									<code>name</code> field (optional) will be used for the alias
+									of the structure
+								</li>
+								<li class="add-substance__sub-item">
+									<code>injection</code> field (optional, Batch level)
+									determines which injections receive the structure
+								</li class="add-substance__sub-item">
+							</ul>
+						</li>
+						<li class="add-substance__item">
+							Excel (you can copy-paste the cells instead of uploading a file)
+							<ul class="add-substance__sub-list">
+								<li class="add-substance__sub-item">1st column: structure or MF</li>
+								<li class="add-substance__sub-item">2nd column (optional): alias for the structure</li>
+								<li class="add-substance__sub-item">
+									3d column (optional, Batch level): names of injections to
+									receive respective structures
+								</li>
+							</ul>
+						</li>
+						<li class="add-substance__item">
+							CSV with the delimiters <code>;</code> or <code>\t</code> (tabs).
+							Note, that commas are not supported because they can be part of
+							InChI.
+						</li>
+					</ul>
+					<p>
+						You can either upload/drag'n'drop files or just copy-paste their
+						content directly into Peaksel forms. See demos below.
+					</p>
+					<h2 class="page-subtitle">Video tutorial</h2>
+					<section>
+						<div class="video-box">
+							<iframe
+								class="video-item"
+								src="https://www.youtube.com/embed/egy4otLuj-w"
+								frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+					</section>
+				</div>
+			</main>
+			<footer class="footer">
+	<div class="container">
+		<div class="footer-row">
+			<section class="footer__social">
+				<p class="footer__section-title">Follow our updates</p>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://www.linkedin.com/company/elsci-io/"
+							>LinkedIn</a
+						>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://www.facebook.com/elsci.io"
+							>Facebook</a
+						>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://twitter.com/elsci_io"
+							>Twitter</a
+						>
+					</li>
+				</ul>
+			</section>
+			<section class="footer__contacts">
+				<p class="footer__section-title">Contact us</p>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://github.com/elsci-io/public/discussions"
+							>Public QnA</a
+						>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="mailto:peaksel@elsci.io">Email</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://t.me/elscipeaksel"
+							>Telegram IM</a
+						>
+					</li>
+				</ul>
+			</section>
 			<section>
-				<iframe
-					class="video"
-					width="1024"
-					height="582"
-					src="https://www.youtube.com/embed/egy4otLuj-w"
-					frameborder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+				<p class="footer__section-title">Company</p>
+				<address class="footer__address">
+					<p>Elsci LLC, Yerevan, Armenia</p>
+					<p>Arabkir district, Komitas ave</p>
+					<p>1st lane, b. 20, 0051</p>
+				</address>
 			</section>
 		</div>
+	</div>
+</footer>
+
+		</div>
+		<script src="../../js/script.js"></script>
 	</body>
 </html>

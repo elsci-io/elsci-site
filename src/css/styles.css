@@ -52,6 +52,11 @@ main {
 	padding: 4rem 0;
 }
 
+.page-content {
+max-width: 990px;
+margin: 0 auto;
+}
+
 @media (max-width: 767px) {
 	.page-body {
 		padding-top: 6rem;
@@ -665,9 +670,7 @@ video,
 	margin: 0.5rem;
 }
 .business-model__body {
-	max-width: 990px;
 	padding: 6rem 0;
-	margin: 0 auto;
 }
 .business-model__section {
 	padding: 1rem 0;
@@ -785,6 +788,17 @@ video,
 	.documentation {
 		padding-top: 6rem;
 	}
+}
+
+
+/*        VOCABULARY    */
+
+.vocabulary-discription {
+	max-width: 700px;
+	margin: 1rem auto;
+	text-align: center;
+	font-style: italic;
+	letter-spacing: 0.2px;
 }
 
 /*      TRY-IT     */
@@ -1114,10 +1128,10 @@ video,
 	}
 }
 
-.home__features {
+/* .home__features {
 	margin: 0 auto;
 	max-width: 1030px;
-}
+} */
 /* .home__features p {
 	margin: 15px 0 5px;
 	font-size: 20px;
