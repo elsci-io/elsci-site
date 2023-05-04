@@ -7,37 +7,39 @@
 		<link rel="stylesheet" href="../css/styles.css" />
 	</head>
 	<body>
-		<div class="container">
-			<header class="header">
-				<a class="header__logo" href="./index.html">PEAK<span>SEL</span></a>
-				<nav class="header__list">
-					<a href="./index.html" class="header__item">Overview</a>
-					<a href="./docs.html" class="header__item">Documentation</a>
-					<a class="header__item header__item--bordered">Try it</a>
-					<a href="./buy.html" class="header__item">Prices</a>
-					<a href="./about.html" class="header__item">About us</a>
-				</nav>
-			</header>
-		</div>
-		<div class="container">
-			<div class="job__type">
-				<img src="img/Illustration-07.png" alt="call" style="height: 234px" />
-				<div class="job__info job__info--shrink">
-					<p>Want to get access to the demo instance? Have questions?</p>
-					<ul style="font-size: 24px">
-						<li>
-							Drop us an email:
-							<a href="mailto:peaksel@elsci.io">peaksel@elsci.io</a>
-						</li>
-						<li>
-							Or
-							<a href="https://peaksel.youcanbook.me/" target="_blank"
-								>book a meeting</a
-							>
-						</li>
-					</ul>
+		<div class="wrapper">
+			<%= require('html-loader!../../partials/header.html').default %> <%=
+			require('html-loader!../../partials/headerPeaksel.html').default %>
+			<main
+				class="contact page-body"
+				data-page="documentation"
+				data-context="peaksel">
+				<div class="container">
+					<div class="job__type">
+						<img
+							src="img/Illustration-07.png"
+							alt="call"
+							style="height: 234px" />
+						<div class="contact-body">
+							<p>Want to get access to the demo instance? Have questions?</p>
+							<ul class="contact-list">
+								<li>
+									Drop us an email:
+									<a href="mailto:peaksel@elsci.io">peaksel@elsci.io</a>
+								</li>
+								<li>
+									Or
+									<a href="https://peaksel.youcanbook.me/" target="_blank"
+										>book a meeting</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</div>
+			</main>
+			<%= require('html-loader!../../partials/footer.html').default %>
+			<script src="../../js/script.js"></script>
 		</div>
 	</body>
 </html>
