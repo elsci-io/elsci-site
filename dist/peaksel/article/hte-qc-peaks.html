@@ -7,7 +7,7 @@
 			High Throughput Experimentation: speed up analysis with visualizations
 		</title>
 		<link rel="stylesheet" href="../../css/styles.css" />
-	<script defer src="../../work/elsci/elsci-site/dist/bundle.js"></script></head>
+	<script defer src="../../bundle.js"></script></head>
 	<body>
 		<div class="wrapper">
       <header class="header-elsci">
@@ -15,10 +15,10 @@
 		<div class="header-elsci__body">
 			<div class="header-elsci-logo">
 				<a href="/" class="header-elsci-logo--main">
-					<img src="../../work/elsci/elsci-site/dist/6c5a0122aa9f5b00d777.png" alt="" />
+					<img src="../../6c5a0122aa9f5b00d777.png" alt="" />
 				</a>
 				<a href="/" class="header-elsci-logo--white">
-					<img src="../../work/elsci/elsci-site/dist/07b7873450156d89e3f9.png" alt="" />
+					<img src="../../07b7873450156d89e3f9.png" alt="" />
 				</a>
 			</div>
 			<a class="header-elsci__logo-peaksel" href="/">PEAK<span>SEL</span></a>
@@ -91,8 +91,8 @@
 </header>
 			<main class="hte-qc-peaks page-body" data-page="documentation" data-context="peaksel">
 				<div class="container">
-					<article>
-						<h1>
+					<article class="page-content">
+						<h1 class="page-title"> 
 							High Throughput Experimentation: speed up analysis with
 							visualizations
 						</h1>
@@ -134,7 +134,7 @@
 							<a href="../index.html">Peaksel</a> software.
 						</p>
 
-						<h2>General approach</h2>
+						<h2 class="page-subtitle">General approach</h2>
 						<p>
 							Ideally we want to review only the data that needs the review and
 							we don’t want to go through all the other injections. For this:
@@ -152,7 +152,7 @@
 						</ol>
 						<p>Now let’s look at the examples of such visualizations.</p>
 
-						<h2>Peak count</h2>
+						<h2 class="page-subtitle">Peak count</h2>
 						<p>
 							Before looking into the quality of peaks we need to check if the
 							number of peaks is correct. We want to identify how many peaks
@@ -197,7 +197,7 @@
 							at them. In this particular case changing the Integration Method
 							for the batch solved almost all problems.
 						</p>
-						<h2>Stable Retention Time across batch</h2>
+						<h2 class="page-subtitle">Stable Retention Time across batch</h2>
 						<p>
 							In many cases HTE represents condition screening or synthesis of
 							similar compounds. Meaning that the number of distinct analytes is
@@ -238,7 +238,7 @@
 								inspection.
 							</li>
 						</ol>
-						<h2>Peak alignment across chromatograms of single injection</h2>
+						<h2 class="page-subtitle">Peak alignment across chromatograms of single injection</h2>
 						<p>
 							Previous visualization helps well when the number of distinct
 							analytes is low. But what if we synthesized 384 distinct products
@@ -265,7 +265,7 @@
 							simpler alternatives should be considered.
 						</p>
 
-						<h2>Simple way of comparing Retention Time</h2>
+						<h2 class="page-subtitle">Simple way of comparing Retention Time</h2>
 						<p>
 							The most straightforward way of finding issues with peak detection
 							is to compare 2 chromatograms at a time:
@@ -279,7 +279,7 @@
 							this type of visualizations is much simpler and cleaner.
 						</p>
 
-						<h2>Detecting Large Co-elutions</h2>
+						<h2 class="page-subtitle">Detecting Large Co-elutions</h2>
 						<p>
 							Another potentially useful possibility is detecting if our EIC
 							peak is actually the most abundant mass at that Retention Time.
@@ -305,7 +305,7 @@
 							>.
 						</p>
 
-						<h2>Summary</h2>
+						<h2  class="page-subtitle">Summary</h2>
 						<p>
 							When running High Throughput Analysis the amount of data that’s
 							generated is too large to look at manually. But with the use of

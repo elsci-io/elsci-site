@@ -20,7 +20,7 @@ let peakselFiles = fs.readdirSync(__dirname + '/src/peaksel/html');
 let htmlPluginsForPeaksel = peakselFiles.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/' + file,
-        filename: '/peaksel/' + file,
+        filename: './peaksel/' + file,
         title: 'blah-blah'
     });
 });
@@ -29,7 +29,7 @@ let peakselDocsFiles = fs.readdirSync(__dirname + '/src/peaksel/html/docs');
 let htmlPluginsForPeakselDocs = peakselDocsFiles.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/docs/' + file,
-        filename: '/peaksel/docs/' + file,
+        filename: './peaksel/docs/' + file,
         title: 'blah-blah'
     });
 });
@@ -38,7 +38,7 @@ let peakselArticleFiles = fs.readdirSync(__dirname + '/src/peaksel/html/article'
 let htmlPluginsForPeakselArticle = peakselArticleFiles.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/article/' + file,
-        filename: '/peaksel/article/' + file,
+        filename: './peaksel/article/' + file,
         title: 'blah-blah'
     });
 });

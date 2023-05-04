@@ -5,81 +5,218 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Automate import from vendor instruments - Peaksel</title>
 		<link rel="stylesheet" href="../../css/styles.css" />
-	<script defer src="../../work/elsci/elsci-site/dist/bundle.js"></script></head>
+	<script defer src="../../bundle.js"></script></head>
 	<body>
-		<div class="container">
-			<header class="header">
-				<a class="header__logo" href="../index.html">PEAK<span>SEL</span></a>
-				<nav class="header__list">
-					<a href="../index.html" class="header__item">Overview</a>
-					<a href="../docs.html" class="header__item header__item--bordered"
-						>Documentation</a
-					>
-					<a href="../buy.html" class="header__item">Try it</a>
-					<a href="../about.html" class="header__item">About us</a>
-				</nav>
-			</header>
+		<div class="wrapper">
+			<header class="header-elsci">
+	<div class="container">
+		<div class="header-elsci__body">
+			<div class="header-elsci-logo">
+				<a href="/" class="header-elsci-logo--main">
+					<img src="../../6c5a0122aa9f5b00d777.png" alt="" />
+				</a>
+				<a href="/" class="header-elsci-logo--white">
+					<img src="../../07b7873450156d89e3f9.png" alt="" />
+				</a>
+			</div>
+			<a class="header-elsci__logo-peaksel" href="/">PEAK<span>SEL</span></a>
+			<div class="header__burger">
+				<span></span>
+			</div>
+			<nav class="header-elsci__navigation">
+				<ul class="header__list">
+					<li>
+						<ul class="navigation-list navigation-list--peaksel">
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/index.html">Overview</a>
+							</li>
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/docs.html">Documentation</a>
+							</li>
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/buy.html">Try it</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="navigation-list">
+							<li class="navigation-list__item" data-page="our-products">
+								<a class="header__link" href="/index.html#our-products"
+									>Our products</a
+								>
+							</li>
+							<li class="navigation-list__item" data-page="business-model">
+								<a class="header__link" href="/business-model.html"
+									>Business model</a
+								>
+							</li>
+							<li class="navigation-list__item" data-page="about">
+								<a class="header__link" href="/about.html">About us</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
 		</div>
-		<article class="container docs">
-			<h1>Automate import from vendor instruments</h1>
-			<p>
-				While it's possible to just
-				<a href="./import-manual-upload.html"
-					>drag'n'drop raw files into Peaksel</a
-				>, most organizations will benefit from setting up automatic import.
-				This way your administrator can set up all the locations and the
-				scientists will never have to deal with raw files and folders -
-				everything is going to be manageable using Peaksel interface. The
-				process looks like this:
-			</p>
-			<ol>
-				<li>Specify locations where instruments write raw data</li>
-				<li>Peaksel looks for the new raw files every several minutes</li>
-				<li>Once discovered, the data is automatically loaded and processed</li>
-				<li>
-					When scientists open Peaksel, they see the new data and don't have to
-					deal with files and folders
-				</li>
-			</ol>
+	</div>
+</header>
+ <header class="header-peaksel">
+	<div class="container">
+		<div class="header-peaksel__body">
+			<a class="header-peaksel__logo main-color1" href="/peaksel/index.html"
+				>PEAK<span>SEL</span></a
+			>
+			<div>
+				<div class="header-peaksel__menu-burger">
+					<span></span>
+				</div>
+				<nav>
+					<ul class="header-peaksel__navigation">
+						<li class="navigation-list__item" data-page="overview">
+							<a class="header__link" href="/peaksel/index.html">Overview</a>
+						</li>
+						<li class="navigation-list__item" data-page="documentation">
+							<a class="header__link" href="/peaksel/docs.html">Documentation</a>
+						</li>
+						<li class="navigation-list__item" data-page="try-it">
+							<a class="header__link" href="/peaksel/buy.html">Try it</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+			<main
+				class="import-automation page-body"
+				data-page="documentation"
+				data-context="peaksel">
+				<div class="container">
+					<article class="page-content">
+						<h1 class="page-title">Automate import from vendor instruments</h1>
+						<p>
+							While it's possible to just
+							<a href="./import-manual-upload.html"
+								>drag'n'drop raw files into Peaksel</a
+							>, most organizations will benefit from setting up automatic
+							import. This way your administrator can set up all the locations
+							and the scientists will never have to deal with raw files and
+							folders - everything is going to be manageable using Peaksel
+							interface. The process looks like this:
+						</p>
+						<ol>
+							<li>Specify locations where instruments write raw data</li>
+							<li>Peaksel looks for the new raw files every several minutes</li>
+							<li>
+								Once discovered, the data is automatically loaded and processed
+							</li>
+							<li>
+								When scientists open Peaksel, they see the new data and don't
+								have to deal with files and folders
+							</li>
+						</ol>
 
-			<h2>Configuring vendor folders</h2>
-			<p>Peaksel is able to import the data located:</p>
-			<ul>
-				<li>In a Windows shared folder (SMB)</li>
-				<li>
-					At FTP server. Could be yours or an open database like
-					<a href="https://massive.ucsd.edu">MassIVE</a>.
-				</li>
-				<li>On the local disk where Peaksel is running</li>
-			</ul>
-			<p>
-				For this you open <code>Settings -> Import</code> and press
-				<code>Add location</code>:
-			</p>
-			<img
-				src="../img/import-automatic-location.png"
-				alt="a list of locations to import raw analytical data from" />
-			<p>
-				After that you'll need to enter the actual location and possibly the
-				credentials to access the raw vendor files:
-			</p>
-			<img
-				src="../img/import-automatic-location-dialog.png"
-				alt="location and possibly the credentials to access the raw vendor files" />
-			<p>
-				Then just turn on the importing and it will discover the files. You can
-				add as many of these locations as needed. And you can turn on and off
-				them at any point in time.
-			</p>
-		</article>
-		<footer class="footer">
-			Follow our updates:
-			<a href="https://www.linkedin.com/company/elsci-io/">LinkedIn</a>,
-			<a href="https://www.facebook.com/elsci.io">Facebook</a>,
-			<a href="https://twitter.com/elsci_io">Twitter</a>,
-			<a href="https://t.me/elscipeaksel">Telegram</a> ||
-			<a href="https://github.com/elsci-io/public/discussions">Support</a> ||
-			<a href="mailto:peaksel@elsci.io">Contact us</a>
-		</footer>
+						<h2 class="page-subtitle">Configuring vendor folders</h2>
+						<p>Peaksel is able to import the data located:</p>
+						<ul>
+							<li>In a Windows shared folder (SMB)</li>
+							<li>
+								At FTP server. Could be yours or an open database like
+								<a href="https://massive.ucsd.edu">MassIVE</a>.
+							</li>
+							<li>On the local disk where Peaksel is running</li>
+						</ul>
+						<p>
+							For this you open <code>Settings -> Import</code> and press
+							<code>Add location</code>:
+						</p>
+						<img
+							src="../img/import-automatic-location.png"
+							alt="a list of locations to import raw analytical data from" />
+						<p class="page-paragraph--margin">
+							After that you'll need to enter the actual location and possibly
+							the credentials to access the raw vendor files:
+						</p>
+						<img
+							src="../img/import-automatic-location-dialog.png"
+							alt="location and possibly the credentials to access the raw vendor files" />
+						<p>
+							Then just turn on the importing and it will discover the files.
+							You can add as many of these locations as needed. And you can turn
+							on and off them at any point in time.
+						</p>
+					</article>
+				</div>
+			</main>
+			<footer class="footer">
+	<div class="container">
+		<div class="footer-row">
+			<section class="footer__social">
+				<p class="footer__section-title">Follow our updates</p>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://www.linkedin.com/company/elsci-io/"
+							>LinkedIn</a
+						>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://www.facebook.com/elsci.io"
+							>Facebook</a
+						>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://twitter.com/elsci_io"
+							>Twitter</a
+						>
+					</li>
+				</ul>
+			</section>
+			<section class="footer__contacts">
+				<p class="footer__section-title">Contact us</p>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://github.com/elsci-io/public/discussions"
+							>Public QnA</a
+						>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="mailto:peaksel@elsci.io">Email</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://t.me/elscipeaksel"
+							>Telegram IM</a
+						>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<p class="footer__section-title">Company</p>
+				<address class="footer__address">
+					<p>Elsci LLC, Yerevan, Armenia</p>
+					<p>Arabkir district, Komitas ave</p>
+					<p>1st lane, b. 20, 0051</p>
+				</address>
+			</section>
+		</div>
+	</div>
+</footer>
+
+			<script src="../../js/script.js"></script>
+		</div>
 	</body>
 </html>
