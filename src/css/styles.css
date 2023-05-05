@@ -53,8 +53,8 @@ main {
 }
 
 .page-content {
-max-width: 990px;
-margin: 0 auto;
+	max-width: 990px;
+	margin: 0 auto;
 }
 
 @media (max-width: 794px) {
@@ -83,7 +83,6 @@ a {
 }
 
 h2 {
-	
 	color: var(--main-color-text);
 	font-weight: 300;
 	/* font-size: 30px; */
@@ -98,7 +97,6 @@ h2 {
 } */
 
 h3 {
-	
 	font-weight: 300;
 	/* font-size: 18px; */
 	/* font-size: clamp(1.5rem, 2vw + 1rem, 2rem); */
@@ -154,7 +152,7 @@ li {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%; 
+	height: 100%;
 }
 
 video,
@@ -246,6 +244,12 @@ video,
 	position: sticky;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+.header-elsci__logo img {
+		height: 50px;
+	}
+.sub-header .header-elsci__logo img {
+	height: 30px;
+}
 
 @media (min-width: 795px) {
 	.header-elsci.sub-header {
@@ -264,23 +268,27 @@ video,
 	.sub-header .header__link:hover {
 		color: #fff;
 	}
+	.sub-header .header-elsci__logo--main {
+		display: none;
+	}
+	.sub-header .header-elsci__logo--white {
+		display: block;
+	}
+	.sub-header .header-elsci__logo img {
+	height: 50px;
+}
 }
 
-.header-elsci-logo {
+.header-elsci__logo {
 	position: relative;
 	z-index: 3;
 }
-.header-elsci-logo img {
-	height: 50px;
-}
-/* 
+
+
 .header-elsci__logo--white {
 	display: none;
 }
 
-.sub-header .header-elsci__logo--white {
-	display: block;
-} */
 .header__burger {
 	display: none;
 }
@@ -356,6 +364,10 @@ video,
 .navigation-list--peaksel {
 	display: none;
 }
+
+@media (max-width: 600px) {
+}
+
 @media (max-width: 794px) {
 	body.lock {
 		overflow: hidden;
@@ -792,7 +804,6 @@ video,
 	}
 }
 
-
 /*        VOCABULARY    */
 
 .vocabulary-discription {
@@ -855,13 +866,12 @@ video,
 	list-style: decimal;
 }
 
-/*       ZOOM       */ 
+/*       ZOOM       */
 
 .zoom-body {
 	max-width: 1030px;
 	margin: 0 auto;
 }
-
 
 /*        add-substance     */
 
@@ -878,25 +888,17 @@ video,
 	list-style: circle;
 }
 
-
-
 /*         waters-structures   */
 
-
-
-.waters-structures__table{
+.waters-structures__table {
 	max-width: 100%;
 }
 
-
-
-
 /*         vis-templates       */
 
-.page-paragraph--margin{
+.page-paragraph--margin {
 	margin: 2rem 0;
 }
-
 
 /*          import-automation       */
 
@@ -911,21 +913,11 @@ video,
 	list-style: initial;
 }
 
-
-
-
-
-
-
-
-
 /*             install      */
 
 .install li {
 	list-style: decimal;
 }
-
-
 
 /*      CONTACT     */
 
@@ -939,10 +931,6 @@ video,
 	font-size: 1.5rem;
 	margin-left: 40px;
 }
-
-
-
-
 
 .btn {
 	margin: 0;
@@ -1393,6 +1381,6 @@ article img {
 		max-width: 100%;
 	}
 	.video-box {
-max-width: 100%;
+		max-width: 100%;
 	}
 }
