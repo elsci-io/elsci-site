@@ -246,8 +246,8 @@ video,
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .header-elsci__logo img {
-		height: 50px;
-	}
+	height: 50px;
+}
 .sub-header .header-elsci__logo img {
 	height: 30px;
 }
@@ -276,15 +276,14 @@ video,
 		display: block;
 	}
 	.sub-header .header-elsci__logo img {
-	height: 50px;
-}
+		height: 50px;
+	}
 }
 
 .header-elsci__logo {
 	position: relative;
 	z-index: 3;
 }
-
 
 .header-elsci__logo--white {
 	display: none;
@@ -1390,4 +1389,10 @@ article img {
 	height: 12px;
 	width: 12px;
 	fill: var(--main-color1);
+	margin-right: 2px;
 }
+
+.nowrap {
+	white-space: nowrap;
+}
+
