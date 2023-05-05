@@ -4,18 +4,25 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Buy</title>
-				<link rel="stylesheet" href="../../css/styles.css" />
-
+		<link rel="stylesheet" href="../../css/00_global.css" />
+		<link rel="stylesheet" href="../../css/01_helpers.css" />
+		<link rel="stylesheet" href="../../css/02_header.css" />
+		<link rel="stylesheet" href="../../css/02_footer.css" />
+		<link rel="stylesheet" href="../../css/02_buy-page.css" />
 	</head>
 	<body>
 		<div class="wrapper">
 			<%= require('html-loader!../../partials/header.html').default %> <%=
 			require('html-loader!../../partials/headerPeaksel.html').default %>
-			<main class="try-it page-body" data-page="try-it" data-context="peaksel">
+			<main class="buy page-body" data-page="buy" data-context="peaksel">
 				<div class="container">
-					<section class="job__type">
-						<img src="img/Illustration-07.png" alt="call" style="height: 234px" />
-						<div class="job__info job__info--shrink">
+					<section class="buy__row">
+						<img
+							class="buy__image"
+							src="img/Illustration-07.png"
+							alt="call"
+							style="height: 234px" />
+						<div class="buy__text">
 							<p>
 								If you want to play with our Demo Instance, contact us and we'll
 								send the URL and credentials:
@@ -67,7 +74,7 @@
 							</div>
 						</div>
 					</div>
-		
+
 					<div class="hcentered">
 						<h1>SaaS</h1>
 					</div>
@@ -96,11 +103,10 @@
 					</div>
 				</div>
 			</main>
-	
+
 			<%= require('html-loader!../../partials/footer.html').default %>
 		</div>
 		<script src="../../js/script.js"></script>
-
 	</body>
 	<script type="text/javascript">
 		let emailBtns = document.querySelectorAll("[data-email-btn]");

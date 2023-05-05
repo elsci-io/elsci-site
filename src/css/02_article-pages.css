@@ -1,0 +1,51 @@
+#toc div.h1 {
+	display: none;
+}
+#toc div {
+	margin-top: 0.5em;
+}
+#toc div.h2 {
+	margin-left: 1em;
+}
+#toc div.h3 {
+	margin-left: 3em;
+}
+#toc div.h4 {
+	margin-left: 5em;
+}
+#doc div {
+	margin-top: 5em;
+}
+h2 {
+	border-bottom: 1px solid lightgrey;
+	margin-top: 50px;
+}
+
+/*           MASS-SPEC           */
+
+.mass-spec .mass-spec__img--right {
+	margin: 0 0.5rem;
+	max-width: 25em;
+	float: right;
+}
+
+@media (max-width: 795px) {
+	.mass-spec .mass-spec__img--right {
+		margin: 0;
+		max-width: unset;
+		width: 100%;
+		float: unset;
+	}
+}
+
+/*    wl-extraction   */
+
+.wl-extraction li {
+	list-style: decimal;
+}
+
+/*    hte-qc-peaks */
+
+.hte-qc-peaks li {
+	list-style: decimal;
+}
