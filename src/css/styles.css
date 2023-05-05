@@ -1386,3 +1386,8 @@ article img {
 		max-width: 100%;
 	}
 }
+.external-link {
+	height: 12px;
+	width: 12px;
+	fill: var(--main-color1);
+}
