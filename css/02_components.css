@@ -58,6 +58,11 @@
 .main-features__item--cro-cmo::after {
     background-image: url('../img/feature__cro-cmo--alpha.png');
 }
+.main-features__item--team-visibility::after {
+    background-image: url("../img/binoculars.png");
+    background-size: 270px;
+    height: 80px;
+}
 
 .main-feature__title {
     font-size: clamp(1.5em, 1.5em + 2vw, 47px);
