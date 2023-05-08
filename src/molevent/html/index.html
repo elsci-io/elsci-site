@@ -9,17 +9,18 @@
   <link rel="stylesheet" href="../../css/02_header.css"/>
   <link rel="stylesheet" href="../../css/02_footer.css"/>
   <link rel="stylesheet" href="../../css/02_peaksel-page.css"/>
+  <link rel="stylesheet" href="../../css/02_molevent-page.css"/>
 </head>
 <body>
 <div class="wrapper">
   <%= require('html-loader!../../partials/header.html').default %> <%=
   require('html-loader!../../partials/headerMolevent.html').default %>
   <main data-context="molevent">
-    <section class="peaksel-hero">
+    <section class="page-hero page-hero--molevent">
       <div class="container">
-        <div class="peaksel-hero__text-block">
-          <h1 class="peaksel-hero__title">Tracking molecules</h1>
-          <p class="peaksel-hero__subtitle">All the "who, when, where" in a single place</p>
+        <div class="page-hero__text-block">
+          <h1 class="page-hero__title">Tracking molecules</h1>
+          <p class="page-hero__subtitle">All the "who, when, where" in a single place</p>
         </div>
       </div>
     </section>
