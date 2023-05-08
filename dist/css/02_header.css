@@ -55,34 +55,6 @@
 	height: 30px;
 }
 
-@media (min-width: 795px) {
-	.header-elsci.sub-header {
-		position: relative;
-	}
-	.header-elsci.sub-header.scroll {
-		box-shadow: none;
-	}
-	.sub-header.header-elsci::before {
-		background: #2082d8;
-		/* background:#6ED4FF; */
-	}
-	.sub-header .header__link {
-		color: #fff;
-	}
-	.sub-header .header__link:hover {
-		color: #fff;
-	}
-	.sub-header .header-elsci__logo--main {
-		display: none;
-	}
-	.sub-header .header-elsci__logo--white {
-		display: block;
-	}
-	.sub-header .header-elsci__logo img {
-		height: 50px;
-	}
-}
-
 .header-elsci__logo {
 	position: relative;
 	z-index: 3;
@@ -173,6 +145,34 @@
 
 .navigation-list--peaksel {
 	display: none;
+}
+
+
+@media (min-width: 795px) {
+	.header-elsci.sub-header {
+		position: relative;
+	}
+	.header-elsci.sub-header.scroll {
+		box-shadow: none;
+	}
+	.sub-header.header-elsci::before {
+		background: #2082d8;
+	}
+	.sub-header .header__link {
+		color: #fff;
+	}
+	.sub-header .header__link:hover {
+		color: #fff;
+	}
+	.sub-header .header-elsci__logo--main {
+		display: none;
+	}
+	.sub-header .header-elsci__logo--white {
+		display: block;
+	}
+	.sub-header .header-elsci__logo img {
+		height: 50px;
+	}
 }
 
 @media (max-width: 794px) {
