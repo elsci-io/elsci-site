@@ -1,14 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
-
-let fs = require('fs');
+const fs = require('fs');
 
 
 // find all html files in src directory and create a new HtmlWebpackPlugin for each one
 
-let files = fs.readdirSync(__dirname + '/src');
-let htmlPlugins = files.filter(file => file.endsWith('.html')).map(file => {
+const files = fs.readdirSync(__dirname + '/src');
+const htmlPlugins = files.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/' + file,
         filename: file,
@@ -16,8 +15,8 @@ let htmlPlugins = files.filter(file => file.endsWith('.html')).map(file => {
     });
 });
 
-let peakselFiles = fs.readdirSync(__dirname + '/src/peaksel/html');
-let htmlPluginsForPeaksel = peakselFiles.filter(file => file.endsWith('.html')).map(file => {
+const peakselFiles = fs.readdirSync(__dirname + '/src/peaksel/html');
+const htmlPluginsForPeaksel = peakselFiles.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/' + file,
         filename: './peaksel/' + file,
@@ -25,8 +24,8 @@ let htmlPluginsForPeaksel = peakselFiles.filter(file => file.endsWith('.html')).
     });
 });
 
-let peakselDocsFiles = fs.readdirSync(__dirname + '/src/peaksel/html/docs');
-let htmlPluginsForPeakselDocs = peakselDocsFiles.filter(file => file.endsWith('.html')).map(file => {
+const peakselDocsFiles = fs.readdirSync(__dirname + '/src/peaksel/html/docs');
+const htmlPluginsForPeakselDocs = peakselDocsFiles.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/docs/' + file,
         filename: './peaksel/docs/' + file,
@@ -34,8 +33,8 @@ let htmlPluginsForPeakselDocs = peakselDocsFiles.filter(file => file.endsWith('.
     });
 });
 
-let peakselArticleFiles = fs.readdirSync(__dirname + '/src/peaksel/html/article');
-let htmlPluginsForPeakselArticle = peakselArticleFiles.filter(file => file.endsWith('.html')).map(file => {
+const peakselArticleFiles = fs.readdirSync(__dirname + '/src/peaksel/html/article');
+const htmlPluginsForPeakselArticle = peakselArticleFiles.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/article/' + file,
         filename: './peaksel/article/' + file,
@@ -43,8 +42,8 @@ let htmlPluginsForPeakselArticle = peakselArticleFiles.filter(file => file.endsW
     });
 });
 
-let moleventFiles = fs.readdirSync(__dirname + '/src/molevent');
-let htmlPluginsForMolevent = moleventFiles.filter(file => file.endsWith('.html')).map(file => {
+const moleventFiles = fs.readdirSync(__dirname + '/src/molevent');
+const htmlPluginsForMolevent = moleventFiles.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/molevent/' + file,
         filename: './molevent/' + file,
