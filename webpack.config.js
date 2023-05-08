@@ -42,10 +42,10 @@ const htmlPluginsForPeakselArticle = peakselArticleFiles.filter(file => file.end
     });
 });
 
-const moleventFiles = fs.readdirSync(__dirname + '/src/molevent');
+const moleventFiles = fs.readdirSync(__dirname + '/src/molevent/html');
 const htmlPluginsForMolevent = moleventFiles.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
-        template: __dirname + '/src/molevent/' + file,
+        template: __dirname + '/src/molevent/html/' + file,
         filename: './molevent/' + file,
         title: ''
     });
