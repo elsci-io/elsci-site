@@ -11,7 +11,7 @@
 .footer__item {
 	margin: 0.3rem 0;
 }
-.footer__item:hover {
+.footer__link:hover {
 	text-decoration: underline;
 }
 
