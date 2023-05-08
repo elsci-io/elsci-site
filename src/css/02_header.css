@@ -13,7 +13,8 @@
 }
 
 .header-elsci__body,
-.header-peaksel__body {
+.header-peaksel__body,
+.header-molevent__body {
 	position: relative;
 	height: 4em;
 	display: flex;
@@ -32,7 +33,7 @@
 	z-index: 2;
 }
 
-.header-peaksel {
+.header-peaksel, .header-molevent {
 	background: #fff;
 	position: relative;
 	top: 0;
@@ -41,7 +42,7 @@
 	transition: box-shadow 250ms ease-in;
 	z-index: 10;
 }
-
+.header-molevent.scroll,
 .header-peaksel.scroll {
 	position: sticky;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -120,21 +121,23 @@
 	width: 100%;
 	background: var(--main-color1);
 }
-
+.header-elsci__logo-molevent,
 .header-elsci__logo-peaksel {
 	display: none;
 }
-
+.header-molevent__logo,
 .header-peaksel__logo,
-.header-elsci__logo-peaksel {
+.header-elsci__logo-peaksel,
+.header-elsci__logo-molevent  {
 	font-size: clamp(1.5em, 1.5em + 2vw, 2.5em);
 	font-weight: 400;
 	margin: 0;
 	color: var(--main-color1);
 }
-
+.header-molevent__logo span,
 .header-peaksel__logo span,
-.header-elsci__logo-peaksel span {
+.header-elsci__logo-peaksel span,
+.header-elsci__logo-molevent span {
 	color: var(--main-color2);
 }
 
@@ -256,14 +259,19 @@
 	.navigation-list li:hover {
 		font-weight: 400;
 	}
-	.sub-header .header-elsci__logo-peaksel {
+	.sub-header .header-elsci__logo-peaksel.active {
 		display: block;
 		z-index: 4;
 	}
+	.sub-header .header-elsci__logo-molevent.active {
+		display: block;
+		z-index: 4;
+	}
+	.header-molevent,
 	.header-peaksel {
 		display: none;
 	}
-	.sub-header .navigation-list--peaksel {
+	.sub-header .navigation-list--peaksel.active {
 		display: block;
 		color: #fff;
 		position: relative;

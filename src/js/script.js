@@ -23,6 +23,9 @@ window.addEventListener('scroll', (el) => {
     if (document.querySelector('.header-peaksel')) {
         document.querySelector('.header-peaksel').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
     }
+    if (document.querySelector('.header-molevent')) {
+        document.querySelector('.header-molevent').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
+    }
 });
 
 const pageName = document.querySelector('main').dataset.page;
@@ -35,4 +38,9 @@ const siteName = document.querySelector('main').dataset.context;
 if (siteName) {
     document.querySelector('.header-elsci').classList.add('sub-header')
 } 
-
+if (siteName == 'peaksel') {
+    document.querySelector('.header-elsci__logo-peaksel').classList.add('active')
+}
+if (siteName == 'molevent') {
+    document.querySelector('.header-elsci__logo-molevent').classList.add('active')
+}

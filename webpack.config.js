@@ -12,7 +12,7 @@ let htmlPlugins = files.filter(file => file.endsWith('.html')).map(file => {
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/' + file,
         filename: file,
-        title: 'blah-blah'
+        title: ''
     });
 });
 
@@ -21,7 +21,7 @@ let htmlPluginsForPeaksel = peakselFiles.filter(file => file.endsWith('.html')).
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/' + file,
         filename: './peaksel/' + file,
-        title: 'blah-blah'
+        title: ''
     });
 });
 
@@ -30,7 +30,7 @@ let htmlPluginsForPeakselDocs = peakselDocsFiles.filter(file => file.endsWith('.
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/docs/' + file,
         filename: './peaksel/docs/' + file,
-        title: 'blah-blah'
+        title: ''
     });
 });
 
@@ -39,7 +39,16 @@ let htmlPluginsForPeakselArticle = peakselArticleFiles.filter(file => file.endsW
     return new HtmlWebpackPlugin({
         template: __dirname + '/src/peaksel/html/article/' + file,
         filename: './peaksel/article/' + file,
-        title: 'blah-blah'
+        title: ''
+    });
+});
+
+let moleventFiles = fs.readdirSync(__dirname + '/src/molevent');
+let htmlPluginsForMolevent = moleventFiles.filter(file => file.endsWith('.html')).map(file => {
+    return new HtmlWebpackPlugin({
+        template: __dirname + '/src/molevent/' + file,
+        filename: './molevent/' + file,
+        title: ''
     });
 });
 
@@ -55,6 +64,7 @@ module.exports = {
         ...htmlPluginsForPeaksel,
         ...htmlPluginsForPeakselDocs,
         ...htmlPluginsForPeakselArticle,
+        ...htmlPluginsForMolevent,
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/css', to: 'css' },
