@@ -1,0 +1,15 @@
+
+.business-model__list li {
+	list-style: decimal;
+	margin: 0.5rem;
+}
+.business-model__body {
+	padding: 6rem 0;
+}
+.business-model__section {
+	padding: 1rem 0;
+}
+.section-title {
+	font-size: 2rem;
+	font-weight: 400;
+}

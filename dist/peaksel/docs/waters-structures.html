@@ -3,7 +3,11 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Parsing Structures from Waters RAW</title>
-		<link rel="stylesheet" href="../../css/styles.css" />
+		<link rel="stylesheet" href="../../css/00_global.css" />
+		<link rel="stylesheet" href="../../css/01_helpers.css" />
+		<link rel="stylesheet" href="../../css/02_header.css" />
+		<link rel="stylesheet" href="../../css/02_footer.css" />
+		<link rel="stylesheet" href="../../css/02_docs-pages.css" />
 		<style>
 			table {
 				border-spacing: 0;
@@ -15,105 +19,91 @@
 				border: 1px black solid;
 			}
 		</style>
-		<script defer src="../../bundle.js"></script>
-	</head>
+	<script defer src="../../bundle.js"></script></head>
 	<body>
 		<div class="wrapper">
 			<header class="header-elsci">
-				<div class="container">
-					<div class="header-elsci__body">
-						<div class="header-elsci-logo">
-							<a href="/" class="header-elsci-logo--main">
-								<img src="../../6c5a0122aa9f5b00d777.png" alt="" />
-							</a>
-							<a href="/" class="header-elsci-logo--white">
-								<img src="../../07b7873450156d89e3f9.png" alt="" />
-							</a>
-						</div>
-						<a class="header-elsci__logo-peaksel" href="/"
-							>PEAK<span>SEL</span></a
-						>
-						<div class="header__burger">
-							<span></span>
-						</div>
-						<nav class="header-elsci__navigation">
-							<ul class="header__list">
-								<li>
-									<ul class="navigation-list navigation-list--peaksel">
-										<li class="navigation-list__item">
-											<a class="header__link" href="/peaksel/index.html"
-												>Overview</a
-											>
-										</li>
-										<li class="navigation-list__item">
-											<a class="header__link" href="/peaksel/docs.html"
-												>Documentation</a
-											>
-										</li>
-										<li class="navigation-list__item">
-											<a class="header__link" href="/peaksel/buy.html"
-												>Try it</a
-											>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<ul class="navigation-list">
-										<li class="navigation-list__item" data-page="our-products">
-											<a class="header__link" href="/index.html#our-products"
-												>Our products</a
-											>
-										</li>
-										<li
-											class="navigation-list__item"
-											data-page="business-model">
-											<a class="header__link" href="/business-model.html"
-												>Business model</a
-											>
-										</li>
-										<li class="navigation-list__item" data-page="about">
-											<a class="header__link" href="/about.html">About us</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-					</div>
+	<div class="container">
+		<div class="header-elsci__body">
+			<div class="header-elsci__logo">
+				<a href="/" class="header-elsci__logo--main">
+					<img src="../../6c5a0122aa9f5b00d777.png" alt="" />
+				</a>
+				<a href="/" class="header-elsci__logo--white">
+					<img src="../../07b7873450156d89e3f9.png" alt="" />
+				</a>
+			</div>
+			<a class="header-elsci__logo-peaksel" href="/">PEAK<span>SEL</span></a>
+			<div class="header__burger">
+				<span></span>
+			</div>
+			<nav class="header-elsci__navigation">
+				<ul class="header__list">
+					<li>
+						<ul class="navigation-list navigation-list--peaksel">
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/index.html">Overview</a>
+							</li>
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/docs.html">Documentation</a>
+							</li>
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/buy.html">Try it</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="navigation-list">
+							<li class="navigation-list__item" data-page="our-products">
+								<a class="header__link header__link--bookmarks" href="/index.html#our-products"
+									>Our products</a
+								>
+							</li>
+							<li class="navigation-list__item" data-page="business-model">
+								<a class="header__link" href="/business-model.html"
+									>Business model</a
+								>
+							</li>
+							<li class="navigation-list__item" data-page="about">
+								<a class="header__link" href="/about.html">About us</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+ <header class="header-peaksel">
+	<div class="container">
+		<div class="header-peaksel__body">
+			<a class="header-peaksel__logo main-color1" href="/peaksel/index.html"
+				>PEAK<span>SEL</span></a
+			>
+			<div>
+				<div class="header-peaksel__menu-burger">
+					<span></span>
 				</div>
-			</header>
-			<header class="header-peaksel">
-				<div class="container">
-					<div class="header-peaksel__body">
-						<a
-							class="header-peaksel__logo main-color1"
-							href="/peaksel/index.html"
-							>PEAK<span>SEL</span></a
-						>
-						<div>
-							<div class="header-peaksel__menu-burger">
-								<span></span>
-							</div>
-							<nav>
-								<ul class="header-peaksel__navigation">
-									<li class="navigation-list__item" data-page="overview">
-										<a class="header__link" href="/peaksel/index.html"
-											>Overview</a
-										>
-									</li>
-									<li class="navigation-list__item" data-page="documentation">
-										<a class="header__link" href="/peaksel/docs.html"
-											>Documentation</a
-										>
-									</li>
-									<li class="navigation-list__item" data-page="buy">
-										<a class="header__link" href="/peaksel/buy.html">Try it</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</header>
+				<nav>
+					<ul class="header-peaksel__navigation">
+						<li class="navigation-list__item" data-page="overview">
+							<a class="header__link" href="/peaksel/index.html">Overview</a>
+						</li>
+						<li class="navigation-list__item" data-page="documentation">
+							<a class="header__link" href="/peaksel/docs.html"
+								>Documentation</a
+							>
+						</li>
+						<li class="navigation-list__item" data-page="buy">
+							<a class="header__link" href="/peaksel/buy.html">Try it</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
 			<main
 				class="waters-structures page-body"
 				data-page="documentation"
@@ -132,7 +122,12 @@
 							is described in the
 							<a
 								href="https://support.waters.com/KB_Inf/MassLynx/WKB14988_How_do_I_create_a_new_sample_list_format_in_MassLynx"
-								>official MassLynx documentation</a
+								>official MassLynx
+								<span class="nowrap"
+									>documentation
+									<svg class="external-link" viewBox="0 0 512 512">
+										<path
+											d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg></span></a
 							>:
 						</p>
 						<img
@@ -145,12 +140,15 @@
 							The cells in these columns may contain more than 1 Structure/MF
 							separated with underscores "<code>_</code>". Same goes for
 							aliases. Example (<a
+								class="nowrap"
 								target="_blank"
 								href="https://docs.google.com/spreadsheets/d/1AcFcMnr1wV55tV3cLI0BQyFgXcBE75jJVJHSPuOzEGU/edit?usp=sharing"
-								>spreadsheet</a
+								>spreadsheet
+								<svg class="external-link" viewBox="0 0 512 512">
+									<path
+										d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg></a
 							>):
 						</p>
-
 						<table class="waters-structures__table">
 							<thead>
 								<tr>
@@ -183,74 +181,72 @@
 				</div>
 			</main>
 			<footer class="footer">
-				<div class="container">
-					<div class="footer-row">
-						<section class="footer__social">
-							<p class="footer__section-title">Follow our updates</p>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://www.linkedin.com/company/elsci-io/"
-										>LinkedIn</a
-									>
-								</li>
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://www.facebook.com/elsci.io"
-										>Facebook</a
-									>
-								</li>
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://twitter.com/elsci_io"
-										>Twitter</a
-									>
-								</li>
-							</ul>
-						</section>
-						<section class="footer__contacts">
-							<p class="footer__section-title">Contact us</p>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://github.com/elsci-io/public/discussions"
-										>Public QnA</a
-									>
-								</li>
-								<li class="footer__item">
-									<a class="footer__link" href="mailto:peaksel@elsci.io"
-										>Email</a
-									>
-								</li>
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://t.me/elscipeaksel"
-										>Telegram IM</a
-									>
-								</li>
-							</ul>
-						</section>
-						<section>
-							<p class="footer__section-title">Company</p>
-							<address class="footer__address">
-								<p>Elsci LLC, Yerevan, Armenia</p>
-								<p>Arabkir district, Komitas ave</p>
-								<p>1st lane, b. 20, 0051</p>
-							</address>
-						</section>
-					</div>
-				</div>
-			</footer>
+	<div class="container">
+		<div class="footer-row">
+			<section class="footer__social">
+				<p class="footer__section-title">Follow our updates</p>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://www.linkedin.com/company/elsci-io/"
+							>LinkedIn</a
+						>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://www.facebook.com/elsci.io"
+							>Facebook</a
+						>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://twitter.com/elsci_io"
+							>Twitter</a
+						>
+					</li>
+				</ul>
+			</section>
+			<section class="footer__contacts">
+				<p class="footer__section-title">Contact us</p>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://github.com/elsci-io/public/discussions"
+							>Public QnA</a
+						>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="mailto:peaksel@elsci.io">Email</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://t.me/elscipeaksel"
+							>Telegram IM</a
+						>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<p class="footer__section-title">Company</p>
+				<address class="footer__address">
+					<p>Elsci LLC, Yerevan, Armenia</p>
+					<p>Arabkir district, Komitas ave</p>
+					<p>1st lane, b. 20, 0051</p>
+				</address>
+			</section>
+		</div>
+	</div>
+</footer>
 
 			<script src="../../js/script.js"></script>
 		</div>

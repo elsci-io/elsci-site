@@ -4,147 +4,112 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>DAD/PDA: Extracted and Reference wavelengths</title>
-		<link rel="stylesheet" href="../../css/styles.css" />
+		<link rel="stylesheet" href="../../css/00_global.css" />
+		<link rel="stylesheet" href="../../css/01_helpers.css" />
+		<link rel="stylesheet" href="../../css/02_header.css" />
+		<link rel="stylesheet" href="../../css/02_footer.css" />
+		<link rel="stylesheet" href="../../css/02_article-pages.css" />
 		<script src="../js/app.js"></script>
-		<style>
-			#toc div.h1 {
-				display: none;
-			}
-			#toc div {
-				margin-top: 0.5em;
-			}
-			#toc div.h2 {
-				margin-left: 1em;
-			}
-			#doc div {
-				margin-top: 5em;
-			}
-			h2 {
-				border-bottom: 1px solid lightgrey;
-				margin-top: 50px;
-			}
-		</style>
-		<script defer src="../../bundle.js"></script>
-	</head>
+	<script defer src="../../bundle.js"></script></head>
 	<body>
 		<div class="wrapper">
 			<header class="header-elsci">
-				<div class="container">
-					<div class="header-elsci__body">
-						<div class="header-elsci-logo">
-							<a href="/" class="header-elsci-logo--main">
-								<img src="../../6c5a0122aa9f5b00d777.png" alt="" />
-							</a>
-							<a href="/" class="header-elsci-logo--white">
-								<img src="../../07b7873450156d89e3f9.png" alt="" />
-							</a>
-						</div>
-						<a class="header-elsci__logo-peaksel" href="/"
-							>PEAK<span>SEL</span></a
-						>
-						<div class="header__burger">
-							<span></span>
-						</div>
-						<nav class="header-elsci__navigation">
-							<ul class="header__list">
-								<li>
-									<ul class="navigation-list navigation-list--peaksel">
-										<li class="navigation-list__item">
-											<a class="header__link" href="/peaksel/index.html"
-												>Overview</a
-											>
-										</li>
-										<li class="navigation-list__item">
-											<a class="header__link" href="/peaksel/docs.html"
-												>Documentation</a
-											>
-										</li>
-										<li class="navigation-list__item">
-											<a class="header__link" href="/peaksel/buy.html"
-												>Try it</a
-											>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<ul class="navigation-list">
-										<li class="navigation-list__item" data-page="our-products">
-											<a class="header__link" href="/index.html#our-products"
-												>Our products</a
-											>
-										</li>
-										<li
-											class="navigation-list__item"
-											data-page="business-model">
-											<a class="header__link" href="/business-model.html"
-												>Business model</a
-											>
-										</li>
-										<li class="navigation-list__item" data-page="about">
-											<a class="header__link" href="/about.html">About us</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-					</div>
+	<div class="container">
+		<div class="header-elsci__body">
+			<div class="header-elsci__logo">
+				<a href="/" class="header-elsci__logo--main">
+					<img src="../../6c5a0122aa9f5b00d777.png" alt="" />
+				</a>
+				<a href="/" class="header-elsci__logo--white">
+					<img src="../../07b7873450156d89e3f9.png" alt="" />
+				</a>
+			</div>
+			<a class="header-elsci__logo-peaksel" href="/">PEAK<span>SEL</span></a>
+			<div class="header__burger">
+				<span></span>
+			</div>
+			<nav class="header-elsci__navigation">
+				<ul class="header__list">
+					<li>
+						<ul class="navigation-list navigation-list--peaksel">
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/index.html">Overview</a>
+							</li>
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/docs.html">Documentation</a>
+							</li>
+							<li class="navigation-list__item">
+								<a class="header__link" href="/peaksel/buy.html">Try it</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="navigation-list">
+							<li class="navigation-list__item" data-page="our-products">
+								<a class="header__link header__link--bookmarks" href="/index.html#our-products"
+									>Our products</a
+								>
+							</li>
+							<li class="navigation-list__item" data-page="business-model">
+								<a class="header__link" href="/business-model.html"
+									>Business model</a
+								>
+							</li>
+							<li class="navigation-list__item" data-page="about">
+								<a class="header__link" href="/about.html">About us</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+ <header class="header-peaksel">
+	<div class="container">
+		<div class="header-peaksel__body">
+			<a class="header-peaksel__logo main-color1" href="/peaksel/index.html"
+				>PEAK<span>SEL</span></a
+			>
+			<div>
+				<div class="header-peaksel__menu-burger">
+					<span></span>
 				</div>
-			</header>
-			<header class="header-peaksel">
-				<div class="container">
-					<div class="header-peaksel__body">
-						<a
-							class="header-peaksel__logo main-color1"
-							href="/peaksel/index.html"
-							>PEAK<span>SEL</span></a
-						>
-						<div>
-							<div class="header-peaksel__menu-burger">
-								<span></span>
-							</div>
-							<nav>
-								<ul class="header-peaksel__navigation">
-									<li class="navigation-list__item" data-page="overview">
-										<a class="header__link" href="/peaksel/index.html"
-											>Overview</a
-										>
-									</li>
-									<li class="navigation-list__item" data-page="documentation">
-										<a class="header__link" href="/peaksel/docs.html"
-											>Documentation</a
-										>
-									</li>
-									<li class="navigation-list__item" data-page="buy">
-										<a class="header__link" href="/peaksel/buy.html">Try it</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</header>
-			<main
-				class="wl-extraction page-body"
-				data-page="documentation"
-				data-context="peaksel">
+				<nav>
+					<ul class="header-peaksel__navigation">
+						<li class="navigation-list__item" data-page="overview">
+							<a class="header__link" href="/peaksel/index.html">Overview</a>
+						</li>
+						<li class="navigation-list__item" data-page="documentation">
+							<a class="header__link" href="/peaksel/docs.html"
+								>Documentation</a
+							>
+						</li>
+						<li class="navigation-list__item" data-page="buy">
+							<a class="header__link" href="/peaksel/buy.html">Try it</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+			<main class="wl-extraction page-body" data-page="documentation" data-context="peaksel">
 				<div class="container">
 					<article class="page-content">
-						<h1 class="page-title">
-							DAD/PDA: Extracted and Reference wavelengths
-						</h1>
+						<h1 class="page-title">DAD/PDA: Extracted and Reference wavelengths</h1>
 						<div id="toc"></div>
 						<p>
 							If you gather full DAD/PDA spectra, then instead of extracting a
 							wavelength during acquisition, you can do this digitally offline.
-							Unless you’re standing next to the instrument and want to know
-							peak shapes right away, there’s little value (and may be some
-							harm) in extracting wavelengths right in the acquisition CDS. You
-							can always do this offline after all spectra are gathered.
+							Unless you’re standing next to the instrument and want to know peak
+							shapes right away, there’s little value (and may be some harm) in
+							extracting wavelengths right in the acquisition CDS. You can always
+							do this offline after all spectra are gathered.
 						</p>
-
-						<h2 class="page-subtitle">
-							Problems with online wavelength extraction
-						</h2>
+	
+						<h2 class="page-subtitle">Problems with online wavelength extraction</h2>
 						<p>
 							First, the way your instrument sets up wavelength extraction isn’t
 							obvious. From Waters and Agilent documentation it’s not clear if
@@ -152,29 +117,26 @@
 							switch between gathering full-spectra and selected-wavelength? Or
 							maybe it keeps acquiring the spectra and simply extracts the
 							chromatogram afterwards in the software? If it’s the former, then
-							extracting digitally afterwards will give slightly different
-							values. Which is probably not a big deal, but it’s not perfect
-							either.
+							extracting digitally afterwards will give slightly different values.
+							Which is probably not a big deal, but it’s not perfect either.
 						</p>
 						<p>
 							A bigger problem with this is that when reading files by offline
 							processing software, you don’t know if it displays whatever was
-							acquired. And if that software does display the original trace,
-							the results may differ if you do this again in the offline
-							software. Because integration algorithms can be different between
-							2 software. For this reason if spectra are available, Peaksel will
-							discard the original traces and will re-extract it itself. This
-							way we ensure all chromatograms are extracted the same way and
-							guarantee some consistency.
+							acquired. And if that software does display the original trace, the
+							results may differ if you do this again in the offline software.
+							Because integration algorithms can be different between 2 software.
+							For this reason if spectra are available, Peaksel will discard the
+							original traces and will re-extract it itself. This way we ensure
+							all chromatograms are extracted the same way and guarantee some
+							consistency.
 						</p>
-
-						<h2 class="page-subtitle">
-							Reference wavelength - how does it work?
-						</h2>
+	
+						<h2 class="page-subtitle">Reference wavelength - how does it work?</h2>
 						<p>
-							If you use a gradient elution, you may end up with a baseline
-							drift. To compensate for this some scientists use a Reference
-							Wavelength. The thinking is:
+							If you use a gradient elution, you may end up with a baseline drift.
+							To compensate for this some scientists use a Reference Wavelength.
+							The thinking is:
 						</p>
 						<ol>
 							<li>
@@ -190,12 +152,11 @@
 							</li>
 						</ol>
 						<p>
-							There are problems with this thinking though: what if at some
-							point a substance is eluted that absorbs at 300nm? Then by
-							subtracting
+							There are problems with this thinking though: what if at some point
+							a substance is eluted that absorbs at 300nm? Then by subtracting
 							<code>300nm</code> from <code>254nm</code> we get an unjustifiable
-							signal reduction. This is one of the reasons you may have dips on
-							UV chromatograms. But if there’s no clear dip - you may just get a
+							signal reduction. This is one of the reasons you may have dips on UV
+							chromatograms. But if there’s no clear dip - you may just get a
 							smaller peak area. So the data will lie and you wouldn’t know it.
 						</p>
 						<p>
@@ -203,8 +164,8 @@
 							discard spectra. Without the original spectra, how do you check if
 							there weren’t true absorptions at <code>300nm</code>? This is a
 							reason you can’t discard spectra in case you subtract a Reference
-							Wavelength. Or at least you should extract Reference Wavelength as
-							a separate trace - in addition to the wavelength of interest.
+							Wavelength. Or at least you should extract Reference Wavelength as a
+							separate trace - in addition to the wavelength of interest.
 						</p>
 						<p>
 							Additionally, suppose there’s a range of wavelengths that aren’t
@@ -219,10 +180,13 @@
 							<a
 								href="https://hplctips.blogspot.com/2011/03/reference-wavelengths-as-used-in-hplc.html"
 								target="_blank"
-								>an article by HPLC EXPERT</a
+								>an article by HPLC <span class="nowrap">EXPERT <svg class="external-link" viewBox="0 0 512 512">
+										<path
+											d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg
+								></span></a
 							>.
 						</p>
-
+	
 						<h2 class="page-subtitle">How Peaksel extracts UV chromatograms</h2>
 						<p>
 							Suppose you want to extract a <code>254±4nm</code>, what Peaksel
@@ -230,15 +194,14 @@
 						</p>
 						<ol>
 							<li>
-								Sum intensities of all wavelengths between
-								<code>250nm</code> and <code>258nm</code>. Note, that other
-								software may <i>integrate area</i> (instead of summing) in the
-								range instead.
+								Sum intensities of all wavelengths between <code>250nm</code> and
+								<code>258nm</code>. Note, that other software may
+								<i>integrate area</i> (instead of summing) in the range instead.
 							</li>
 							<li>
-								And divide by the number of points summed to get an average. So
-								if your instrument gathered 250, 251, …, 258 nm, then Peaksel
-								will divide by 9.
+								And divide by the number of points summed to get an average. So if
+								your instrument gathered 250, 251, …, 258 nm, then Peaksel will
+								divide by 9.
 							</li>
 						</ol>
 						<p>
@@ -246,29 +209,27 @@
 							<code>254±4</code> instead of just <code>254nm</code>
 							is because you want to reduce noise. Since any measured signal
 							always has random noise, sometimes we get a little bigger signal
-							than the true value, sometimes we get a little smaller value. So
-							by summing multiple values we cancel it out. Then we calculate the
+							than the true value, sometimes we get a little smaller value. So by
+							summing multiple values we cancel it out. Then we calculate the
 							average to give an approximation to whatever was at
 							<code>254nm</code>.
 						</p>
 						<p>
 							Averaging also means that we most likely will have a lower signal.
 							So the wider the bandwidth, the smaller the peaks get. This is
-							because your λ<small>max</small> is usually the apex of the peak
-							on a spectrum and the rest of the points are located lower. Well,
-							unless there's an overlap with another spectral peak and a
-							shoulder is formed. But in that case you're better off selecting a
-							different wavelength anyway.
+							because your λ<small>max</small> is usually the apex of the peak on
+							a spectrum and the rest of the points are located lower. Well,
+							unless there's an overlap with another spectral peak and a shoulder
+							is formed. But in that case you're better off selecting a different
+							wavelength anyway.
 						</p>
 						<p>
-							Note that the <code>Total</code> (aka TWC) signal is different.
-							This one is just a summation without averaging. So they can’t be
+							Note that the <code>Total</code> (aka TWC) signal is different. This
+							one is just a summation without averaging. So they can’t be
 							compared.
 						</p>
-
-						<h2 class="page-subtitle">
-							How Peaksel subtracts Reference Wavelength
-						</h2>
+	
+						<h2 class="page-subtitle">How Peaksel subtracts Reference Wavelength</h2>
 						<p>
 							A chromatogram <code>254±4 - 300±50</code> is calculated this way:
 						</p>
@@ -284,74 +245,73 @@
 				</div>
 			</main>
 			<footer class="footer">
-				<div class="container">
-					<div class="footer-row">
-						<section class="footer__social">
-							<p class="footer__section-title">Follow our updates</p>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://www.linkedin.com/company/elsci-io/"
-										>LinkedIn</a
-									>
-								</li>
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://www.facebook.com/elsci.io"
-										>Facebook</a
-									>
-								</li>
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://twitter.com/elsci_io"
-										>Twitter</a
-									>
-								</li>
-							</ul>
-						</section>
-						<section class="footer__contacts">
-							<p class="footer__section-title">Contact us</p>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://github.com/elsci-io/public/discussions"
-										>Public QnA</a
-									>
-								</li>
-								<li class="footer__item">
-									<a class="footer__link" href="mailto:peaksel@elsci.io"
-										>Email</a
-									>
-								</li>
-								<li class="footer__item">
-									<a
-										target="_blank"
-										class="footer__link"
-										href="https://t.me/elscipeaksel"
-										>Telegram IM</a
-									>
-								</li>
-							</ul>
-						</section>
-						<section>
-							<p class="footer__section-title">Company</p>
-							<address class="footer__address">
-								<p>Elsci LLC, Yerevan, Armenia</p>
-								<p>Arabkir district, Komitas ave</p>
-								<p>1st lane, b. 20, 0051</p>
-							</address>
-						</section>
-					</div>
-				</div>
-			</footer>
+	<div class="container">
+		<div class="footer-row">
+			<section class="footer__social">
+				<p class="footer__section-title">Follow our updates</p>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://www.linkedin.com/company/elsci-io/"
+							>LinkedIn</a
+						>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://www.facebook.com/elsci.io"
+							>Facebook</a
+						>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://twitter.com/elsci_io"
+							>Twitter</a
+						>
+					</li>
+				</ul>
+			</section>
+			<section class="footer__contacts">
+				<p class="footer__section-title">Contact us</p>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://github.com/elsci-io/public/discussions"
+							>Public QnA</a
+						>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="mailto:peaksel@elsci.io">Email</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							class="footer__link"
+							href="https://t.me/elscipeaksel"
+							>Telegram IM</a
+						>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<p class="footer__section-title">Company</p>
+				<address class="footer__address">
+					<p>Elsci LLC, Yerevan, Armenia</p>
+					<p>Arabkir district, Komitas ave</p>
+					<p>1st lane, b. 20, 0051</p>
+				</address>
+			</section>
+		</div>
+	</div>
+</footer>
+
 		</div>
 		<script src="../../js/script.js"></script>
 	</body>
