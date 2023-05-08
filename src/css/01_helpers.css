@@ -27,7 +27,7 @@
 }
 
 .video-box {
-	max-width: 80%;
+	max-width: 100%;
 	margin: 2rem auto 4rem;
 	position: relative;
 	aspect-ratio: 16 / 9;
@@ -71,17 +71,9 @@ article img {
 	border: #444343 solid 1px;
 	display: block;
 	margin: 0 auto;
-	max-width: 80%;
+	max-width: 100%;
 }
 
-@media (max-width: 900px) {
-	article img {
-		max-width: 100%;
-	}
-	.video-box {
-		max-width: 100%;
-	}
-}
 .external-link {
 	height: 12px;
 	width: 12px;
