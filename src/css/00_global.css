@@ -75,7 +75,7 @@ h3 {
 }
 
 .container {
-	width: clamp(300px, 85vw, 1180px);
+	width: clamp(350px, 90vw, 1180px);
 	max-width: 1180px;
 	margin: 0 auto;
 	padding-right: 15px;
