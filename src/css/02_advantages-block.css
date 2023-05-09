@@ -1,0 +1,87 @@
+.advantages {
+    background: var(--background-color2);
+    padding: 2rem 0;
+}
+
+.advantages-item {
+    padding: 2rem 0;
+}
+
+.advantages-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.advantages-card__body {
+    padding: 0 1rem;
+    max-width: 700px;
+    flex: 60%;
+}
+
+.advantages-card__title {
+    font-size: clamp(1.5em, 1.5em + 2vw, 3rem);
+    line-height: 60px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.advantages-card__img {
+    height: 270px;
+    width: 380px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@media (max-width: 876px) {
+    .advantages-card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .advantages-card__img {
+        max-width: 380px;
+    }
+    .advantages-card__body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.advantages-card__img--plate-w-liquid-handler {
+    background-image: url("../peaksel/img/feature__plate-w-liquid-handler.png");
+}
+
+.advantages-card__img--db-search{
+    background-image: url("../peaksel/img/feature__db-search.png");
+}
+
+.advantages-card__img--many-instruments{
+    background-image: url("../peaksel/img/feature__many-instruments.png");
+}
+
+.advantages-card__img--scatter-plot{
+    background-image: url("../img/scatter-plot.png");
+}
+
+.advantages-card__img--cro-cmo{
+    background-image: url("../peaksel/img/feature__cro-cmo--alpha.png");
+}
+
+.advantages-card__img--binocular {
+    background-image: url("../img/binocular-2-people.png");
+}
+
+.advantages-card__img--benzene-virtual {
+    background-image: url("../img/benzene-virtual-id.png");
+}
+
+.advantages-card__img--db{
+    background-image: url("../img/db-with-2-apps.png");
+}
+
+.advantages-card__img--sockets{
+    background-image: url("../img/sockets.png");
+}

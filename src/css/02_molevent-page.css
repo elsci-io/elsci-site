@@ -1,8 +1,10 @@
 .page-hero--molevent {
     padding: 4rem 0;
 }
+
 @media (max-width: 794px) {
     .page-hero--molevent {
         margin-top: 4rem;
     }
 }
+
