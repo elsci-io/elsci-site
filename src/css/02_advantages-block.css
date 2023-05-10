@@ -52,15 +52,15 @@
 }
 
 .advantages-card__img--plate-w-liquid-handler {
-    background-image: url("../peaksel/img/feature__plate-w-liquid-handler.png");
+    background-image: url("../img/plate-w-liquid-handler.png");
 }
 
 .advantages-card__img--db-search{
-    background-image: url("../peaksel/img/feature__db-search.png");
+    background-image: url("../img/db-search.png");
 }
 
 .advantages-card__img--many-instruments{
-    background-image: url("../peaksel/img/feature__many-instruments.png");
+    background-image: url("../img/many-instruments.png");
 }
 
 .advantages-card__img--scatter-plot{
@@ -68,7 +68,7 @@
 }
 
 .advantages-card__img--cro-cmo{
-    background-image: url("../peaksel/img/feature__cro-cmo--alpha.png");
+    background-image: url("../img/cro-cmo--alpha.png");
 }
 
 .advantages-card__img--binocular {
