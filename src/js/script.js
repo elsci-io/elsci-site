@@ -39,7 +39,8 @@ if (siteName) {
     document.querySelector('.header-elsci').classList.add('sub-header')
 } 
 if (siteName == 'peaksel') {
-    document.querySelector('.header-elsci__logo-peaksel').classList.add('active')
+    document.querySelector('.header-elsci__logo-peaksel').classList.add('active');
+    document.querySelector('.navigation-list--peaksel').classList.add('active')
 }
 if (siteName == 'molevent') {
     document.querySelector('.header-elsci__logo-molevent').classList.add('active')
