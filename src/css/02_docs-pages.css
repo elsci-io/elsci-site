@@ -4,11 +4,11 @@
 	padding: 2rem 0 4rem 0;
 }
 
-.documentation-list {
+.documentation__list {
 	padding-left: 40px;
 }
 
-.documentation-item {
+.documentation__list-item {
 	list-style: initial;
 	font-size: 20px;
 }
