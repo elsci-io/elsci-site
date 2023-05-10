@@ -15,6 +15,7 @@
 
 .slogan__video {
 	display: block;
+    margin: 0 auto;
     height: 528px;
     width: 100%;
     max-width: 90vw;
