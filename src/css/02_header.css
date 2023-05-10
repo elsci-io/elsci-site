@@ -159,7 +159,7 @@
 		box-shadow: none;
 	}
 	.sub-header.header-elsci::before {
-		background: #2082d8;
+		background: var(--main-color1);
 	}
 	.sub-header .header__link {
 		color: #fff;

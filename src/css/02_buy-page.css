@@ -27,7 +27,7 @@
 }
 
 .billing-plan__description {
-	background-color: #f9f9f9;
+	background-color: var(--background-color2);
 	height: 75px;
 }
 

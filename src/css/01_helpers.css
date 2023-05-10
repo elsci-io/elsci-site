@@ -31,7 +31,7 @@
 	margin: 2rem auto 4rem;
 	position: relative;
 	aspect-ratio: 16 / 9;
-	border: #444343 solid 1px;
+	border: var(--text-color) solid 1px;
 }
 
 .video-item {
@@ -51,7 +51,7 @@ video,
 	text-align: center;
 	font-size: clamp(2.375rem, 3vw + 1.25rem, 3rem);
 	letter-spacing: 0.3px;
-	color: #444343;
+	color: var(--text-color);
 	font-weight: 400;
 	margin: 1.5rem 1rem;
 	/* background: var(--gradient-blue);
@@ -99,7 +99,7 @@ video,
 }
 
 article img {
-	border: #444343 solid 1px;
+	border: var(--text-color) solid 1px;
 	display: block;
 	margin: 0 auto;
 	max-width: 100%;
