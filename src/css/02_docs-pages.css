@@ -53,8 +53,13 @@
 
 /*         waters-structures   */
 
+.waters-structures__scroll-block {
+	overflow: scroll;
+}
+
 .waters-structures__table {
 	max-width: 100%;
+	overflow-x: scroll;
 }
 
 /*         vis-templates       */
