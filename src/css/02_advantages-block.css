@@ -3,7 +3,7 @@
     padding: 2rem 0;
 }
 
-.advantages-item {
+.advantages__list-item {
     padding: 2rem 0;
 }
 
@@ -48,6 +48,9 @@
         flex-direction: column;
         text-align: center;
         padding: 0;
+    }
+    .advantages__list-item {
+        padding: 1rem 0;
     }
 }
 
