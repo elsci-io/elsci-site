@@ -76,7 +76,6 @@
 	height: 4px;
 	background: var(--color-red);
 	border-radius: 57%;
-	/* transform: skewY(-5deg); */
 	animation-name: strike;
 	animation-duration: 2s;
 	animation-timing-function: cubic-bezier(1, 0, 0, 1);
@@ -86,7 +85,7 @@
 
 @media (max-width: 675px) {
 	.hero-body {
-		padding-top: 2rem;
+		padding: 2rem 0 0 0;
 	}
 	.hero-title {
 		line-height: 1.9;
