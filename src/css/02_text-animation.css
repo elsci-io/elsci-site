@@ -3,8 +3,14 @@
 .hero-body {
 	padding: 4rem 2rem 2rem 2rem;
 	min-height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -39,7 +45,11 @@
 	width: auto;
 	color: var(--color-red);
 	opacity: 0;
+	-webkit-transition: all 500ms ease-in;
+	-o-transition: all 500ms ease-in;
 	transition: all 500ms ease-in;
+	-webkit-transform: scale(0) translate(-50%);
+	-ms-transform: scale(0) translate(-50%);
 	transform: scale(0) translate(-50%);
 }
 
@@ -51,7 +61,18 @@
 
 .word-box__correct.visible {
 	opacity: 1;
+	-webkit-transform: scale(1) translate(-50%);
+	-ms-transform: scale(1) translate(-50%);
 	transform: scale(1) translate(-50%);
+}
+
+@-webkit-keyframes strike {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
 }
 
 @keyframes strike {
@@ -76,10 +97,15 @@
 	height: 4px;
 	background: var(--color-red);
 	border-radius: 57%;
+	-webkit-animation-name: strike;
 	animation-name: strike;
+	-webkit-animation-duration: 2s;
 	animation-duration: 2s;
+	-webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
 	animation-timing-function: cubic-bezier(1, 0, 0, 1);
+	-webkit-animation-iteration-count: 1;
 	animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 }
 

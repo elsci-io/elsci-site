@@ -1,5 +1,5 @@
 .video-body {
-	padding: 2rem 0 4rem;
+    padding: 2rem 0 4rem;
 }
 
 .slogan__decor-video {
@@ -9,17 +9,17 @@
 }
 
 .slogan__decor-video--top {
+    -ms-flex-item-align: end;
     align-self: flex-end;
     width: 175px;
 }
 
 .slogan__video {
-	display: block;
+    display: block;
     margin: 0 auto;
     height: 528px;
     width: 100%;
     max-width: 90vw;
     max-height: 50vw;
 }
-
 

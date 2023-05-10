@@ -22,14 +22,20 @@ blockquote {
 
 .quotation__text {
     margin: 0;
+    -webkit-margin-start: 0;
     margin-inline-start: 0;
+    -webkit-margin-before: 0;
     margin-block-start: 0;
     font-size: clamp(1em, 1em + 2vw, 1.4vw);
     text-align: center;
 }
 
 .quotation__author {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-style: italic;
     font-size: clamp(.5em, .5em + 1vw, .8em);

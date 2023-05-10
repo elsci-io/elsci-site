@@ -1,23 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+
 :root {
-    --home-content-max-width: 1250px;
-    --text-color: #444343;
-    --main-color1: #2082D8;
-    --main-color2: #61D66D;
-    --background-color2: #F9F9F9;
-    --color-red: #ef2929;
+	--home-content-max-width: 1250px;
+	--text-color: #444343;
+	--main-color1: #2082D8;
+	--main-color2: #61D66D;
+	--background-color2: #F9F9F9;
+	--color-red: #ef2929;
 }
+
 *,
 *::before,
 *::after {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 html {
 	height: 100%;
 	width: 100%;
 	scroll-behavior: smooth;
 }
+
 body {
 	margin: 0;
 	padding: 0;
@@ -31,6 +35,8 @@ body {
 }
 
 main {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
 	flex: 1 1 auto;
 }
 
@@ -39,11 +45,11 @@ main {
 	display: block;
 	height: 5rem; /* fixed header height*/
 	margin: -5rem 0 0; /* negative fixed header height */
-} 
+}
 
 a {
-    color: var(--main-color1);
-    text-decoration: none;
+	color: var(--main-color1);
+	text-decoration: none;
 }
 
 ul,
@@ -70,7 +76,12 @@ h3 {
 
 .wrapper {
 	min-height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 

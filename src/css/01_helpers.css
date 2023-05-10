@@ -21,6 +21,7 @@
 	border: 0;
 	padding: 0;
 	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
@@ -54,10 +55,6 @@ video,
 	color: var(--text-color);
 	font-weight: 400;
 	margin: 1.5rem 1rem;
-	/* background: var(--gradient-blue);
-	background-clip: inherit;
-	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent; */
 }
 
 .page-description {
@@ -67,19 +64,36 @@ video,
 
 .page-hero__body {
 	min-height: calc(100vh - 8rem);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
 .page-hero__animation {
+	-ms-flex-item-align: end;
 	align-self: flex-end;
 }
 
 .page-hero__text-block {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 

@@ -1,21 +1,27 @@
 #toc div.h1 {
 	display: none;
 }
+
 #toc div {
 	margin-top: 0.5em;
 }
+
 #toc div.h2 {
 	margin-left: 1em;
 }
+
 #toc div.h3 {
 	margin-left: 3em;
 }
+
 #toc div.h4 {
 	margin-left: 5em;
 }
+
 #doc div {
 	margin-top: 5em;
 }
+
 h2 {
 	border-bottom: 1px solid lightgrey;
 	margin-top: 50px;
@@ -30,12 +36,13 @@ h2 {
 }
 
 .mass-spec img {
-border: none;
+	border: none;
 }
 
 .mass-spec__img--vertical {
 	max-width: 200px;
 }
+
 @media (max-width: 795px) {
 	.mass-spec .mass-spec__img--right {
 		margin: 0;
