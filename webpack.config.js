@@ -85,7 +85,7 @@ module.exports = {
                 use: ['css-loader', 'sass-loader'],
             },
             {
-                test: /\.(ico|png|jp?g|svg)$/,
+                test: /\.(ico|png|jp?g|svg|mp4)$/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'img/[name].[hash:8][ext][query]',
