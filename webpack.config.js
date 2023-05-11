@@ -21,7 +21,7 @@ module.exports = {
                     import: './src/peaksel/html/docs.html',
                 },
                 'peaksel/buy': {
-                    import: './src/html/peaksel/buy.html',
+                    import: './src/peaksel/html/buy.html',
                 },
                 'peaksel/docs/add-substance': {
                     import: './src/peaksel/html/docs/add-substance.html',
