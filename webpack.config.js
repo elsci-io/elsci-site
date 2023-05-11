@@ -1,4 +1,5 @@
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
+const {join} = require("path");
 
 module.exports = {
     plugins: [
@@ -28,8 +29,8 @@ module.exports = {
                 'peaksel/docs/align-detectors': {
                     import: './src/peaksel/html/docs/align-detectors.html',
                 },
-                'peakseldocs/batch-navigation': {
-                    import: './src/peaksel//html/docs/batch-navigation.html',
+                'peaksel/docs/batch-navigation': {
+                    import: './src/peaksel/html/docs/batch-navigation.html',
                 },
                 'peaksel/docs/import-automation': {
                     import: './src/peaksel/html/docs/import-automation.html',
@@ -97,9 +98,14 @@ module.exports = {
         path: __dirname + "/target"
     },
     devServer: {
-        static: './target',
-        hot: true,
-        host: 'localhost',
-        port: 3457
+        static: {
+            directory: join(__dirname, 'target'),
+        },
+        watchFiles: {
+            paths: ['src/**/*.*'],
+            options: {
+                usePolling: true,
+            },
+        },
     }
 };
