@@ -12,8 +12,8 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<%= require('html-loader!../../partials/header.html').default %> <%=
-			require('html-loader!../../partials/headerPeaksel.html').default %>
+			<%~ includeFile('/src/partials/header.html') %>
+			<%~ includeFile('/src/partials/headerPeaksel.html') %>
 			<main class="buy page-body" data-page="buy" data-context="peaksel">
 				<div class="container">
 					<section class="buy__row">
@@ -95,8 +95,7 @@
 					</div>
 				</div>
 			</main>
-
-			<%= require('html-loader!../../partials/footer.html').default %>
+			<%~ includeFile('/src/partials/footer.html') %>
 		</div>
 		<script src="../../js/script.js"></script>
 	</body>

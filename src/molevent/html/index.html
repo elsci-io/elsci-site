@@ -14,8 +14,8 @@
 </head>
 <body>
 <div class="wrapper">
-  <%= require('html-loader!../../partials/header.html').default %> <%=
-  require('html-loader!../../partials/headerMolevent.html').default %>
+  <%~ includeFile('/src/partials/header.html') %>
+  <%~ includeFile('/src/partials/headerMolevent.html') %>
   <main data-context="molevent">
     <section class="page-hero page-hero--molevent">
       <div class="container">
@@ -97,7 +97,7 @@
       </div>
     </section>
   </main>
-  <%= require('html-loader!../../partials/footer.html').default %>
+  <%~ includeFile('/src/partials/footer.html') %>
 </div>
 <script src="../../js/script.js"></script>
 </body>

@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<%= require('html-loader!./partials/header.html').default %>
+			<%~ includeFile('/src/partials/header.html') %>
 			<main>
 				<section class="hero">
 					<div class="container">
@@ -105,7 +105,7 @@
 					</div>
 				</section>
 			</main>
-			<%= require('html-loader!./partials/footer.html').default %>
+			<%~ includeFile('/src/partials/footer.html') %>
 		</div>
 		<script src="js/script.js"></script>
 		<script src="js/textAnimation.js"></script>

@@ -1,90 +1,43 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const path = require('path');
-const fs = require('fs');
-
-
-// find all html files in src directory and create a new HtmlWebpackPlugin for each one
-
-const files = fs.readdirSync(__dirname + '/src');
-const htmlPlugins = files.filter(file => file.endsWith('.html')).map(file => {
-    return new HtmlWebpackPlugin({
-        template: __dirname + '/src/' + file,
-        filename: file,
-        title: ''
-    });
-});
-
-const peakselFiles = fs.readdirSync(__dirname + '/src/peaksel/html');
-const htmlPluginsForPeaksel = peakselFiles.filter(file => file.endsWith('.html')).map(file => {
-    return new HtmlWebpackPlugin({
-        template: __dirname + '/src/peaksel/html/' + file,
-        filename: './peaksel/' + file,
-        title: ''
-    });
-});
-
-const peakselDocsFiles = fs.readdirSync(__dirname + '/src/peaksel/html/docs');
-const htmlPluginsForPeakselDocs = peakselDocsFiles.filter(file => file.endsWith('.html')).map(file => {
-    return new HtmlWebpackPlugin({
-        template: __dirname + '/src/peaksel/html/docs/' + file,
-        filename: './peaksel/docs/' + file,
-        title: ''
-    });
-});
-
-const peakselArticleFiles = fs.readdirSync(__dirname + '/src/peaksel/html/article');
-const htmlPluginsForPeakselArticle = peakselArticleFiles.filter(file => file.endsWith('.html')).map(file => {
-    return new HtmlWebpackPlugin({
-        template: __dirname + '/src/peaksel/html/article/' + file,
-        filename: './peaksel/article/' + file,
-        title: ''
-    });
-});
-
-const moleventFiles = fs.readdirSync(__dirname + '/src/molevent/html');
-const htmlPluginsForMolevent = moleventFiles.filter(file => file.endsWith('.html')).map(file => {
-    return new HtmlWebpackPlugin({
-        template: __dirname + '/src/molevent/html/' + file,
-        filename: './molevent/' + file,
-        title: ''
-    });
-});
+const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
-    entry: './src/index.js',
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'target')
-    },
     plugins: [
-        ...htmlPlugins,
-        ...htmlPluginsForPeaksel,
-        ...htmlPluginsForPeakselDocs,
-        ...htmlPluginsForPeakselArticle,
-        ...htmlPluginsForMolevent,
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: 'src/css', to: 'css' },
-                { from: 'src/js', to: 'js' },
-                { from: 'src/img', to: 'img' },
-                { from: 'src/peaksel/img', to: 'peaksel/img' },
-                { from: 'src/peaksel/js', to: 'peaksel/js' },
-            ]
+        new HtmlBundlerPlugin({
+            entry: {
+                'index': { // => dist/index.html (key is output filename w/o '.html')
+                    import: './src/index.html', // template file
+                }
+                // 'peaksel/index': {
+                //     import: './src/peaksel/index.html', // template file
+                // }
+            },
+            js: {
+                // output filename of JS extracted from source script specified in `<script>`
+                filename: './js/[name].[contenthash:8].js',
+            },
+            css: {
+                // output filename of CSS extracted from source file specified in `<link>`
+                filename: './css/[name].[contenthash:8].css',
+            },
         }),
     ],
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use:
-                    [
-                        'style-loader',
-                        'css-loader',
-                    ]
+                test: /\.(css|sass|scss)$/,
+                use: ['css-loader', 'sass-loader'],
             },
-        ]
+            {
+                test: /\.(ico|png|jp?g|svg)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'img/[name].[hash:8][ext][query]',
+                },
+            },
+        ],
+    },
+    output: {
+        path: __dirname + "/target"
     },
     devServer: {
         static: './target',

@@ -12,9 +12,8 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<%= require('html-loader!../../../partials/header.html').default %> <%=
-			require('html-loader!../../../partials/headerPeaksel.html').default %>
-
+			<%~ includeFile('/src/partials/header.html') %>
+			<%~ includeFile('/src/partials/headerPeaksel.html') %>
 			<main class="align-detectors page-body"
 				data-page="documentation"
 				data-context="peaksel">
@@ -31,8 +30,7 @@
 					</div>
 				</div>
 			</main>
-			<%= require('html-loader!../../../partials/footer.html').default %>
-
+			<%~ includeFile('/src/partials/footer.html') %>
 		</div>
 		<script src="../../js/script.js"></script>
 

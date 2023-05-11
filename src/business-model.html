@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<%= require('html-loader!./partials/header.html').default %>
+			<%~ includeFile('/src/partials/header.html') %>
 			<main data-page="business-model">
 				<div class="container">
 					<div class="business-model__body page-content">
@@ -140,7 +140,7 @@
 					</div>
 				</div>
 			</main>
-			<%= require('html-loader!./partials/footer.html').default %>
+			<%~ includeFile('/src/partials/footer.html') %>
 		</div>
 		<script src="js/script.js"></script>
 	</body>
