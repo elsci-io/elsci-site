@@ -93,14 +93,7 @@
 			</main>
 			<%~ includeFile('/src/partials/footer.html') %>
 		</div>
-		<script src="../../js/script.js"></script>
+		<script src="../../js/header.js"></script>
 	</body>
-	<script type="text/javascript">
-		let emailBtns = document.querySelectorAll("[data-email-btn]");
-		for (let e of emailBtns) {
-			e.addEventListener("click", (event) => {
-				event.target.textContent = "peaksel@elsci.io";
-			});
-		}
-	</script>
+	<script src="../js/contactUsButton.js"></script>
 </html>
