@@ -92,7 +92,7 @@ module.exports = {
                 test: /\.(ico|png|jp?g|svg|mp4)$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'img/[name].[hash:8][ext][query]',
+                    filename: 'img/[name].[hash:8][ext]',
                 },
             },
         ],
@@ -112,9 +112,7 @@ module.exports = {
         },
     },
     performance: {
-        hints: false,
-        maxEntrypointSize: 512000,
-        maxAssetSize: 512000000
+        hints: false
     },
     mode: 'production'
 };
