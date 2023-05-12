@@ -77,6 +77,9 @@ module.exports = {
                 // output filename of CSS extracted from source file specified in `<link>`
                 filename: './css/[name].[contenthash:8].css',
             },
+            loaderOptions: {
+                root: join(__dirname, 'src')
+            },
         }),
     ],
     module: {
