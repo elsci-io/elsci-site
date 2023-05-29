@@ -174,7 +174,7 @@
 	flex-direction: row;
 }
 
-.navigation-list--peaksel {
+.navigation-list--peaksel, .navigation-list--molevent {
 	display: none;
 }
 
@@ -315,12 +315,14 @@
 	.header-peaksel {
 		display: none;
 	}
-	.sub-header .navigation-list--peaksel.active {
+	.sub-header .navigation-list--peaksel.active,
+	.sub-header .navigation-list--molevent.active {
 		display: block;
 		color: #fff;
 		position: relative;
 	}
-	.navigation-list--peaksel::before {
+	.navigation-list--peaksel::before,
+	.navigation-list--molevent::before {
 		position: absolute;
 		content: "";
 		bottom: 0;

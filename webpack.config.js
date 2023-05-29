@@ -68,6 +68,9 @@ module.exports = {
                 'molevent/index': {
                     import: './src/molevent/html/index.html',
                 },
+                'molevent/buy': {
+                    import: './src/molevent/html/buy.html',
+                },
             },
             js: {
                 // output filename of JS extracted from source script specified in `<script>`
