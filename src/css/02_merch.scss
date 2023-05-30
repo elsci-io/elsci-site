@@ -1,8 +1,11 @@
+.merch-row{
+    padding: 6rem 0 4rem;
+}
+
 .merch-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-   
 }
 .merch-list__item {
     flex: 1 1 auto;
