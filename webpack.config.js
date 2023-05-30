@@ -14,6 +14,9 @@ module.exports = {
                 'about': {
                     import: './src/about.html',
                 },
+                'merch': {
+                    import: './src/merch.html',
+                },
                 'peaksel/index': {
                     import: './src/peaksel/html/index.html',
                 },
