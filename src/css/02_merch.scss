@@ -1,0 +1,22 @@
+.merch-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.merch-list__item {
+    flex: 1 1 auto;
+    margin: 2rem 1rem;
+}
+.merch-card__image {
+    width: 300px;
+    height: 350px;
+    display: block;
+    margin: 0 auto;
+}
+.merch-card__description {
+    text-align: center;
+    font-size: 2rem;
+}
+.merch-card__description--color {
+    font-size: 1rem;
+}
