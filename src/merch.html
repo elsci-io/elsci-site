@@ -28,7 +28,7 @@
 											class="merch-card__image"
 											src="./img/T_Shirt_Ethanasana.png"
 											alt="T_Shirt_Ethanasana"
-											onclick="zoomIn(this)" />
+											 />
 										<div class="merch-card__description">T-Shirt Yoga</div>
 									</div>
 								</li>
@@ -38,7 +38,7 @@
 											class="merch-card__image"
 											src="./img/T_Shirt_Not_fear_black.png"
 											alt="T_Shirt_Not_fear_black"
-											onclick="zoomIn(this)" />
+											 />
 										<div class="merch-card__description">
 											T-Shirt Monsters
 											<div class="merch-card__description--color">(black)</div>
@@ -51,7 +51,7 @@
 											class="merch-card__image"
 											src="./img/T_Shirt_Not_fear_white.png"
 											alt="T_Shirt_Not_fear_white"
-											onclick="zoomIn(this)" />
+											 />
 										<div class="merch-card__description">
 											T-Shirt Monsters
 											<div class="merch-card__description--color">(white)</div>
@@ -64,7 +64,7 @@
 											class="merch-card__image"
 											src="./img/T_Shirt_Code_Matrix.png"
 											alt="T_Shirt_Code_Matrix"
-											onclick="zoomIn(this)" />
+											 />
 										<div class="merch-card__description">T-Shirt Matrix</div>
 									</div>
 								</li>
@@ -74,7 +74,7 @@
 											class="merch-card__image"
 											src="./img/T_Shirt_Numbers.png"
 											alt="T_Shirt_Numbers"
-											onclick="zoomIn(this)" />
+											 />
 										<div class="merch-card__description">T-Shirt Numbers</div>
 									</div>
 								</li>
@@ -82,28 +82,15 @@
 						</div>
 					</div>
 				</section>
-				<div class="popup" onclick="unVisible()">
+				<div class="popup">
 					<div class="popup-content">
-						<img src="#" alt="t-shirt" />
+						<img alt="t-shirt" />
 					</div>
 				</div>
 			</main>
 			<%~ includeFile('/src/partials/footer.html') %>
 		</div>
 		<script src="./js/header.js"></script>
-		<script>
-			const popup = document.querySelector(".popup");
-			function zoomIn(image) {
-				const imgSrc = image.getAttribute("src");
-				popup.classList.add("visible");
-				document
-					.querySelector(".popup-content img")
-					.setAttribute("src", imgSrc);
-			}
-			function unVisible() {
-				console.log("i am function");
-				popup.classList.remove("visible");
-			}
-		</script>
+		<script src="./js/popup.js"></script>
 	</body>
 </html>
