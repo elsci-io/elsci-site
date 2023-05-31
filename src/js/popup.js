@@ -13,8 +13,28 @@ function zoomIn(image) {
     document
         .querySelector(".popup-content img")
         .setAttribute("src", imgSrc);
+    const imageId = image.getAttribute('id');
+    const currentUrl = window.location.href;
+    let newUrl = '';
+    if (currentUrl.includes('#')) {
+        newUrl = currentUrl.replace(/#(.*)/, '#' + imageId);
+    } else {
+        newUrl = currentUrl + '#' + imageId;
+    }
+    history.pushState(null, null, newUrl);
 }
 
 function zoomOut() {
     popup.classList.toggle("visible");
+    removeHashFromURL()
+}
+
+function removeHashFromURL() {
+    const url = window.location.href;
+    const index = url.indexOf('#');
+
+    if (index !== -1) {
+        const newUrl = url.slice(0, index);
+        window.location.replace(newUrl);
+    }
 }
