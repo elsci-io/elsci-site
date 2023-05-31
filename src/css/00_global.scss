@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
 
 :root {
 	--home-content-max-width: 1250px;
 	--text-color: #444343;
-	--main-color1: #2082D8;
-	--main-color2: #61D66D;
+	--main-color1: #2082d8;
+	--main-color2: #61d66d;
 	--main-color2-molevent: #e99c39;
 	--main-color2-crystaline: #de5e5b;
-	--background-color2: #F9F9F9;
+	--background-color2: #f9f9f9;
 	--color-red: #ef2929;
 }
 
@@ -35,14 +35,17 @@ body {
 	color: var(--text-color);
 	line-height: 1.5;
 }
-
+body.lock {
+	overflow: hidden;
+}
 main {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 auto;
 	flex: 1 1 auto;
 }
 
-:target::before { /*    Added block o top o scroll for header   */
+:target::before {
+	/*    Added block o top o scroll for header   */
 	content: "";
 	display: block;
 	height: 5rem; /* fixed header height*/

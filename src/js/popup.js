@@ -22,10 +22,12 @@ function zoomIn(image) {
         newUrl = currentUrl + '#' + imageId;
     }
     history.pushState(null, null, newUrl);
+    document.body.classList.toggle("lock");
 }
 
 function zoomOut() {
     popup.classList.toggle("visible");
+    document.body.classList.toggle("lock");
     removeHashFromURL()
 }
 
