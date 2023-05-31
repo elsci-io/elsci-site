@@ -82,9 +82,9 @@
 						</div>
 					</div>
 				</section>
-				<div class="popup">
+				<div class="popup" onclick="unVisible()">
 					<div class="popup-content">
-						<img src="./img/T_Shirt_Code_Matrix.png" alt="t-shirt" />
+						<img src="#" alt="t-shirt" />
 					</div>
 				</div>
 			</main>
@@ -92,8 +92,17 @@
 		</div>
 		<script src="./js/header.js"></script>
 		<script>
+			const popup = document.querySelector(".popup");
 			function zoomIn(image) {
-				image.classList.toggle("zoomed");
+				const imgSrc = image.getAttribute("src");
+				popup.classList.add("visible");
+				document
+					.querySelector(".popup-content img")
+					.setAttribute("src", imgSrc);
+			}
+			function unVisible() {
+				console.log("i am function");
+				popup.classList.remove("visible");
 			}
 		</script>
 	</body>
