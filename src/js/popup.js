@@ -1,19 +1,59 @@
 const popup = document.querySelector(".popup");
 const images = document.querySelectorAll(".merch-card__image");
+const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+const body = document.querySelector('body');
+const header = document.querySelector('header');
+const popupImage = document.querySelector(".popup-image")
+
+
+// Add Event Listeners to images and popup-element
 
 images.forEach(image => {
-    image.addEventListener('click', () => zoomIn(image))
+    image.addEventListener('click', (event) => zoomIn(event))
 });
 
-popup.addEventListener('click', zoomOut);
+popup.addEventListener('click', (event) => zoomOut(event));
 
-function zoomIn(image) {
-    const imgSrc = image.getAttribute("src");
+
+// Functions that zoom/unzoom the image
+
+function zoomIn(event) {
+    const imgSrc = event.target.getAttribute("src");
+    const imageId = event.target.getAttribute('id');
     popup.classList.toggle("visible");
-    document
-        .querySelector(".popup-content img")
-        .setAttribute("src", imgSrc);
-    const imageId = image.getAttribute('id');
+    popupImage.setAttribute("src", imgSrc);
+    bodyLock();
+    addHashToURL(imageId);
+    event.preventDefault();
+}
+
+function zoomOut(event) {
+    popup.classList.toggle("visible");
+    popupImage.removeAttribute("src");
+    bodyUnLock();
+    removeHashFromURL();
+    event.preventDefault();
+}
+
+
+//Functions that block/unblock scrolling and screen shift
+
+function bodyLock() {
+    header.setAttribute("style", `padding-right: ${lockPaddingValue}`);
+    body.setAttribute("style", `padding-right: ${lockPaddingValue}`);
+    body.classList.add("lock");
+}
+
+function bodyUnLock() {
+    header.removeAttribute("style");
+    body.removeAttribute("style");
+    body.classList.remove("lock");
+}
+
+
+// Functions that add/remov hash from URL
+
+function addHashToURL(imageId) {
     const currentUrl = window.location.href;
     let newUrl = '';
     if (currentUrl.includes('#')) {
@@ -22,21 +62,13 @@ function zoomIn(image) {
         newUrl = currentUrl + '#' + imageId;
     }
     history.pushState(null, null, newUrl);
-    document.body.classList.toggle("lock");
-}
-
-function zoomOut() {
-    popup.classList.toggle("visible");
-    document.body.classList.toggle("lock");
-    removeHashFromURL()
 }
 
 function removeHashFromURL() {
     const url = window.location.href;
     const index = url.indexOf('#');
-
     if (index !== -1) {
-        const newUrl = url.slice(0, index);
+        const newUrl = url.slice(0, index) + "#top";
         window.location.replace(newUrl);
     }
 }
