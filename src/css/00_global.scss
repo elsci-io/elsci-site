@@ -24,6 +24,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+html.scroll-behavior-auto {
+	scroll-behavior: auto;
+}
+
 body {
 	margin: 0;
 	padding: 0;
