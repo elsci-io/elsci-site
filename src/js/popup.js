@@ -5,13 +5,13 @@ const body = document.querySelector('body');
 const header = document.querySelector('header');
 const popupImage = document.querySelector(".popup-image");
 const hashValue = window.location.hash.slice(1);
-const hashImage = document.querySelector(`[id=${hashValue}]`);
-const hashSRC = hashImage['src']
 
 
 // Zooming image, if url include hash
 
-if (hashSRC) {
+if (hashValue && hashValue != "top") {
+    const hashImage = document.querySelector(`[id=${hashValue}]`);
+    const hashSRC = hashImage['src']
     popup.classList.toggle("visible");
     popupImage.setAttribute("src", hashSRC);
     bodyLock();
