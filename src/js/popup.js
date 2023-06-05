@@ -1,4 +1,4 @@
-const popup = document.querySelector(".popup");
+const popup = document.querySelector(".popup-content");
 const images = document.querySelectorAll(".merch-card__image");
 const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
 const body = document.querySelector('body');
@@ -12,8 +12,8 @@ const hashValue = window.location.hash.slice(1);
 if (hashValue && hashValue != "top") {
     const hashImage = document.querySelector(`[id=${hashValue}]`);
     const hashSRC = hashImage['src']
-    popup.classList.toggle("visible");
     popupImage.setAttribute("src", hashSRC);
+    popup.showModal()
     bodyLock();
 }
 
@@ -26,19 +26,13 @@ images.forEach(image => {
 
 popup.addEventListener('click', (event) => zoomOut(event));
 
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-        zoomOut(event);
-    }
-});
-
 
 // Functions that zoom/unzoom the image
 
 function zoomIn(event) {
     const imgSrc = event.target.getAttribute("src");
     const imageId = event.target.getAttribute('id');
-    popup.classList.toggle("visible");
+    popup.showModal();
     popupImage.setAttribute("src", imgSrc);
     bodyLock();
     addHashToURL(imageId);
@@ -46,13 +40,12 @@ function zoomIn(event) {
 }
 
 function zoomOut(event) {
-    popup.classList.toggle("visible");
+    popup.close();
     popupImage.removeAttribute("src");
     bodyUnLock();
     removeHashFromURL();
     event.preventDefault();
 }
-
 
 //Functions that block/unblock scrolling and screen shift
 
