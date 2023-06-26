@@ -104,7 +104,8 @@ module.exports = {
         ],
     },
     output: {
-        path: __dirname + "/target"
+        path: __dirname + "/target",
+        clean: true
     },
     devServer: {
         static: {

@@ -26,6 +26,11 @@ images.forEach(image => {
 
 popup.addEventListener('click', (event) => zoomOut(event));
 
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') 
+        zoomOut(event); 
+    }
+);
 
 // Functions that zoom/unzoom the image
 
