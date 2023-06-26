@@ -29,7 +29,6 @@ window.addEventListener('scroll', (el) => {
 });
 
 const pageName = document.querySelector('main').dataset.page;
-console.log(pageName);
 if (pageName) {
     document.querySelector(`.navigation-list__item[data-page="${pageName}"]`).classList.add('active');
 }
