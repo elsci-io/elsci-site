@@ -65,6 +65,9 @@ module.exports = {
                 'peaksel/article/mass-spec': {
                     import: './src/peaksel/html/article/mass-spec.html',
                 },
+                'peaksel/article/types-of-uv-detectors': {
+                    import: './src/peaksel/html/article/types-of-uv-detectors.html',
+                },
                 'peaksel/article/wl-extraction': {
                     import: './src/peaksel/html/article/wl-extraction.html',
                 },

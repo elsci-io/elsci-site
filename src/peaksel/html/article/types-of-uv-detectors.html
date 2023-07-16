@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Types of UV detectors: DAD, UV, VWD, SWD, MWD</title>
+  <link rel="stylesheet" href="../../../css/bundle.scss"/>
+  <script src="../../js/app.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <%~ includeFile('/src/partials/header.html') %>
+  <%~ includeFile('/src/partials/headerPeaksel.html') %>
+  <main class="wl-extraction page-body" data-page="documentation" data-context="peaksel">
+    <div class="container">
+      <article class="page-content">
+        <h1 class="page-title">Types of UV detectors: DAD, PDA, UV, VWD, SWD, MWD</h1>
+        <div id="toc"></div>
+
+        <h2>UV Detector</h2>
+        <p>
+          This is the simplest of the detectors as it only measures one wavelength that the scientist configures
+          using the software. It's confusing because DAD and MWD also measure UV absorbance, but when saying
+          <i>UV detector</i> people <i>usually</i> mean exactly the fact that it can work with just a single wavelength.
+        </p>
+        <p>
+          This detector <i>first</i> filters out the right wavelength, <i>then</i> it directs the light
+          to the sample. Since the light that passes through the sample is of just one wavelength, it's called
+          monochromatic light.</p>
+
+        <h2>Variable Wavelength Detector (VWD)</h2>
+        <p>This is an improvement over the UV detector that allows switching between the measured wavelengths. So
+          the detector does the measurement, then some mechanical motor changes an angle to another wavelength
+          and makes another measurement.
+        </p>
+        <p>So the key difference between the UV detector and VWD is you either get a single chromatogram or you can
+          get multiple.</p>
+
+        <h2>Diode arrays (DAD & PDA)</h2>
+        <p>
+          Diode array detector and Photodiode detector are 2 different names that mean the same thing. Instead of
+          measuring just a single wavelength, they measure the whole spectra. E.g. they could measure light absorbance
+          at 200 to 400 nm - all <i>at the same time</i>.
+        </p>
+        <p>
+          As opposed to the UV detector, the light of broad spectrum is directed through the sample. The sample
+          absorbs different wavelengths differently. After the light passed through the sample, the ray is divided
+          into many monochromatic rays - each falling on its own mini-detector (photodiode). There could be many
+          photodiodes (e.g. 1024) which allows to measure many wavelengths at the same time.
+        </p>
+
+        <h2>MWD & SWD</h2>
+        <p>
+          MWD (Multiple wavelengths detector) and SWD (Single wavelength detector) are actually the same as DAD/PDA
+          detectors. But while the physical device is the same, vendors can
+          restrict how many wavelengths are recorded at the firmware/software level. This is probably done for
+          marketing/sales reason and doesn't have anything to do with the science.
+        </p>
+        <p>
+          So while the device is just a DAD, what users get as a result is more similar to UV detector: it's just
+          instead of just one measurement/chromatogram they get multiple (e.g. 8).
+        </p>
+        <p>
+          Here's some weirdness. If MWD/SWD is just a DAD that doesn't give the result from selected diodes,
+          why some (many? all?) MWD/SWD associate the signal with <i>different retention times</i>? It seems like
+          the detector measures one wavelength, then switches to measuring the next one. While that shouldn't be
+          the case with the diodes - we can measure both of them at the same time.
+        </p>
+
+        <h2>Similarities to Mass Spectrometry</h2>
+        <p>
+          We can draw parallels between the data produced by these detectors. UV and VWD detectors are similar to
+          the <a href="mass-spec.html#sim">Single Ion Monitoring (SIM)</a> done in Mass Spec. While DAD/PDA
+          detectors are similar to <a href="mass-spec.html#scanmode">Scan Mode</a>. There doesn't seem to be any
+          equivalent of MWD thought, but that's a weird concept in the first place.
+        </p>
+
+        <h2>Chromatogram names in Peaksel</h2>
+        <p>
+          Since at the basic level all these detectors give us UV absorbance,
+          <a href="https://elsci.io/peaksel">Peaksel</a> always refers to the signal from any of these detectors as UV.
+          So we end up with chromatograms like <code>UV Total</code> (aka TWC, total wavelength chromatogram) and
+          <code>UV xxx</code> for extracted chromatograms
+          (see <a href="wl-extraction.html">DAD/PDA: Extracted and Reference wavelengths</a>).
+        </p>
+      </article>
+    </div>
+  </main>
+  <%~ includeFile('/src/partials/footer.html') %>
+</div>
+<script src="../../../js/header.js"></script>
+</body>
+</html>
