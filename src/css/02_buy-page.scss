@@ -30,6 +30,7 @@
 
 .billing-plan__title {
 	padding: 10px;
+	border-bottom: 1px solid #eeecec;
 }
 
 .hugetext {
@@ -37,17 +38,14 @@
 }
 
 .billing-plan__description {
-	background-color: var(--background-color2);
 	height: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .billing-plan__button {
 	height: 29px;
-	border: 1px solid;
-	border-radius: 2px;
-	padding: 10px;
-	position: relative;
-	top: 20px;
 }
 
 .buy__row {
