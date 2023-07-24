@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Focused Gradients: generating Sample Lists</title>
+  <link rel="stylesheet" href="../../../css/bundle.scss"/>
+</head>
+<body>
+<div class="wrapper">
+  <%~ includeFile('/src/partials/header.html') %>
+  <%~ includeFile('/src/partials/headerPeaksel.html') %>
+  <main
+      class="peaks page-body"
+      data-page="documentation"
+      data-context="peaksel">
+    <div class="container">
+      <article class="page-content">
+        <h1>Focused Gradients: generating Sample Lists</h1>
+        <p>
+          So you want to generate your Sample Lists/Sequences from scouting runs on a regular basis? Let's see
+          how you can set up Peaksel to generate those with couple of clicks.
+        </p>
+        <p>
+          <i>Prerequisites:</i> you've developed methods with zoned Focused Gradients, you've got your scouting
+          results. What's left is to select the right zone for each sample based on the Retention Time of the target
+          peaks.
+        </p>
+				<h2>Sample List table</h2>
+        <p>First you can create a table that resembles the one that you want to upload to your software that
+          controls the instrument. You can name your columns, add calculated columns however you want. So suppose
+          you want something like this for MassLynx:</p>
+        <table class="sheet">
+          <thead>
+          <tr>
+            <th class="sheet__cell sheet__cell--header">File Name</th>
+            <th class="sheet__cell sheet__cell--header">Sample ID</th>
+            <th class="sheet__cell sheet__cell--header">MS File</th>
+            <th class="sheet__cell sheet__cell--header">Bottle</th>
+            <th class="sheet__cell sheet__cell--header">Injection Volume</th>
+            <th class="sheet__cell sheet__cell--header">Inlet Method</th>
+            <th class="sheet__cell sheet__cell--header">Scouting RT</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="sheet__cell">0000-001-prep1</td>
+            <td class="sheet__cell">0000-001-prep1</td>
+            <td class="sheet__cell">ES+MSMethod</td>
+            <td class="sheet__cell">D:5</td>
+            <td class="sheet__cell">5.0</td>
+            <td class="sheet__cell"><b>5minGradient4</b></td>
+            <td class="sheet__cell">1.82</td>
+          </tr>
+          <tr>
+            <td class="sheet__cell">0000-002-prep1</td>
+            <td class="sheet__cell">0000-002-prep1</td>
+            <td class="sheet__cell">ES+MSMethod</td>
+            <td class="sheet__cell">D:6</td>
+            <td class="sheet__cell">5.0</td>
+            <td class="sheet__cell"><b>5minGradient1</b></td>
+            <td class="sheet__cell">0.35</td>
+          </tr>
+          </tbody>
+        </table>
+        <p>The last column is the most important - it's the method with the zone that we calculated. So what do formulas look like?</p>
+				<h2>Focused Gradients formula</h2>
+        <ul>
+          <li class="bullet">"File Name" and "Sample ID" are easy - just peak predefined "Injection name" column from
+            what Peaksel suggest, and then replace the formula with <code>injection.name + '-prep1'</code></li>
+          <li class="bullet">"Bottle" is one of the predefined columns, aka "Plate Location"</li>
+          <li class="bullet">"MS File" and "Injection Volume" are just static strings, when adding a Calculated
+            Column just put <code>'ES+MSMethod'</code> and <code>5.0</code> respectively.</li>
+          <li>"Scouting RT" - this is the Retention Time of our analyte that we want to purify. From the list of
+            predefined columns select the peak that you want to purify, and rename the column to "Scouting RT"
+            respectively.</li>
+          <li class="bullet">Finally "Inlet Method" uses a boolean expression of form:
+            <code>expression ? what if true : what if false</code>. In our case it's a series of such blocks:
+            <pre class="code">
+
+              col['Scouting RT']   == '' ? 'N/A'
+              : col['Scouting RT'] < 0.5 ? '5minGradient1'
+              : col['Scouting RT'] < 1.0 ? '5minGradient2'
+              : col['Scouting RT'] < 1.5 ? '5minGradient3'
+              :                            '5minGradient4'
+            </pre></li>
+        </ul>
+
+        <h2>Filtering out samples w/o peaks</h2>
+        <p>If there are samples that don't really have the analyte, you'll see a bunch of 'N/A'. You can filter
+          out by going to the table menu, choosing "Filter menu" and specifying the filtering formula.</p>
+        <p>The formula is simple - we want only those rows with non-empty "Scouting RT" to stay, so it's just <code>col['Scouting RT']</code></p>
+
+
+        <h2>Creating a template</h2>
+        <p>Now this Batch that you configured can be used as a template. Just go to another batch, select
+          <code>Visualize -> Import visualizations</code> and find the template batch.</p>
+        <p>Note however, that if the substance was named differently than what you had in the Template Batch,
+          you'll have to delete the column "Scouting RT" and creating again - but this time from the substance
+          that's actually present.</p>
+        <p>Here's the final result that you should get:</p>
+        <img src="../../img/focused-gradient-sample-list.png" alt="Waters MassLynx: Focused Gradient sample list">
+      </article>
+    </div>
+  </main>
+  <%~ includeFile('/src/partials/footer.html') %>
+</div>
+<script src="../../../js/header.js"></script>
+</body>
+</html>

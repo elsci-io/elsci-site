@@ -44,6 +44,9 @@ module.exports = {
                 'peaksel/docs/peaks': {
                     import: './src/peaksel/html/docs/peaks.html',
                 },
+                'peaksel/docs/focused-gradient': {
+                    import: './src/peaksel/html/docs/focused-gradient.html',
+                },
                 'peaksel/docs/reports': {
                     import: './src/peaksel/html/docs/reports.html',
                 },

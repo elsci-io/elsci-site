@@ -1,0 +1,15 @@
+// for Excel-like tables that should look like Excel
+.sheet {
+	border-spacing: 0;
+	font-family: monospace;
+	font-size: .9rem;
+	margin: auto;
+}
+.sheet__cell {
+	border: black 1px solid;
+	padding: .2rem;
+}
+.sheet__cell--header {
+	font-weight: 400;
+	font-size: .8rem;
+}
