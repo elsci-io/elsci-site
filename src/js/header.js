@@ -20,6 +20,8 @@ document.querySelector('.header__link--bookmarks').addEventListener('click', () 
 
 window.addEventListener('scroll', (el) => {
     document.querySelector('.header-elsci').classList.toggle('scroll', document.scrollingElement.scrollTop != 0);
+    if (document.querySelector('.header')) // the new approach - used in crystaline
+        document.querySelector('.header').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
     if (document.querySelector('.header-peaksel')) {
         document.querySelector('.header-peaksel').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
     }

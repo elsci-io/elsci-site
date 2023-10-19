@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Crystaline</title>
+  <link rel="stylesheet" href="../../css/bundle.scss" />
+</head>
+<body>
+<div class="wrapper">
+  <%~ includeFile('/src/partials/header.html') %>
+  <%~ includeFile('/src/partials/headerCrystaline.html') %>
+  <main data-page="overview" data-context="crystaline">
+    <section class="page-hero page-hero--crystaline">
+      <div class="container">
+        <div class="page-hero__text-block">
+          <h1 class="page-hero__title">Crystal management</h1>
+          <p class="page-hero__subtitle">Design crystallography experiments, track X-ray and Cryo-EM results</p>
+        </div>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="container">
+        <div class="advantages-body">
+          <h2 class="visuallyhidden">Problems that can be solved with Molevent</h2>
+          <ul class="advantages__list">
+            <li class="advantages__list-item">
+              <div class="advantages-card">
+                <div class="advantages-card__body">
+                  <h3 class="advantages-card__title">Visibility across teams</h3>
+                  <p class="advantages-card__description">
+                    Sketched? Synthesized? Purified? Automatically feed all the events into MolEvent and learn about
+                    anything that happens to your molecules across your whole organization. Read events in your ELN and
+                    create alerts if someone already worked with the same compounds.
+                  </p>
+                </div>
+                <div class="advantages-card__img advantages-card__img--binocular">
+                </div>
+              </div>
+            </li>
+            <li class="advantages__list-item">
+              <div class="advantages-card">
+                <div class="advantages-card__body">
+                  <h3 class="advantages-card__title">Virtual Compounds</h3>
+                  <p class="advantages-card__description">
+                    Register IDs for your Virtual Compounds, share those instead of using pictures or
+                    chemical files. Write your own ID generation algorithms if need to.</p>
+                </div>
+                <div class="advantages-card__img advantages-card__img--benzene-virtual">
+                </div>
+              </div>
+            </li>
+            <li class="advantages__list-item">
+              <div class="advantages-card">
+                <div class="advantages-card__body">
+                  <h3 class="advantages-card__title">Mine the data</h3>
+                  <p class="advantages-card__description">
+                    Get insights from the organization, project, team-wide reports using data
+                    gathered from all your systems.</p>
+                </div>
+                <div class="advantages-card__img advantages-card__img--scatter-plot">
+                </div>
+              </div>
+            </li>
+            <li class="advantages__list-item">
+              <div class="advantages-card">
+                <div class="advantages-card__body">
+                  <h3 class="advantages-card__title">Event sourcing</h3>
+                  <p class="advantages-card__description">
+                    Instead of integrating every software with every other software, use
+                    MolEvent as a single source of all events from all systems.</p>
+                </div>
+                <div class="advantages-card__img advantages-card__img--db">
+                </div>
+              </div>
+            </li>
+            <li class="advantages__list-item">
+              <div class="advantages-card">
+                <div class="advantages-card__body">
+                  <h3 class="advantages-card__title">Use existing connectors</h3>
+                  <p class="advantages-card__description">
+                    We have already written some connectors to 3d-party software. Let us know which
+                    software you need to gather data from.</p>
+                </div>
+                <div class="advantages-card__img advantages-card__img--sockets">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <%~ includeFile('/src/partials/footer.html') %>
+</div>
+<script src="../../js/header.js"></script>
+</body>
+</html>

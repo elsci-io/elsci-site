@@ -80,6 +80,12 @@ module.exports = {
                 'molevent/buy': {
                     import: './src/molevent/html/buy.html',
                 },
+                'crystaline/index': {
+                    import: './src/crystaline/html/index.html',
+                },
+                'crystaline/buy': {
+                    import: './src/crystaline/html/buy.html',
+                },
             },
             js: {
                 // output filename of JS extracted from source script specified in `<script>`
