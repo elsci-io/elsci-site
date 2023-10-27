@@ -11,6 +11,9 @@ module.exports = {
                 'business-model': {
                     import: './src/business-model.html',
                 },
+                'hplc-prep': {import: './src/hplc-prep.html'},
+                'nmr': {import: './src/nmr.html'},
+                'hrms': {import: './src/hrms.html'},
                 'about': {
                     import: './src/about.html',
                 },
