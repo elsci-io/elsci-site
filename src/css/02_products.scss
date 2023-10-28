@@ -92,15 +92,6 @@
 	height: 100%;
 	color: var(--text-color);
 }
-.product-card__description--text.hidden {
-	display: none;
-}
-.product-card:hover .product-card__description--text {
-	display: none;
-}
-.product-card:hover .product-card__description--text.hidden {
-	display: block;
-}
 
 @media (max-width: 900px) {  /*   992 for 3 products  */
 	.products-list {
