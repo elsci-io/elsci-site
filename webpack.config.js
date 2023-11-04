@@ -15,6 +15,7 @@ module.exports = {
                 'nmr': {import: './src/nmr.html'},
                 'hrms': {import: './src/hrms.html'},
                 'cryo-em': {import: './src/cryo-em.html'},
+                'open-molevent': {import: './src/open-molevent.html'},
                 'about': {import: './src/about.html'},
                 'merch': {import: './src/merch.html'},
                 'peaksel/index': {

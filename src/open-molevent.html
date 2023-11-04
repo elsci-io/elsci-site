@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>An open database to combine them all</title>
+		<link rel="stylesheet" href="css/bundle.scss" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<%~ includeFile('/src/partials/header.html') %>
+			<main data-page="business-model">
+				<div class="container">
+					<div class="business-model__body page-content">
+						<h1 class="page-title">Open Molecule Event Database</h1>
+						<section class="business-model__section">
+							<p>You probably have to frequently deal with a lot of open databases. Imagine a single website
+								where the information from all those databases is aggregated. We have a good understanding of how to
+								make it possible.</p>
+							<p>
+								We're looking for companies who're willing to sponsor development of such database. We already have some
+								capabilities implemented as part of our <a href="./molevent">Molevent</a>, but a lot of work is
+								still needed. There are 2 parts to it:
+							</p>
+							<ol class="business-model__list">
+								<li>It's going to be a huge database, so we need to implement a technical possibility to handle that
+									many records.</li>
+								<li>And we need to write ETLs that would gather information from other sources.</li>
+							</ol>
+							<p>If you're interested in sponsoring or want to be notified about the progress,
+								let us know at <a href="mailto:support@elsci.io">support@elsci.io</a>.
+							</p>
+						</section>
+					</div>
+				</div>
+			</main>
+			<%~ includeFile('/src/partials/footer.html') %>
+		</div>
+		<script src="./js/header.js"></script>
+	</body>
+</html>
+
