@@ -126,7 +126,7 @@ video,
 	}
 }
 
-article img {
+article img, .article img {
 	border: var(--text-color) solid 1px;
 	display: block;
 	margin: 0 auto;
@@ -142,4 +142,12 @@ article img {
 
 .nowrap {
 	white-space: nowrap;
+}
+
+.list {
+	line-height: 1.7;
+	padding-left: 40px;
+}
+.list__item--bullet {
+	list-style: initial;
 }

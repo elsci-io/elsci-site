@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Adducts, Multiply charged species, isotope patterns</title>
+		<link rel="stylesheet" href="../../../css/bundle.scss" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<%~ includeFile('/src/partials/header.html') %>
+			<%~ includeFile('/src/partials/headerPeaksel.html') %>
+			<main class="page-body" data-page="documentation" data-context="peaksel">
+				<article class="container page-content">
+					<h1 class="visuallyhidden">Adducts, Multiply charged species, isotope patterns</h1>
+					<h2>Fragments, Adducts, charge</h2>
+					<p>
+						When creating/editing a substance that's used for Mass Spec you can set which ions are used by Peaksel:
+					</p>
+					<img src="../../img/mass-spec-settings-btn.png" alt="Mass Spec settings button"/>
+					<p>In the Mass Spec settings you can:</p>
+					<ul class="list">
+						<li class="list__item--bullet">Add/subtract fragments to/from your initial structure</li>
+						<li class="list__item--bullet">Set max charge count to define how many times you expect your compound to be ionized</li>
+					</ul>
+					<p>When extracting a chromatogram, now Peaksel will add up all the intensities of all the adducts:</p>
+					<img src="../../img/mass-spec-settings-dialog.png" alt="Mass Spec settings - pointing out fragments"/>
+
+					<h2>Isotopic patterns, qualifier and quantifier ions</h2>
+					<p>
+						It's possible to fine-tune which of the ions that Peaksel calculated should be used. For instance, you may
+						want to use one set of ions as <b>quantifiers</b> (they'll be part of the peak area), while others are used as
+						<b>qualifiers</b> to determine if the peak is actually our compound and not some isobar with very similar mass.
+					</p>
+					<p>By default, Peaksel will use only the most abundant isotopes (of the same adduct!) as qualifiers, but
+					   only if their predicted intensities are higher than the tolerance level.</p>
+					<img src="../../img/mass-spec-settings-ions-arrows.png" alt="Mass Spec settings - pointing out qualifier and quantifier ions"/>
+				</article>
+			</main>
+			<%~ includeFile('/src/partials/footer.html') %>
+		</div>
+		<script src="../../../js/header.js"></script>
+	</body>
+</html>

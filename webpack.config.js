@@ -58,6 +58,7 @@ module.exports = {
                 'peaksel/docs/vocabulary': {
                     import: './src/peaksel/html/docs/vocabulary.html',
                 },
+                'peaksel/docs/mass-spec-ions': {import: './src/peaksel/html/docs/mass-spec-ions.html'},
                 'peaksel/docs/waters-structures': {
                     import: './src/peaksel/html/docs/waters-structures.html',
                 },
