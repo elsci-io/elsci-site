@@ -26,15 +26,27 @@
 					<p>When extracting a chromatogram, now Peaksel will add up all the intensities of all the adducts:</p>
 					<img src="../../img/mass-spec-settings-dialog.png" alt="Mass Spec settings - pointing out fragments"/>
 
+					<p>It's possible to set multiple fragments to be added to or removed from the compound. They can be charged
+					(like <code>H+</code>, <code>Na+</code>, <code>Cl-</code> ions) or neutral (like deprotected compound):</p>
+					<img src="../../img/mass-spec-settings-fragments.png" alt="Mass Spec settings - configuring fragments"/>
+
 					<h2>Isotopic patterns, qualifier and quantifier ions</h2>
 					<p>
-						It's possible to fine-tune which of the ions that Peaksel calculated should be used. For instance, you may
-						want to use one set of ions as <b>quantifiers</b> (they'll be part of the peak area), while others are used as
-						<b>qualifiers</b> to determine if the peak is actually our compound and not some isobar with very similar mass.
+						It's possible to fine-tune which of the ions that Peaksel calculated should be used:
 					</p>
-					<p>By default, Peaksel will use only the most abundant isotopes (of the same adduct!) as qualifiers, but
-					   only if their predicted intensities are higher than the tolerance level.</p>
 					<img src="../../img/mass-spec-settings-ions-arrows.png" alt="Mass Spec settings - pointing out qualifier and quantifier ions"/>
+
+					<p>Some use cases:</p>
+					<ul class="list">
+						<li class="list__item--bullet">You may want to use one set of ions as <b>quantifiers</b>
+							(they'll be part of the peak area), while others are used as <b>qualifiers</b> to determine if the peak
+							is actually our compound and not some isobar with very similar mass.</li>
+						<li class="list__item--bullet">Or maybe you work with isopure compounds, and you want to uncheck all but
+							one isotope from quantification</li>
+					</ul>
+					<p>By default, Peaksel will use only the most abundant isotopes (of the same adduct!) as qualifiers, but
+						only if their predicted intensities are higher than the tolerance level:</p>
+					<img src="../../img/mass-spec-settings-ions.png" alt="Mass Spec settings - selecting qualifier and quantifier ions"/>
 				</article>
 			</main>
 			<%~ includeFile('/src/partials/footer.html') %>
