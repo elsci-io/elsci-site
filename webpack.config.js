@@ -8,9 +8,8 @@ module.exports = {
                 'index': { // => target/index.html (key is output filename w/o '.html')
                     import: './src/index.html', // template file
                 },
-                'business-model': {
-                    import: './src/business-model.html',
-                },
+                'business-model': {import: './src/business-model.html'},
+                'external-sales-partners': {import: './src/external-sales-partners.html'},
                 'hplc-prep': {import: './src/hplc-prep.html'},
                 'nmr': {import: './src/nmr.html'},
                 'hrms': {import: './src/hrms.html'},
