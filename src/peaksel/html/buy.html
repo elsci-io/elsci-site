@@ -54,7 +54,7 @@
 								<span>Per-user billing</span>
 							</div>
 							<div class="billing-plan__description">
-								<span>€<span class="hugetext">500</span> per user/year</span>
+								<span>€<span class="hugetext">900</span> per user/year</span>
 							</div>
 						</div>
 						<div class="billing-plan">
@@ -69,16 +69,25 @@
 								<script src="https://cdn.paddle.com/paddle/paddle.js"></script>
 								<script type="text/javascript">
 									const params = new URLSearchParams(window.location.search);
+									let env = params.get('env');// could be 'sandbox' for testing
+									if(env)
+										Paddle.Environment.set(env);
+									Paddle.Setup({ vendor: 165667 });
 									const product = params.get('product');
 									if(product) {
 										document.querySelector('[data-enterprise-email-btn]').style.display = 'none';
 										const paddleBtn = document.getElementsByClassName('paddle_button')[0];
 										paddleBtn.style.display = 'block';
 										paddleBtn.setAttribute('data-product', product);// e.g. 60777 for testing
+									} else {
+										document.querySelector('[data-team-email-btn]').style.display = 'none';
+										const paddleBtn = document.getElementsByClassName('paddle_button')[0];
+										paddleBtn.style.display = 'block';
+										paddleBtn.setAttribute('data-product', product);// e.g. 60777 for testing
 										let env = params.get('env');// could be 'sandbox' for testing
 										if(env)
-												Paddle.Environment.set(env);
-										Paddle.Setup({ vendor: 165667 });
+											Paddle.Environment.set(env);
+											Paddle.Setup({ vendor: 165667 });
 									}
 								</script>
 							</div>
