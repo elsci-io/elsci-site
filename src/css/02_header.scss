@@ -166,11 +166,6 @@
 	color: var(--main-color1);
 }
 
-.header-peaksel__logo span,
-.header-elsci__logo-peaksel span {
-	color: var(--main-color2);
-}
-
 .navigation-list {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -308,7 +303,6 @@
 		font-weight: 400;
 	}
 	.sub-header .header-elsci__logo-peaksel.active {
-		display: block;
 		z-index: 4;
 	}
 	.sub-header .header-elsci__logo-molevent.active {
