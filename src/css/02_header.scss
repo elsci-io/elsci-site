@@ -31,8 +31,7 @@
 	position: relative;
 }
 
-.product-header.scroll {
-	// this class is added by JS
+.product-header.scroll { // this class is added by JS
 	position: sticky;
 	top: 0;
 	left: 0;
@@ -40,21 +39,21 @@
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.header-elsci__logo img {
+.company-header__logo img {
 	height: 50px;
 }
 
-.sub-header .header-elsci__logo img {
+.sub-header .company-header__logo img {
 	height: 30px;
 }
 
-.header-elsci__logo {
+.company-header__logo {
 	margin-left: 3px;
 	position: relative;
 	z-index: 3;
 }
 
-.header-elsci__logo--white {
+.company-header__logo--white {
 	display: none;
 }
 
@@ -179,10 +178,10 @@
 	.sub-header .header-elsci__logo--main {
 		display: none;
 	}
-	.sub-header .header-elsci__logo--white {
+	.sub-header .company-header__logo--white {
 		display: block;
 	}
-	.sub-header .header-elsci__logo img {
+	.sub-header .company-header__logo img {
 		height: 50px;
 	}
 }
