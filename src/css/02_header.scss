@@ -1,18 +1,16 @@
-.header-elsci {
+.company-header {
 	position: fixed;
+	// since position is fixed, we need an explicit width to take up the available space: https://stackoverflow.com/questions/16638958
 	width: 100%;
+	background: #fff;
+	// When burger menu is open, the crossed out text on the landing page shows up higher because
+	// it has relative position and goes after the header. So need to set a higher z-index.
+	z-index: 5;
+	transition: box-shadow 250ms ease-in;
+}
+.company-header.scroll {
 	top: 0;
 	left: 0;
-	z-index: 6;
-	-webkit-transition: -webkit-box-shadow 250ms ease-in;
-	transition: -webkit-box-shadow 250ms ease-in;
-	-o-transition: box-shadow 250ms ease-in;
-	transition: box-shadow 250ms ease-in;
-	transition: box-shadow 250ms ease-in, -webkit-box-shadow 250ms ease-in;
-}
-
-.header-elsci.scroll {
-	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -33,34 +31,17 @@
 	align-items: center;
 }
 
-.header-elsci::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #fff;
-	z-index: 2;
-}
-
 .product-header {
 	background: #fff;
 	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	-webkit-transition: -webkit-box-shadow 250ms ease-in;
-	transition: -webkit-box-shadow 250ms ease-in;
-	-o-transition: box-shadow 250ms ease-in;
-	transition: box-shadow 250ms ease-in;
-	transition: box-shadow 250ms ease-in, -webkit-box-shadow 250ms ease-in;
-	z-index: 5;
 }
 
 .product-header.scroll {
+	// this class is added by JS
 	position: sticky;
-	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	top: 0;
+	left: 0;
+	z-index: 5;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -184,14 +165,14 @@
 
 
 @media (min-width: 795px) {
-	.header-elsci.sub-header {
+	.company-header.sub-header {
 		position: relative;
 	}
-	.header-elsci.sub-header.scroll {
+	.company-header.sub-header.scroll {
 		-webkit-box-shadow: none;
 		box-shadow: none;
 	}
-	.sub-header.header-elsci::before {
+	.sub-header.company-header {
 		background: var(--main-color1);
 	}
 	.sub-header .header__link {

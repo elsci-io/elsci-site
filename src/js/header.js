@@ -19,7 +19,7 @@ document.querySelector('.header__link--bookmarks').addEventListener('click', () 
 });
 
 window.addEventListener('scroll', (el) => {
-    document.querySelector('.header-elsci').classList.toggle('scroll', document.scrollingElement.scrollTop !== 0);
+    document.querySelector('.company-header').classList.toggle('scroll', document.scrollingElement.scrollTop !== 0);
     if (document.querySelector('.product-header'))
         document.querySelector('.product-header').classList.toggle('scroll', document.scrollingElement.scrollTop !== 0)
 });
@@ -31,7 +31,7 @@ if (pageName) {
 
 const siteName = document.querySelector('main').dataset.context;
 if (siteName) {
-    document.querySelector('.header-elsci').classList.add('sub-header')
+    document.querySelector('.company-header').classList.add('sub-header')
 } 
 if (siteName === 'peaksel') {
     document.querySelector('.header-elsci__logo-peaksel').classList.add('active');
