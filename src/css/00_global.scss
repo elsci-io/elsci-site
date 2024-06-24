@@ -88,11 +88,13 @@ h3 {
 	-ms-flex-direction: column;
 	flex-direction: column;
 }
-
-.container {
+@mixin container {
 	width: clamp(350px, 95vw, 1180px);
 	max-width: 1180px;
 	margin: 0 auto;
 	padding-right: 15px;
 	padding-left: 15px;
+}
+.container {// we'll get rid of .container at some point since it requires extra divs, and we'll use the mixin instead
+	@include container;
 }

@@ -1,3 +1,5 @@
+@import "00_global";
+
 .company-header {
 	position: fixed;
 	// since position is fixed, we need an explicit width to take up the available space: https://stackoverflow.com/questions/16638958
@@ -14,20 +16,13 @@
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.header-elsci__body,
-.header__body,
-.header-peaksel__body,
-.header-molevent__body {
+.company-header__body,
+.product-header__body {
+	@include container;
 	position: relative;
 	height: 4em;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 }
 
