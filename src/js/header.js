@@ -19,15 +19,9 @@ document.querySelector('.header__link--bookmarks').addEventListener('click', () 
 });
 
 window.addEventListener('scroll', (el) => {
-    document.querySelector('.header-elsci').classList.toggle('scroll', document.scrollingElement.scrollTop != 0);
-    if (document.querySelector('.header')) // the new approach - used in crystaline
-        document.querySelector('.header').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
-    if (document.querySelector('.header-peaksel')) {
-        document.querySelector('.header-peaksel').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
-    }
-    if (document.querySelector('.header-molevent')) {
-        document.querySelector('.header-molevent').classList.toggle('scroll', document.scrollingElement.scrollTop != 0)
-    }
+    document.querySelector('.header-elsci').classList.toggle('scroll', document.scrollingElement.scrollTop !== 0);
+    if (document.querySelector('.product-header'))
+        document.querySelector('.product-header').classList.toggle('scroll', document.scrollingElement.scrollTop !== 0)
 });
 
 const pageName = document.querySelector('main').dataset.page;
@@ -39,11 +33,11 @@ const siteName = document.querySelector('main').dataset.context;
 if (siteName) {
     document.querySelector('.header-elsci').classList.add('sub-header')
 } 
-if (siteName == 'peaksel') {
+if (siteName === 'peaksel') {
     document.querySelector('.header-elsci__logo-peaksel').classList.add('active');
     document.querySelector('.navigation-list--peaksel').classList.add('active')
 }
-if (siteName == 'molevent') {
+if (siteName === 'molevent') {
     document.querySelector('.header-elsci__logo-molevent').classList.add('active');
     document.querySelector('.navigation-list--molevent').classList.add('active')
 }

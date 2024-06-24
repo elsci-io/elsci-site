@@ -44,7 +44,7 @@
 	z-index: 2;
 }
 
-.header, .header-peaksel, .header-molevent {
+.product-header {
 	background: #fff;
 	position: relative;
 	top: 0;
@@ -58,9 +58,7 @@
 	z-index: 5;
 }
 
-.header.scroll,
-.header-molevent.scroll,
-.header-peaksel.scroll {
+.product-header.scroll {
 	position: sticky;
 	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -314,9 +312,7 @@
 		display: block;
 		z-index: 4;
 	}
-	.header,
-	.header-molevent,
-	.header-peaksel {
+	.product-header {
 		display: none;
 	}
 	.sub-header .navigation-list--peaksel.active,
