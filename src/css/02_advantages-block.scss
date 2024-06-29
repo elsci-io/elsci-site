@@ -71,18 +71,22 @@
 }
 
 .advantages-card__img--plate-w-liquid-handler {
-    background-image: url("../img/plate-w-liquid-handler.png");
+    background-image: url("../img/plate-w-liquid-handler.svg");
 }
 
 .advantages-card__img--db-search{
+    // leaving PNG instead of SVG for now because in SVG the font isn't specified. Need to export a new SVG, but with
+    // font-as-picture at some point
     background-image: url("../img/db-search.png");
 }
 
 .advantages-card__img--many-instruments{
-    background-image: url("../img/many-instruments.png");
+    background-image: url("../img/many-instruments.svg");
 }
 
 .advantages-card__img--scatter-plot{
+    // leaving PNG instead of SVG for now because in SVG the font isn't specified. Need to export a new SVG, but with
+    // font-as-picture at some point
     background-image: url("../img/scatter-plot.png");
 }
 
@@ -91,24 +95,28 @@
 }
 
 .advantages-card__img--binocular {
-    background-image: url("../img/binocular-2-people.png");
+    background-image: url("../img/binocular-2-people.svg");
 }
 
 .advantages-card__img--benzene-virtual {
+    // leaving PNG instead of SVG for now because in SVG the font isn't specified. Need to export a new SVG, but with
+    // font-as-picture at some point
     background-image: url("../img/benzene-virtual-id.png");
 }
 
 .advantages-card__img--plate-n-puck {
-    background-image: url("../img/crystallographic-plate-n-puck.png");
+    background-image: url("../img/crystallographic-plate-n-puck.svg");
 }
 .advantages-card__img--crystal-watering {
-    background-image: url("../img/crystal-watering.png");
+    background-image: url("../img/crystal-watering.svg");
 }
 
 .advantages-card__img--db{
+    // leaving PNG instead of SVG for now because in SVG the font isn't specified. Need to export a new SVG, but with
+    // font-as-picture at some point
     background-image: url("../img/db-with-2-apps.png");
 }
 
 .advantages-card__img--sockets{
-    background-image: url("../img/sockets.png");
+    background-image: url("../img/sockets.svg");
 }
