@@ -1,5 +1,13 @@
 @import "00_global";
 
+// There are 2 types of headers:
+//  1. company-header (Elsci) - shown on every page at the very top
+//  2. product-header (Peaksel, Crystaline, etc) - shown on product page under the company-header. It could be
+//     either a picture or simply text (for old logos that we haven't drawn yet).
+//
+// On small screens product-header is moved to the same line as the company-header and the rest of the menus are
+// hidden in the burger.
+
 .company-header {
 	position: fixed;
 	// since position is fixed, we need an explicit width to take up the available space: https://stackoverflow.com/questions/16638958
